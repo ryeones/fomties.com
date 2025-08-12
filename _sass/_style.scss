@@ -177,15 +177,82 @@ code {
   border-radius: 50%;
 }
 
-/* ConvertKit inline form stays inline/left */
-.subscribe-inline {
+/* -------- ConvertKit inline form (pretty, minimal) -------- */
+.site-footer .formkit-form.subscribe-inline {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.site-footer .subscribe-inline {
   display: flex;
   align-items: center;
-  gap: .6rem;
+  gap: .75rem;
   margin: 1rem 0 2rem;
 }
-.subscribe-inline .formkit-input { flex: 1; min-width: 16em; }
-.subscribe-inline .formkit-submit { white-space: nowrap; }
+
+/* Input: no box, just an underline; full width on desktop */
+.site-footer .subscribe-inline .formkit-input {
+  flex: 1 1 24rem;
+  min-width: 16em;
+  background: transparent !important;
+  color: $color-text !important;
+
+  /* kill CK defaults */
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+
+  /* our style */
+  border-bottom: 1px solid $color-border !important;
+  padding: .6rem 0 !important;
+  outline: none !important;
+}
+
+.site-footer .subscribe-inline .formkit-input::placeholder {
+  color: mix($color-text, white, 65%) !important;
+}
+
+.site-footer .subscribe-inline .formkit-input:focus {
+  border-bottom-color: $color-primary !important;
+}
+
+/* Button: compact, dark, rounded */
+.site-footer .subscribe-inline .formkit-submit {
+  appearance: none !important;
+  border: 0 !important;
+  background: $color-primary !important;
+  color: #fff !important;
+  padding: .55rem 1rem !important;
+  line-height: 1 !important;
+  border-radius: $border-radius !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  box-shadow: none !important;
+}
+
+.site-footer .subscribe-inline .formkit-submit:hover {
+  filter: brightness(.95);
+}
+
+/* Hide “Powered by Kit” if CK injects it */
+.site-footer .formkit-powered-by,
+.site-footer .formkit-powered-by-convertkit-container {
+  display: none !important;
+}
+
+/* Mobile: stack neatly */
+@media (max-width: 600px) {
+  .site-footer .subscribe-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+  }
+  .site-footer .subscribe-inline .formkit-input {
+    flex-basis: 100%;
+  }
+}
 
 /* If you still see a different background tone, force it transparent */
 .site-footer,
