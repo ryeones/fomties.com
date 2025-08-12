@@ -147,8 +147,140 @@ code {
   cursor: help;
 }
 
-.footer-logo {
-  max-height: 40px; /* adjust logo size */
-  display: block;
-  margin-top: 1rem;
+/* footer layout + colours */
+.site-footer {
+  border-top: 1px solid $color-border;
+  margin: 4rem 0 2rem;
+  padding-top: 1.5rem;
+  font-size: .9em;
+  color: mix($color-text, white, 75%);
+}
+.footer-wrap { max-width: 37em; margin: 0 auto; text-align: left; }
+.footer-title { margin: 0 0 .75rem; color: $color-text; font-weight: 500; }
+.small { font-size: .875em; }
+.muted { color: mix($color-text, white, 70%); }
+
+/* links styled like the reference */
+a.plain { text-decoration: underline; border: 0; }
+a.plain:hover { color: $color-primary; }
+
+/* hide any old text 'about' link block if present */
+.footer-nav { display: none; }
+
+/* convertkit inline form */
+.subscribe-inline {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin: 1rem 0 2rem;
+}
+.subscribe-inline .formkit-input {
+  flex: 1;
+  min-width: 16em;
+  border: 0;
+  border-bottom: 1px solid $color-border;
+  padding: .6rem 0;
+  background: transparent;
+  color: $color-text;
+}
+.subscribe-inline .formkit-input::placeholder { color: mix($color-text, white, 65%); }
+.subscribe-inline .formkit-submit {
+  border: 0;
+  background: $color-primary;
+  color: #fff;
+  padding: .55rem 1rem;
+  border-radius: $border-radius;
+  line-height: 1;
+  cursor: pointer;
+}
+.subscribe-inline .formkit-submit:hover { filter: brightness(.95); }
+
+@media (max-width: 600px) {
+  .subscribe-inline { flex-direction: column; align-items: flex-start; }
+}
+
+/* logo left; circular crop optional */
+.footer-logo-link { display: inline-block; }
+.footer-logo { max-height: 40px; display: block; margin: 1.25rem 0 0 0; border-radius: 50%; }
+
+/* remove 'powered by kit' */
+.formkit-powered-by { display: none !important; }
+
+/* Header / nav */
+.site-header {
+  border-bottom: 1px solid $color-border;
+  margin-bottom: 2rem;
+}
+
+.site-nav {
+  max-width: 37em;          /* use 63em if you want a wider header */
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-brand {
+  text-decoration: none;
+  border: 0;
+  font-weight: normal;      /* ensure not bold */
+  color: $color-primary;
+}
+
+/* Right-side links */
+.site-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid $color-border;
+}
+
+/* Theme toggle (lightweight version compatible with your colours) */
+#theme-toggle {
+  height: 20px;
+  width: 36px;
+  display: inline-block;
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.theme-toggle-slide {
+  height: 20px;
+  border: 1px solid $color-border;
+  border-radius: 24px;
+  width: 100%;
+  position: absolute;
+  background: mix($color-text, white, 92%);
+}
+.theme-toggle-switch {
+  position: absolute;
+  z-index: 1;
+  top: 1px;
+  left: 1px;                /* moves to the right in dark mode via the rule below */
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: $color-text;
+  transition: left 120ms linear, background 120ms linear;
+}
+
+/* In dark mode, slide the knob to the right and invert colours slightly */
+.theme-dark .theme-toggle-slide { background: mix($color-text, white, 15%); }
+.theme-dark .theme-toggle-switch { left: 17px; background: mix($color-text, white, 90%); }
+
+@media (max-width: 700px) {
+  .site-nav { padding: .75rem 0; }
+  .site-links a { margin-left: .75rem; }
+}
+
+.site-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid $color-border;  /* matches your link style */
+}
+
+@media (max-width: 700px) {
+  .site-nav { padding: .75rem 0; }
+  .site-links a { margin-left: .75rem; }
 }
