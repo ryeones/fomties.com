@@ -157,53 +157,41 @@ code {
   color: mix($color-text, white, 75%);
 }
 
-/* footer layout */
+/* Footer container: align left, not centered */
 .footer-wrap {
   max-width: 37em;
-  margin: 0 auto;
+  margin: 0;              /* was 0 auto */
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
-.footer-title { margin: 0 0 .75rem; color: $color-text; font-weight: 500; }
-.small { font-size: .875em; }
-.muted { color: mix($color-text, white, 70%); }
 
-/* footer links look clean; no ↗ and no underline border */
-.site-footer a { text-decoration: none; border: 0; }
-.site-footer a:after { content: "" !important; }
-a.plain { text-decoration: underline; border: 0; } /* only when you explicitly add .plain */
-a.plain:hover { color: $color-primary; }
+/* No ↗ arrows in the footer */
+.site-footer a::after {
+  content: none !important;
+}
 
-/* ConvertKit inline form */
+/* Make sure the logo aligns left and ignores global img centring */
+.footer-logo {
+  display: block;
+  max-height: 40px;
+  margin: 1.25rem 0 0 0 !important;  /* ensure no auto margins */
+  border-radius: 50%;
+}
+
+/* ConvertKit inline form stays inline/left */
 .subscribe-inline {
   display: flex;
   align-items: center;
   gap: .6rem;
   margin: 1rem 0 2rem;
 }
-.subscribe-inline .formkit-input {
-  flex: 1;
-  min-width: 16em;
-  border: 0;
-  border-bottom: 1px solid $color-border;
-  padding: .6rem 0;
-  background: transparent;
-  color: $color-text;
-}
-.subscribe-inline .formkit-input::placeholder { color: mix($color-text, white, 65%); }
-.subscribe-inline .formkit-submit {
-  border: 0;
-  background: $color-primary;
-  color: #fff;
-  padding: .55rem 1rem;
-  border-radius: $border-radius;
-  line-height: 1;
-  cursor: pointer;
-}
-.subscribe-inline .formkit-submit:hover { filter: brightness(.95); }
-.formkit-powered-by { display: none !important; }
+.subscribe-inline .formkit-input { flex: 1; min-width: 16em; }
+.subscribe-inline .formkit-submit { white-space: nowrap; }
+
+/* If you still see a different background tone, force it transparent */
+.site-footer,
+.footer-wrap,
+.subscribe-inline,
+.formkit-form { background: transparent; }
 
 @media (max-width: 600px) {
   .subscribe-inline { flex-direction: column; align-items: flex-start; }
