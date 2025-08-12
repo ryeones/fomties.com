@@ -1,5 +1,5 @@
 ---
-title: a-season-of-growth-and-reflection
+title: a season of growth and reflection
 ---
 This season has been a rollercoaster,
 

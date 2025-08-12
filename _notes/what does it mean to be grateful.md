@@ -1,3 +1,6 @@
+---
+title: what does it mean to be grateful
+---
 ### skepticism to being sold
 
 ever since i was a kid, i have always been an avid fan of documentaries, especially about the ins and outs of things that we normally don’t get to see on the daily - things like wild life, or bear grylls, and in most recent times, drug cartels and prisons. about a week ago, i was recommended a docu-series on youtube by my partner, she said “it was one of the best documentary she has watched in a while, and almost teared up a couple of time”. i wasn’t skeptical per say, but i am not very involved with politics or current affairs, and was afraid that i wouldn’t fully enjoy or even understand the context that the story was taking place in.

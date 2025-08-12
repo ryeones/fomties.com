@@ -1,5 +1,5 @@
 ---
-title: hey-i'm-ryan
+title: hey, i'm ryan
 ---
 
 telling stories, sparks, strategies, sequences, stories, systems, spaces.
@@ -14,17 +14,18 @@ both are projects i wish my younger self had found sooner and the stories i'd wa
 
 previously, i studied architecture at the national university of singapore and played floorball at a competitive level all my life.
 
--quick links- 
+**-quick links-**
+
 [[about]]
 [[creations]]
 [portfolio](https://www.ryeones.com/work)
 [[notes]]
-[[library ]]
+[[library]]
 [[videos]]
 [[press]]
 [[fomties™| fomties]]
 
-how to get around this site
+**-how to get around this site-**
 
 not sure what brought you here, but i've set up a few ways to explore, so you'll find something interesting no matter your reason:
 
