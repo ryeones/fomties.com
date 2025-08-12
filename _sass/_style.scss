@@ -144,3 +144,13 @@ code {
   color: #ccc;
   cursor: help;
 }
+
+/* Limit line length of main content to ~70 characters */
+#notes-entry-container {
+  justify-content: center;
+}
+#notes-entry-container > *:first-child {
+  max-width: 70ch;   /* content column */
+  width: 100%;
+  margin: 0 auto;
+}

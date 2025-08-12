@@ -6,7 +6,7 @@ layout: default
   <div>
     <h1>{{ page.title }}</h1>
     <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
-      Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
+      last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
       {% endif %}
     </time>
   </div>
@@ -14,7 +14,7 @@ layout: default
   <div id="notes-entry-container">
     <content>
       {{ content }}
-      <p>This line appears after every note.</p>
+      <p>this line appears after every note.</p>
     </content>
 
     <side style="font-size: 0.9em">
@@ -32,7 +32,7 @@ layout: default
 
       <div style="font-size: 0.9em">
         <p>
-          There are no notes linking to this note.
+          there are no notes linking to this note.
         </p>
       </div>
       {% endif %}
@@ -42,6 +42,6 @@ layout: default
 
 <hr>
 
-<p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
+<p>here are all the notes in this garden, along with their links, visualised as a graph.</p>
 
 {% include notes_graph.html %}
