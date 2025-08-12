@@ -1,8 +1,9 @@
-$color-primary: hsl(0, 0%, 10%);
-$color-text: hsl(0, 0%, 20%);
-$color-subtext: hsl(0, 0%, 30%);
-$color-border: hsl(0, 0%, 85%);
-$color-box-background: mix($color-primary, white, 4%);
+/* --- theme colours (HSL) --- */
+$color-primary: hsl(0, 3%, 6%);        // #100f0f
+$color-text: hsl(0, 3%, 6%);           // main body text
+$color-subtext: hsl(50, 3%, 42%);      // #6f6e69 - secondary text
+$color-border: hsl(46, 20%, 79%);      // #d4cfbf - subtle borders/dividers
+$color-box-background: hsl(48, 100%, 97%); // #fffcf0 - light paper background for blocks
 $border-radius: 4px;
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
   sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
@@ -15,11 +16,12 @@ body {
   padding: 4vh 6vw;
   overflow-x: hidden;
   color: $color-text;
+  background-color: hsl(48, 100%, 97%);  // paper background
   font-size: 1rem;
-  max-width: 63em;
+  max-width: 37em;
 
   @media (min-width: 820px) {
-    font-size: 1.2rem;
+    font-size: calc(1.5rem + 0.25vw);
   }
 }
 
@@ -145,12 +147,3 @@ code {
   cursor: help;
 }
 
-/* Limit line length of main content to ~70 characters */
-#notes-entry-container {
-  justify-content: center;
-}
-#notes-entry-container > *:first-child {
-  max-width: 70ch;   /* content column */
-  width: 100%;
-  margin: 0 auto;
-}
