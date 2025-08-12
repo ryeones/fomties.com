@@ -15,18 +15,14 @@ both are projects i wish my younger self had found sooner and the stories i'd wa
 previously, i studied architecture at the national university of singapore and played floorball at a competitive level all my life.
 
 -quick links- 
-about
-creations
-portfolio 
-notes
-library 
-videos
-press 
-fomties
-
--under construction-
-
-archive
+[[about]]
+[[creations]]
+[portfolio](https://www.ryeones.com/work)
+[[notes]]
+[[library ]]
+[[videos]]
+[[press]]
+[[fomties™| fomties]]
 
 how to get around this site
 

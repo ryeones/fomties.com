@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: about
 permalink: /about
 ---
 *telling stories*, sparks, strategies, sequences, stories, systems, spaces.
