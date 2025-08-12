@@ -147,27 +147,36 @@ code {
   cursor: help;
 }
 
-/* footer layout + colours */
+/* page background already set on body; match footer to it */
 .site-footer {
+  background-color: hsl(43, 68%, 94%); /* #FAF4E5 */
   border-top: 1px solid $color-border;
   margin: 4rem 0 2rem;
   padding-top: 1.5rem;
   font-size: .9em;
   color: mix($color-text, white, 75%);
 }
-.footer-wrap { max-width: 37em; margin: 0 auto; text-align: left; }
+
+/* footer layout */
+.footer-wrap {
+  max-width: 37em;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .footer-title { margin: 0 0 .75rem; color: $color-text; font-weight: 500; }
 .small { font-size: .875em; }
 .muted { color: mix($color-text, white, 70%); }
 
-/* links styled like the reference */
-a.plain { text-decoration: underline; border: 0; }
+/* footer links look clean; no ↗ and no underline border */
+.site-footer a { text-decoration: none; border: 0; }
+.site-footer a:after { content: "" !important; }
+a.plain { text-decoration: underline; border: 0; } /* only when you explicitly add .plain */
 a.plain:hover { color: $color-primary; }
 
-/* hide any old text 'about' link block if present */
-.footer-nav { display: none; }
-
-/* convertkit inline form */
+/* ConvertKit inline form */
 .subscribe-inline {
   display: flex;
   align-items: center;
@@ -194,48 +203,45 @@ a.plain:hover { color: $color-primary; }
   cursor: pointer;
 }
 .subscribe-inline .formkit-submit:hover { filter: brightness(.95); }
+.formkit-powered-by { display: none !important; }
 
 @media (max-width: 600px) {
   .subscribe-inline { flex-direction: column; align-items: flex-start; }
 }
 
-/* logo left; circular crop optional */
-.footer-logo-link { display: inline-block; }
-.footer-logo { max-height: 40px; display: block; margin: 1.25rem 0 0 0; border-radius: 50%; }
-
-/* remove 'powered by kit' */
-.formkit-powered-by { display: none !important; }
+/* footer logo */
+.footer-logo-link { display: inline-block; border: 0; }
+.footer-logo { max-height: 40px; display: block; margin: 1.25rem 0 0; border-radius: 50%; }
 
 /* Header / nav */
 .site-header {
   border-bottom: 1px solid $color-border;
   margin-bottom: 2rem;
 }
-
 .site-nav {
-  max-width: 37em;          /* use 63em if you want a wider header */
+  max-width: 37em;                 /* 63em for wider header */
   margin: 0 auto;
   padding: 1rem 0;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;  /* left title | right links */
 }
-
+/* brand */
 .site-brand {
   text-decoration: none;
   border: 0;
-  font-weight: normal;      /* ensure not bold */
+  font-weight: normal;
   color: $color-primary;
 }
+/* right group */
+.site-links { display: flex; align-items: center; }
+/* remove underline in header; arrows already removed via .internal-link */
+.site-nav a { border-bottom: 0; text-decoration: none; }
+/* spacing */
+.site-links a { margin-left: 1rem; }
+#theme-toggle   { margin-left: 1rem; }
 
-/* Right-side links */
-.site-links a {
-  margin-left: 1rem;
-  text-decoration: none;
-  border-bottom: 1px solid $color-border;
-}
-
-/* Theme toggle (lightweight version compatible with your colours) */
+/* theme toggle visuals */
 #theme-toggle {
   height: 20px;
   width: 36px;
@@ -257,28 +263,15 @@ a.plain:hover { color: $color-primary; }
   position: absolute;
   z-index: 1;
   top: 1px;
-  left: 1px;                /* moves to the right in dark mode via the rule below */
+  left: 1px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
   background: $color-text;
   transition: left 120ms linear, background 120ms linear;
 }
-
-/* In dark mode, slide the knob to the right and invert colours slightly */
 .theme-dark .theme-toggle-slide { background: mix($color-text, white, 15%); }
 .theme-dark .theme-toggle-switch { left: 17px; background: mix($color-text, white, 90%); }
-
-@media (max-width: 700px) {
-  .site-nav { padding: .75rem 0; }
-  .site-links a { margin-left: .75rem; }
-}
-
-.site-links a {
-  margin-left: 1rem;
-  text-decoration: none;
-  border-bottom: 1px solid $color-border;  /* matches your link style */
-}
 
 @media (max-width: 700px) {
   .site-nav { padding: .75rem 0; }
