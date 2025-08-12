@@ -135,16 +135,17 @@ code {
   border-radius: 4px;
 }
 
+/* Uncreated notes: lighter colour, no brackets */
 .invalid-link {
-  color: #444444;
-  cursor: help;
-  background: #fafafa;
-  padding: 0 0.1em;
+  color: mix($color-text, white, 50%); /* lighter text shade */
+  background: transparent;
+  padding: 0;
+  cursor: pointer; /* optional: keep pointer */
+  border-bottom: 1px dashed $color-border; /* optional: hint it's a link */
 }
 
 .invalid-link-brackets {
-  color: #ccc;
-  cursor: help;
+  display: none; /* hide [[ and ]] */
 }
 
 /* page background already set on body; match footer to it */
