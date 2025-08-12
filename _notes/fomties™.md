@@ -1,13 +1,14 @@
 ---
 title: fomties™
 ---
-welcome to ***fomties™***, which is a stylised version of the phrase figuring out my twenties.
-it is also the fancy name i gave to this side project of mine.
+*my initial apple note entry*
 
-this is my little corner of the internet where i share my ideas and thoughts in public. this is also known as digital gardening or a form of learning in public.
+figuring out my twenties 
 
-the site has a diverse ecosystem of interlinked notes evolving at very different rates. most of the notes fall within these topics i'm interested in, but the most common attribute between all of these notes is the fact that they will always be a work in progress, regardless of how evolved they appear.
+idea came out on 30th july official at 715pm
 
-this project is built upon a couple of my values i hold dearly to.
+110.80 usd 10 years domain
 
-so these notes are written for myself to aid my thinking, learning and creativity.
+have also secured the [domain](https://www.fomties.com) as well as relevant [social handles](https://www.instagram.com/fomties) for future use depending on how it evolves.
+
+at the moment, fomties™ is this [[index | current site]] where i share my thoughts and learnings in public, under a subdomain of my [personal brand](https://www.ryeones.com).
