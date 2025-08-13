@@ -77,30 +77,37 @@ h6 {
   padding-bottom: 0;
 }
 
-/* --- LINK STYLES (Kepano-like, blue hover) --- */
+/* === Link styles (blue hover #b0cef2) === */
 
-/* Accent blue used on hover */
-$color-accent-blue: hsl(210, 80%, 40%);
+/* 0) Accent colour + global reset */
+$color-accent-blue: #b0cef2;
 
-/* Base links: simple underline, no background box */
+a,
+a:visited {
+  background: transparent !important;   /* no beige/purple block */
+  padding: 0 !important;                /* no boxed look */
+  border: 0 !important;
+}
+
+/* Remove any old universal arrows; we’ll add them back only for externals */
+a::after { content: none !important; }
+
+/* 1) Base link — subtle underline by default */
 a {
   color: $color-primary;
   text-decoration: underline;
-  text-underline-offset: .08em;
   text-decoration-thickness: 1px;
-  text-decoration-color: $color-border;     /* subtle underline by default */
-  border: 0;
-  padding: 0;
-  background: transparent;
+  text-underline-offset: .08em;
+  text-decoration-color: $color-border;           /* subtle */
   transition: color 200ms ease, text-decoration-color 200ms ease;
 }
 a:hover {
-  color: $color-accent-blue !important;      /* blue text on hover */
-  background: transparent;                   /* no beige block */
-  text-decoration-color: $color-accent-blue; /* underline turns blue too */
+  color: $color-accent-blue !important;            /* blue text */
+  text-decoration-color: $color-accent-blue !important; /* blue underline */
+  background: transparent !important;
 }
 
-/* Internal wiki links + footnotes: underline only (no arrow) */
+/* 2) Internal links (between notes / footnotes): no arrow */
 a.internal-link,
 a.footnote,
 a.reversefootnote {
@@ -109,49 +116,43 @@ a.reversefootnote {
 a.internal-link::after,
 a.footnote::after,
 a.reversefootnote::after {
-  content: "";
+  content: "" !important;
 }
 
-/* External links (not internal, not footnotes, not hashes, not local paths):
-   show a ↗ and let it inherit the hover color */
-a:not(.internal-link):not(.footnote):not(.reversefootnote)
- [href]:not([href^="#"]):not([href^="/"])::after {
+/* 3) External links only: show ↗ and inherit hover colour
+   (anything starting with http/https and not marked as internal) */
+a[href^="http"]:not(.internal-link):not(.footnote):not(.reversefootnote)::after {
   content: "↗";
   font-size: .75em;
   position: relative;
-  top: -.45em;
+  top: -.35em;
   margin-left: .15em;
-  color: inherit; /* turns blue on hover automatically */
+  color: inherit;  /* turns blue on hover automatically */
 }
 
-/* Ghost/uncreated notes: lighter + dotted, also turn blue on hover */
+/* 4) Ghost/uncreated notes: grey + dotted, do NOT turn blue on hover */
 .invalid-link {
-  color: mix($color-text, white, 50%);
-  background: transparent;
-  padding: 0;
+  color: mix($color-text, white, 50%) !important;
+  background: transparent !important;
+  text-decoration: none !important;
+  border-bottom: 1px dotted $color-border !important;
   cursor: not-allowed;
-  text-decoration: none;
-  border-bottom: 1px dotted $color-border;
 }
 .invalid-link:hover {
-  color: $color-accent-blue;
-  border-bottom-color: $color-accent-blue;
+  color: mix($color-text, white, 50%) !important;     /* stay grey */
+  border-bottom-color: $color-border !important;      /* stay dotted grey */
 }
-.invalid-link-brackets { display: none; }  /* hide [[ ]] */
+.invalid-link-brackets { display: none; }             /* hide [[ ]] */
 
-/* External links only: add ↗ */
-a:not(.internal-link):not(.footnote):not(.reversefootnote)
-  :not([href^="#"]):not([href^="/"]):not([href^="{{ site.baseurl }}/"])::after {
-  content: "↗";
-  position: relative;
-  top: -0.35em;
-  font-size: 0.7em;
-  color: #aaaaaa;
-  margin-left: 2px;
-}
-
-/* Optional: inside the footer, never show arrows (you already have this) */
+/* 5) Footer never shows arrows */
 .site-footer a::after { content: none !important; }
+
+/* 6) Focus (keyboard) — subtle, no background fill */
+a:focus {
+  outline: 2px dotted $color-accent-blue;
+  outline-offset: 2px;
+  background: transparent !important;
+}
 
 *:focus {
   background: #ffe8bc !important;
