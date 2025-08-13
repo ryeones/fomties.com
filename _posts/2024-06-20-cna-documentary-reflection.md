@@ -1,5 +1,8 @@
 ---
 title: what does it mean to be grateful
+tags:
+  - reflections
+  - migration
 ---
 ### skepticism to being sold
 

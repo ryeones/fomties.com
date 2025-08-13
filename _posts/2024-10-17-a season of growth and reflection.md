@@ -1,5 +1,7 @@
 ---
 title: a season of growth and reflection
+tags:
+  - reflections
 ---
 this season has been a rollercoaster,
 

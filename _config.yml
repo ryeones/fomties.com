@@ -61,9 +61,7 @@ sass:
 collections:
   notes:
     output: true
-    permalink: /:slug  # keeps your current note URLs (e.g. /my-note)
-    # If you’d rather namespace notes under /notes/, switch to:
-    # permalink: /notes/:slug
+    permalink: /:slug
 
 # -----------------------------
 # Defaults (layouts per type)

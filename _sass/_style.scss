@@ -263,3 +263,39 @@ a[href^="//"]:not(.internal-link):not(.footnote):not(.reversefootnote)::after {
 /* (Optional) Don’t show the arrow for your own domain even if it’s absolute URLs */
 a[href^="https://notes.ryeones.com"]:after,
 a[href^="http://notes.ryeones.com"]:after { content: none !important; }
+
+.post-list { list-style: none; margin: 0; padding: 0; }
+.post-list li { margin: .35rem 0; }
+
+.post-link { 
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.post-date {
+  color: #6f6e69;
+  margin-right: .6rem;
+}
+
+.post-title {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .08em;
+  text-decoration-color: #d4cfbf;
+}
+
+.post-link:hover .post-title {
+  color: #b0cef2;
+  text-decoration-color: currentColor;
+}
+
+.post-link:hover .post-date {
+  color: #b0cef2; /* Date changes colour, but no underline */
+}
+
+.theme-dark .post-date { color: #9a9996; }
+.theme-dark .post-link:hover .post-title,
+.theme-dark .post-link:hover .post-date {
+  color: #B0CEF2;
+}
+.theme-dark .post-title { text-decoration-color: #666; }

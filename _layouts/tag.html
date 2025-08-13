@@ -1,0 +1,47 @@
+---
+layout: default
+---
+{% comment %}
+Normalize the tag name: prefer page.tag, fall back to page.title,
+then force lowercase for case-insensitive matching.
+{% endcomment %}
+{% assign wanted = page.tag | default: page.title | downcase %}
+
+<section class="tag-page">
+  <h2 class="tag-breadcrumb">
+    <span class="muted">
+      <a class="internal-link plain" href="{{ '/tags/' | relative_url }}">tags</a>
+    </span>
+    <span> / </span>
+    <span>{{ wanted }}</span>
+  </h2>
+
+  {%- comment -%} Count matches (case-insensitive) {%- endcomment -%}
+  {% assign count = 0 %}
+  {% for post in site.posts %}
+    {% assign ptags = post.tags | join: ',' | downcase | split: ',' %}
+    {% if ptags contains wanted %}
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
+  <p class="muted" style="margin:.25rem 0 1rem">
+    {{ count }} {% if count == 1 %}entry{% else %}entries{% endif %} with this tag
+  </p>
+
+  {% if count == 0 %}
+    <p class="muted">no posts yet.</p>
+  {% else %}
+    <ul class="post-list compact">
+      {% for post in site.posts %}
+        {% assign ptags = post.tags | join: ',' | downcase | split: ',' %}
+        {% if ptags contains wanted %}
+          <li class="post-row">
+            <span class="post-date">{{ post.date | date: "%Y · %m" }}</span>
+            <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</section>
