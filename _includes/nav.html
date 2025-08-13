@@ -1,39 +1,81 @@
 <header class="site-header">
-    <nav class="site-nav font-ui">
-      <!-- left -->
-      <a class="internal-link plain site-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-  
-      <!-- right -->
-      <div class="site-links">
-        <a href="/about" class="internal-link muted plain">about</a>
-        <a href="/now"   class="internal-link muted plain">now</a>
-        <button id="theme-toggle" title="toggle dark mode" aria-label="toggle dark mode" type="button" role="switch">
-          <div class="theme-toggle-slide"></div>
-          <div class="theme-toggle-switch"></div>
-        </button>
-      </div>
-    </nav>
-  </header>
-  
-  <!-- theme toggle logic -->
-  <script>
-  (function () {
-    const root = document.documentElement;
-    const btn  = document.getElementById('theme-toggle');
-  
-    function setMode(mode) {
-      root.classList.toggle('theme-dark', mode === 'dark');
-      btn.setAttribute('aria-checked', String(mode === 'dark'));
-      localStorage.theme = mode;
+  <nav class="site-nav font-ui">
+    <!-- left -->
+    <a class="internal-link plain site-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+    <!-- right -->
+    <div class="site-links">
+      <a href="/about" class="internal-link muted plain">about</a>
+      <a href="/now"   class="internal-link muted plain">now</a>
+      <button id="theme-toggle"
+              title="toggle dark mode"
+              aria-label="toggle dark mode"
+              type="button"
+              role="switch"
+              aria-checked="false">
+        <div class="theme-toggle-slide"></div>
+        <div class="theme-toggle-switch"></div>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Theme toggle (button + "t" key) -->
+<script>
+(function initThemeToggle() {
+  const STORAGE_KEY = 'theme';
+  const root = document.documentElement;
+
+  function setMode(mode) {
+    const dark = (mode === 'dark');
+    root.classList.toggle('theme-dark', dark);
+    // Update button state if it exists
+    const btn = document.getElementById('theme-toggle');
+    if (btn) btn.setAttribute('aria-checked', String(dark));
+    localStorage.setItem(STORAGE_KEY, mode);
+  }
+
+  function currentMode() {
+    return root.classList.contains('theme-dark') ? 'dark' : 'light';
+  }
+
+  function toggleMode() {
+    setMode(currentMode() === 'dark' ? 'light' : 'dark');
+  }
+
+  // Apply saved or system mode immediately
+  const saved = localStorage.getItem(STORAGE_KEY);
+  const initial = saved ? saved :
+    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  setMode(initial);
+
+  // Attach listeners once DOM is ready (defensive in case this file is moved)
+  function wireUp() {
+    const btn = document.getElementById('theme-toggle');
+    if (btn && !btn._wired) {
+      btn.addEventListener('click', toggleMode);
+      btn._wired = true; // avoid double-binding
     }
-  
-    const initial = localStorage.theme
-      ? localStorage.theme
-      : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    setMode(initial);
-  
-    btn.addEventListener('click', () => {
-      setMode(root.classList.contains('theme-dark') ? 'light' : 'dark');
-    });
-  })();
-  </script>
+
+    // Keyboard shortcut: "t"
+    if (!window._themeKeyWired) {
+      window.addEventListener('keydown', (e) => {
+        const tag = (e.target.tagName || '').toLowerCase();
+        if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+        if (tag === 'input' || tag === 'textarea' || e.target.isContentEditable) return;
+        if (e.key && e.key.toLowerCase() === 't') {
+          e.preventDefault();
+          toggleMode();
+        }
+      });
+      window._themeKeyWired = true;
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wireUp);
+  } else {
+    wireUp();
+  }
+})();
+</script>

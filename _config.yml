@@ -1,44 +1,102 @@
-title:               fomties™
-include:             ['_pages']
-exclude:             ['_includes/notes_graph.json']
-# You may need to change the base URL depending on your deploy configuration.
-baseurl:             ''
+# =========================
+# Site identity
+# =========================
+title:               "fomties™"
+description:         "musings as i figure out my twenties by ryan tham."
+url:                 "https://notes.ryeones.com"   # <- change if different
+baseurl:             ""                            # subpath, e.g. "/blog" (empty if at root)
 
-# If you are using a host that cannot resolve URLs that do
-# not end with .html (such as Neocities), set this to 'true'.
-use_html_extension:  false
+author:
+  name:  "ryan tham"
+  email: "ryan@ryeones.com"
 
-# Set to `true` to open non-internal links in new tabs, or
-# set to `false` to open non-internal links in current tab.
-open_external_links_in_new_tab: true
+# Optional social (used in <head> and footer/elsewhere if you reference them)
+social:
+  twitter:  "itsryeones"
+  instagram: "ryeones"
+  github:   "ryeones"
+  x:        "itsryeones"   # alias if you reference it
 
-# Set to `true` to replace tweet URLs with Twitter embeds.
-# Note that doing so will negatively the reader's privacy
-# as their browser will communicate with Twitter's servers.
-embed_tweets: false
+# =========================
+# Build & content
+# =========================
+include:             ["_pages"]                     # treat `_pages` as site content
+exclude:             ["_includes/notes_graph.json"] # raw graph data (not a page)
 
 permalink:           pretty
 relative_permalinks: false
+use_html_extension:  false
 
-plugins:
-  - jekyll-last-modified-at
-  - jekyll-feed
-  
+# Markdown & code
+markdown:            kramdown
+highlighter:         rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+# Sass/CSS
 sass:
   sass_dir:          _sass
-  style:            :compressed
+  style:             :compressed
 
+# =========================
+# Behavior toggles
+# =========================
+open_external_links_in_new_tab: true
+embed_tweets: false
+
+# =========================
+# Collections
+# =========================
 collections:
   notes:
     output: true
     permalink: /:slug
 
+# If you also keep long-form blog posts in _posts/, nothing special is required.
+# (Jekyll handles posts by default.)
+
+# =========================
+# Plugins
+# =========================
+plugins:
+  - jekyll-last-modified-at
+  - jekyll-feed
+
+# jekyll-feed: include notes + posts in the feed if you want
+feed:
+  path: feed.xml
+  collections:
+    - posts
+    - notes
+
+# =========================
+# Defaults (front matter fallbacks)
+# =========================
 defaults:
+  # All content gets layout "default" unless overridden below
   - scope:
       path: "**/*"
     values:
       layout: "default"
+
+  # Notes get the dedicated note layout (graph, backlinks, etc.)
   - scope:
       path: "_notes/**/*.md"
     values:
       layout: "note"
+      is_note: true
+
+  # Optional: pages in _pages/ use default unless you override per-file
+  - scope:
+      path: "_pages/**/*.md"
+    values:
+      layout: "default"
+
+# =========================
+# Misc
+# =========================
+# If you ever deploy under a subfolder, update baseurl and use this:
+#   url: "https://yourdomain.com"
+#   baseurl: "/subfolder"
