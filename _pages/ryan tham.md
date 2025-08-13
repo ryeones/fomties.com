@@ -1,6 +1,6 @@
 ---
 layout: page
-title: index
+title: ryan tham
 id: home
 permalink: /
 ---
@@ -16,7 +16,7 @@ this project is built upon a couple of [[personal values]] i hold dearly to.
 
 so these notes are written for myself to aid my thinking, learning and creativity.
 
-<strong>Recently updated notes</strong>
+<strong>recently updated notes</strong>
 
 <ul>
   {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}

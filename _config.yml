@@ -17,86 +17,82 @@ social:
   github:   "ryeones"
   x:        "itsryeones"   # alias if you reference it
 
-# =========================
-# Build & content
-# =========================
-include:             ["_pages"]                     # treat `_pages` as site content
-exclude:             ["_includes/notes_graph.json"] # raw graph data (not a page)
-
+# -----------------------------
+# Build
+# -----------------------------
 permalink:           pretty
 relative_permalinks: false
+
+include:             ["_pages"]
+exclude:             ["_includes/notes_graph.json"]
+
 use_html_extension:  false
 
-# Markdown & code
-markdown:            kramdown
-highlighter:         rouge
-kramdown:
-  input: GFM
-  hard_wrap: false
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-
-# Sass/CSS
-sass:
-  sass_dir:          _sass
-  style:             :compressed
-
-# =========================
-# Behavior toggles
-# =========================
 open_external_links_in_new_tab: true
-embed_tweets: false
+embed_tweets:        false
 
-# =========================
-# Collections
-# =========================
-collections:
-  notes:
-    output: true
-    permalink: /:slug
+timezone: "UTC"
 
-# If you also keep long-form blog posts in _posts/, nothing special is required.
-# (Jekyll handles posts by default.)
-
-# =========================
+# -----------------------------
 # Plugins
-# =========================
+# -----------------------------
 plugins:
   - jekyll-last-modified-at
   - jekyll-feed
 
-# jekyll-feed: include notes + posts in the feed if you want
+# jekyll-feed settings: only publish blog posts (not notes) to /feed.xml
 feed:
   path: feed.xml
-  collections:
-    - posts
-    - notes
+  # By default jekyll-feed only includes posts.
+  # If you ever add custom collections to the feed, list them here:
+  # collections:
+  #   - posts
 
-# =========================
-# Defaults (front matter fallbacks)
-# =========================
+# -----------------------------
+# Sass/CSS
+# -----------------------------
+sass:
+  sass_dir: _sass
+  style:    :compressed
+
+# -----------------------------
+# Collections
+# -----------------------------
+collections:
+  notes:
+    output: true
+    permalink: /:slug  # keeps your current note URLs (e.g. /my-note)
+    # If you’d rather namespace notes under /notes/, switch to:
+    # permalink: /notes/:slug
+
+# -----------------------------
+# Defaults (layouts per type)
+# -----------------------------
 defaults:
-  # All content gets layout "default" unless overridden below
   - scope:
       path: "**/*"
     values:
       layout: "default"
 
-  # Notes get the dedicated note layout (graph, backlinks, etc.)
   - scope:
       path: "_notes/**/*.md"
     values:
       layout: "note"
-      is_note: true
 
-  # Optional: pages in _pages/ use default unless you override per-file
   - scope:
-      path: "_pages/**/*.md"
+      path: "_posts/*"
     values:
-      layout: "default"
+      layout: "post"
+      # Optional: set categories/tags defaults here if you like
+      # categories: ["writing"]
 
-# =========================
-# Misc
-# =========================
-# If you ever deploy under a subfolder, update baseurl and use this:
-#   url: "https://yourdomain.com"
-#   baseurl: "/subfolder"
+# -----------------------------
+# Markdown / excerpts (optional nice defaults)
+# -----------------------------
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Show teaser/preview by splitting content with this marker
+excerpt_separator: "\n\n<!--more-->\n\n"
