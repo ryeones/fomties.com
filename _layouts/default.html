@@ -9,5 +9,43 @@
     </div>
 
     {% include link-previews.html wrapperQuerySelector="content" %}
+
+    <script>
+(function () {
+  const KEY = 't';                       // <— change this letter if you want
+  const STORAGE_KEY = 'theme';
+  const root = document.documentElement; // the <html> element
+  const btn  = document.getElementById('theme-toggle');
+
+  function apply(theme) {
+    if (theme === 'dark') root.classList.add('theme-dark');
+    else root.classList.remove('theme-dark');
+    if (btn) btn.setAttribute('aria-pressed', theme === 'dark');
+    localStorage.setItem(STORAGE_KEY, theme);
+  }
+  function current() { return root.classList.contains('theme-dark') ? 'dark' : 'light'; }
+  function toggle() { apply(current() === 'dark' ? 'light' : 'dark'); }
+
+  // on load: use saved theme (if any)
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) apply(saved);
+
+  // keep the button working
+  if (btn) btn.addEventListener('click', toggle);
+
+  // keyboard shortcut
+  window.addEventListener('keydown', (e) => {
+    // ignore typing in inputs / editors and modifier combos
+    const tag = (e.target.tagName || '').toLowerCase();
+    if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+    if (tag === 'input' || tag === 'textarea' || e.target.isContentEditable) return;
+
+    if (e.key.toLowerCase() === KEY) {
+      e.preventDefault();
+      toggle();
+    }
+  });
+})();
+</script>
   </body>
 </html>
