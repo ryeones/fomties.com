@@ -17,13 +17,20 @@ previously, i studied architecture at the national university of singapore and p
 **-quick links-**
 
 [[about]]
+
 [[creations]]
+
 [portfolio](https://www.ryeones.com/work)
+
 [[notes]]
+
 [[library]]
+
 [[videos]]
+
 [[press]]
-[[fomties™| fomties]]
+
+[[fomties™]]
 
 **-how to get around this site-**
 
