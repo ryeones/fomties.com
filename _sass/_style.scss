@@ -13,13 +13,13 @@ body {
   font-family: $font-family;
   margin: 0 auto;
   line-height: 1.7;
-  padding: clamp(16px, 3vh, 28px) clamp(12px, 3vw, 28px);
+  padding: 4vh 6vw;
   overflow-x: hidden;
   color: $color-text;
   background-color: hsl(43, 68%, 94%); // #FAF4E5
   font-size: 1rem;
-  max-width: 63em; /* or 60–66em for comfort */
-  
+  max-width: 37em;
+
   @media (min-width: 820px) {
     font-size: 1.2rem;
   }
@@ -110,6 +110,19 @@ nav {
   margin: 1em 0 3em;
 }
 
+#notes-entry-container {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-areas:
+    "content"
+    "side";
+
+  @media (min-width: 700px) {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "content side";
+  }
+}
+
 .backlink-box {
   background: $color-box-background;
   padding: 1em;
@@ -147,7 +160,7 @@ code {
 
 /* Footer container: align left, not centered */
 .footer-wrap {
-  max-width: 63em;
+  max-width: 37em;
   margin: 0;              /* was 0 auto */
   text-align: left;
 }
@@ -262,7 +275,7 @@ code {
   margin-bottom: 2rem;
 }
 .site-nav {
-  max-width: 63em;                 /* 63em for wider header */
+  max-width: 37em;                 /* 63em for wider header */
   margin: 0 auto;
   padding: 1rem 0;
   display: flex;
