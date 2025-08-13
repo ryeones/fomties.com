@@ -4,34 +4,33 @@
 
     <p class="small muted">
       follow me via
-      <a class="plain" href="mailto:ryan@ryeones.com">email</a>,
+      <a class="plain" href="mailto:ryan@ryeones.com" aria-label="email ryan">email</a>,
       <a class="plain" href="/feed.xml">rss</a>,
       <a class="plain" href="https://twitter.com/itsryeones" rel="me">x</a>,
       <a class="plain" href="https://instagram.com/ryeones" rel="me">instagram</a>,
       and <a class="plain" href="/subscribe">other options</a>.
     </p>
 
-    <form
-      action="https://app.convertkit.com/forms/8382182/subscriptions"
-      class="seva-form formkit-form subscribe-inline"
-      method="post"
-      data-sv-form="8382182"
-      data-uid="1a29e628cb"
-      data-format="inline"
-      data-version="5"
-      data-options='{"settings":{"after_subscribe":{"action":"redirect","redirect_url":"https://notes.ryeones.com/success"}}}'>
-      
-      <input class="formkit-input" type="email" name="email_address"
-             placeholder="enter your email" aria-label="email address" required>
-      <button class="formkit-submit" type="submit">sign up</button>
+   <!-- convertkit inline form -->
+<form
+  action="https://app.convertkit.com/forms/8382182/subscriptions"
+  class="seva-form formkit-form subscribe-inline"
+  method="post"
+  data-sv-form="8382182"
+  data-uid="1a29e628cb"
+  data-format="inline"
+  data-version="5"
+  data-options='{"settings":{"after_subscribe":{"action":"redirect","success_message":"","redirect_url":"https://notes.ryeones.com/success"}}}'>
+  <input class="formkit-input" type="email" name="email_address"
+         placeholder="enter your email" aria-label="email address" required>
+  <button class="formkit-submit" type="submit">sign up</button>
+</form>
 
-      <!-- required for JS -->
-      <div class="formkit-response" data-element="response"></div>
-    </form>
+<!-- must load the ConvertKit JS to make form work -->
+<script async src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 
-    <script async src="https://f.convertkit.com/ckjs/ck.5.js"></script>
-
-    <a href="/about" class="footer-logo-link">
+    <!-- logo linking to about -->
+    <a href="/about" aria-label="about me" class="footer-logo-link">
       <img src="/assets/images/fomt.jpeg" alt="fomt logo" class="footer-logo">
     </a>
   </div>

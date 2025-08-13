@@ -1,6 +1,6 @@
 ---
 layout: page
-title: home
+title: index
 id: home
 permalink: /
 ---

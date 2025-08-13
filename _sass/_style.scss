@@ -60,22 +60,10 @@ a:hover {
   color: $color-accent-blue !important;
   text-decoration-color: $color-accent-blue !important;
 }
-/* remove any global arrow; we’ll add only for externals */
-a::after { content: none !important; }
 
 /* Internal links / footnotes: underline only (no arrow) */
 a.internal-link, a.footnote, a.reversefootnote { text-decoration: underline; }
 a.internal-link::after, a.footnote::after, a.reversefootnote::after { content: "" !important; }
-
-/* External links only: add ↗ (inherits hover color) */
-a[href^="http"]:not(.internal-link):not(.footnote):not(.reversefootnote)::after {
-  content: "↗";
-  font-size: .75em;
-  position: relative;
-  top: -.35em;
-  margin-left: .15em;
-  color: inherit;
-}
 
 /* Ghost/uncreated notes: grey + dotted, never blue */
 .invalid-link {
@@ -113,7 +101,6 @@ code { background: #f5f5f5; padding: .1em .2em; border-radius: 4px; }
 /* ---- Footer & subscribe ---- */
 .site-footer { border-top: 1px solid $color-border; margin: 4rem 0 2rem; padding-top: 1.5rem; font-size: .9em; color: mix($color-text, white, 75%); }
 .footer-wrap { max-width: 37em; margin: 0; text-align: left; }
-.site-footer a::after { content: none !important; }
 .footer-logo-link { display: inline-block; border: 0; }
 .footer-logo { max-height: 40px; display: block; margin: 1.25rem 0 0; border-radius: 50%; }
 
@@ -252,3 +239,27 @@ code { background: #f5f5f5; padding: .1em .2em; border-radius: 4px; }
   color: inherit !important;
   text-decoration-color: #888;
 }
+
+/* External-link arrow (works everywhere, including .plain) */
+a[href^="http://"]:not(.internal-link):not(.footnote):not(.reversefootnote)::after,
+a[href^="https://"]:not(.internal-link):not(.footnote):not(.reversefootnote)::after,
+a[href^="//"]:not(.internal-link):not(.footnote):not(.reversefootnote)::after {
+  content: "↗";
+  font-size: 0.75em;
+  position: relative;
+  top: -0.35em;
+  margin-left: 0.15em;
+  color: currentColor;
+  display: inline-block;
+}
+
+/* Put the arrow back inside the footer (overrides your footer reset) */
+.site-footer a[href^="http://"]:not(.internal-link):not(.footnote):not(.reversefootnote)::after,
+.site-footer a[href^="https://"]:not(.internal-link):not(.footnote):not(.reversefootnote)::after,
+.site-footer a[href^="//"]:not(.internal-link):not(.footnote):not(.reversefootnote)::after {
+  content: "↗" !important;
+}
+
+/* (Optional) Don’t show the arrow for your own domain even if it’s absolute URLs */
+a[href^="https://notes.ryeones.com"]:after,
+a[href^="http://notes.ryeones.com"]:after { content: none !important; }

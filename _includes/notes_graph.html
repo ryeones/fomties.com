@@ -1,25 +1,56 @@
 <style>
-  .links line {
-    stroke: #ccc;
-    opacity: 0.5;
+  /* Light theme */
+  @media (prefers-color-scheme: light) {
+    .links line {
+      stroke: #b0cef2; /* other notes */
+      opacity: 0.5;
+    }
+    .nodes circle {
+      cursor: pointer;
+      fill: #b0cef2; /* other notes */
+      transition: all 0.15s ease-out;
+    }
+    .nodes [active],
+    .text [active] {
+      cursor: pointer;
+      fill: #333333; /* current note */
+    }
+    .text text {
+      cursor: pointer;
+      fill: #b0cef2;
+    }
+    #graph-wrapper {
+      background: #faf4e5; /* graph background */
+      border-radius: 4px;
+      height: auto;
+    }
   }
 
-  .nodes circle {
-    cursor: pointer;
-    fill: #8b88e6;
-    transition: all 0.15s ease-out;
-  }
-
-  .text text {
-    cursor: pointer;
-    fill: #333;
-    text-shadow: -1px -1px 0 #fafafabb, 1px -1px 0 #fafafabb, -1px 1px 0 #fafafabb, 1px 1px 0 #fafafabb;
-  }
-
-  .nodes [active],
-  .text [active] {
-    cursor: pointer;
-    fill: black;
+  /* Dark theme */
+  @media (prefers-color-scheme: dark) {
+    .links line {
+      stroke: #b0cef2;
+      opacity: 0.5;
+    }
+    .nodes circle {
+      cursor: pointer;
+      fill: #b0cef2;
+      transition: all 0.15s ease-out;
+    }
+    .nodes [active],
+    .text [active] {
+      cursor: pointer;
+      fill: #faf4e5; /* current note */
+    }
+    .text text {
+      cursor: pointer;
+      fill: #b0cef2;
+    }
+    #graph-wrapper {
+      background: #333333;
+      border-radius: 4px;
+      height: auto;
+    }
   }
 
   .inactive {
@@ -27,18 +58,11 @@
     transition: all 0.15s ease-out;
   }
 
-  #graph-wrapper {
-    background: #fcfcfc;
-    border-radius: 4px;
-    height: auto;
-  }
-  
   #graph-wrapper > svg {
     max-width: 100%;
     display: block;
   }
 </style>
-
 <div id="graph-wrapper">
   <script>
     window.addEventListener("load", loadGraph);
