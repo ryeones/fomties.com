@@ -77,29 +77,81 @@ h6 {
   padding-bottom: 0;
 }
 
+/* --- LINK STYLES (Kepano-like, blue hover) --- */
+
+/* Accent blue used on hover */
+$color-accent-blue: hsl(210, 80%, 40%);
+
+/* Base links: simple underline, no background box */
 a {
-  transition: background 300ms;
-  padding: 0 0.1em;
-  text-decoration: none;
-  border-bottom: 1px solid $color-border;
   color: $color-primary;
-  &:hover {
-    color: black !important;
-    background: #fffaf1;
-  }
-  &:after {
-    position: relative;
-    top: -0.5em;
-    font-size: 0.7em;
-    content: "↗";
-    color: #aaaaaa;
-  }
-  &.internal-link:after,
-  &.footnote:after,
-  &.reversefootnote:after {
-    content: "";
-  }
+  text-decoration: underline;
+  text-underline-offset: .08em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: $color-border;     /* subtle underline by default */
+  border: 0;
+  padding: 0;
+  background: transparent;
+  transition: color 200ms ease, text-decoration-color 200ms ease;
 }
+a:hover {
+  color: $color-accent-blue !important;      /* blue text on hover */
+  background: transparent;                   /* no beige block */
+  text-decoration-color: $color-accent-blue; /* underline turns blue too */
+}
+
+/* Internal wiki links + footnotes: underline only (no arrow) */
+a.internal-link,
+a.footnote,
+a.reversefootnote {
+  text-decoration: underline;
+}
+a.internal-link::after,
+a.footnote::after,
+a.reversefootnote::after {
+  content: "";
+}
+
+/* External links (not internal, not footnotes, not hashes, not local paths):
+   show a ↗ and let it inherit the hover color */
+a:not(.internal-link):not(.footnote):not(.reversefootnote)
+ [href]:not([href^="#"]):not([href^="/"])::after {
+  content: "↗";
+  font-size: .75em;
+  position: relative;
+  top: -.45em;
+  margin-left: .15em;
+  color: inherit; /* turns blue on hover automatically */
+}
+
+/* Ghost/uncreated notes: lighter + dotted, also turn blue on hover */
+.invalid-link {
+  color: mix($color-text, white, 50%);
+  background: transparent;
+  padding: 0;
+  cursor: not-allowed;
+  text-decoration: none;
+  border-bottom: 1px dotted $color-border;
+}
+.invalid-link:hover {
+  color: $color-accent-blue;
+  border-bottom-color: $color-accent-blue;
+}
+.invalid-link-brackets { display: none; }  /* hide [[ ]] */
+
+/* External links only: add ↗ */
+a:not(.internal-link):not(.footnote):not(.reversefootnote)
+  :not([href^="#"]):not([href^="/"]):not([href^="{{ site.baseurl }}/"])::after {
+  content: "↗";
+  position: relative;
+  top: -0.35em;
+  font-size: 0.7em;
+  color: #aaaaaa;
+  margin-left: 2px;
+}
+
+/* Optional: inside the footer, never show arrows (you already have this) */
+.site-footer a::after { content: none !important; }
 
 *:focus {
   background: #ffe8bc !important;
