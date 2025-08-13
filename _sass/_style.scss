@@ -1,13 +1,21 @@
-/* --- theme colours (HSL) --- */
+/* =======================
+   Fomties — Base Styles
+   (drop in as a full replacement)
+   ======================= */
+
+/* ---- Tokens ---- */
 $color-primary: hsl(0, 3%, 6%);        // #100f0f
-$color-text: hsl(0, 0%, 20%);           // main body text
-$color-subtext: hsl(50, 3%, 42%);      // #6f6e69 - secondary text
-$color-border: hsl(46, 20%, 79%);      // #d4cfbf - subtle borders/dividers
-$color-box-background: hsl(48, 100%, 97%); // #fffcf0 - light paper background for blocks
+$color-text: hsl(0, 0%, 20%);          // body text
+$color-subtext: hsl(50, 3%, 42%);      // #6f6e69
+$color-border: hsl(46, 20%, 79%);      // #d4cfbf
+$color-box-background: hsl(48, 100%, 97%); // #fffcf0
+$color-accent-blue: #b0cef2;           // link hover/outline
 $border-radius: 4px;
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
   sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
+/* ---- Page background (light) ---- */
+html { background-color: #FAF4E5; }     /* light paper */
 body {
   box-sizing: content-box;
   font-family: $font-family;
@@ -16,121 +24,60 @@ body {
   padding: 4vh 6vw;
   overflow-x: hidden;
   color: $color-text;
-  background-color: hsl(43, 68%, 94%); // #FAF4E5
+  background: transparent;              /* body blends with html */
   font-size: 1rem;
   max-width: 37em;
 
-  @media (min-width: 820px) {
-    font-size: 1.2rem;
-  }
+  @media (min-width: 820px) { font-size: 1.2rem; }
 }
 
-time {
-  display: block;
-  color: $color-subtext;
-  margin: 0.5em 0 1em;
-}
-
-footer {
-  margin: 2em 0;
-  font-size: 0.8em;
-  color: mix($color-text, white, 80%);
-  padding-top: 1em;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-  max-height: 75vh;
-  border-radius: $border-radius;
-}
-
+/* ---- Basics ---- */
+time { display: block; color: $color-subtext; margin: .5em 0 1em; }
+footer { margin: 2em 0; font-size: .8em; color: mix($color-text, white, 80%); padding-top: 1em; }
+img { max-width: 100%; display: block; margin: 0 auto; max-height: 75vh; border-radius: $border-radius; }
 blockquote {
-  padding: 1.5em;
-  margin: 0;
-  font-size: 0.88em;
-  background: $color-box-background;
-  border-radius: $border-radius;
-
-  p {
-    margin: 0;
-  }
+  padding: 1.5em; margin: 0; font-size: .88em; background: $color-box-background; border-radius: $border-radius;
+  p { margin: 0; }
 }
+hr { width: 100%; border: 0; height: 1px; margin: 1.5em 0; background: $color-border; }
+h1,h2,h3,h4,h5,h6 { line-height: 1.3; margin-bottom: 0; padding-bottom: 0; }
 
-hr {
-  width: 100%;
-  border: 0;
-  height: 1px;
-  margin: 1.5em 0;
-  background: $color-border;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.3;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-/* === Link styles (blue hover #b0cef2) === */
-
-/* 0) Accent colour + global reset */
-$color-accent-blue: #b0cef2;
-
-a,
-a:visited {
-  background: transparent !important;   /* no beige/purple block */
-  padding: 0 !important;                /* no boxed look */
-  border: 0 !important;
-}
-
-/* Remove any old universal arrows; we’ll add them back only for externals */
-a::after { content: none !important; }
-
-/* 1) Base link — subtle underline by default */
-a {
+/* =======================
+   Links (Kepano-like)
+   ======================= */
+a, a:visited {
   color: $color-primary;
+  background: transparent !important;   /* no purple/beige box */
+  border: 0 !important;
+  padding: 0 !important;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: .08em;
-  text-decoration-color: $color-border;           /* subtle */
+  text-decoration-color: $color-border; /* subtle by default */
   transition: color 200ms ease, text-decoration-color 200ms ease;
 }
 a:hover {
-  color: $color-accent-blue !important;            /* blue text */
-  text-decoration-color: $color-accent-blue !important; /* blue underline */
-  background: transparent !important;
+  color: $color-accent-blue !important;
+  text-decoration-color: $color-accent-blue !important;
 }
+/* remove any global arrow; we’ll add only for externals */
+a::after { content: none !important; }
 
-/* 2) Internal links (between notes / footnotes): no arrow */
-a.internal-link,
-a.footnote,
-a.reversefootnote {
-  text-decoration: underline;
-}
-a.internal-link::after,
-a.footnote::after,
-a.reversefootnote::after {
-  content: "" !important;
-}
+/* Internal links / footnotes: underline only (no arrow) */
+a.internal-link, a.footnote, a.reversefootnote { text-decoration: underline; }
+a.internal-link::after, a.footnote::after, a.reversefootnote::after { content: "" !important; }
 
-/* 3) External links only: show ↗ and inherit hover colour
-   (anything starting with http/https and not marked as internal) */
+/* External links only: add ↗ (inherits hover color) */
 a[href^="http"]:not(.internal-link):not(.footnote):not(.reversefootnote)::after {
   content: "↗";
   font-size: .75em;
   position: relative;
   top: -.35em;
   margin-left: .15em;
-  color: inherit;  /* turns blue on hover automatically */
+  color: inherit;
 }
 
-/* 4) Ghost/uncreated notes: grey + dotted, do NOT turn blue on hover */
+/* Ghost/uncreated notes: grey + dotted, never blue */
 .invalid-link {
   color: mix($color-text, white, 50%) !important;
   background: transparent !important;
@@ -138,251 +85,170 @@ a[href^="http"]:not(.internal-link):not(.footnote):not(.reversefootnote)::after 
   border-bottom: 1px dotted $color-border !important;
   cursor: not-allowed;
 }
-.invalid-link:hover {
-  color: mix($color-text, white, 50%) !important;     /* stay grey */
-  border-bottom-color: $color-border !important;      /* stay dotted grey */
-}
-.invalid-link-brackets { display: none; }             /* hide [[ ]] */
+.invalid-link:hover { color: mix($color-text, white, 50%) !important; border-bottom-color: $color-border !important; }
+.invalid-link-brackets { display: none; }
 
-/* 5) Footer never shows arrows */
-.site-footer a::after { content: none !important; }
-
-/* 6) Focus (keyboard) — subtle, no background fill */
-a:focus {
-  outline: 2px dotted $color-accent-blue;
-  outline-offset: 2px;
-  background: transparent !important;
-}
-
-*:focus {
-  background: #ffe8bc !important;
-  color: black !important;
-}
-
-nav {
-  margin: 1em 0 3em;
-}
-
+/* =======================
+   Layout bits
+   ======================= */
+nav { margin: 1em 0 3em; }
 #notes-entry-container {
-  display: grid;
-  grid-gap: 2em;
-  grid-template-areas:
-    "content"
-    "side";
-
-  @media (min-width: 700px) {
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: "content side";
-  }
+  display: grid; grid-gap: 2em; grid-template-areas: "content" "side";
+  @media (min-width: 700px) { grid-template-columns: 3fr 1fr; grid-template-areas: "content side"; }
 }
+.backlink-box { background: $color-box-background; padding: 1em; border-radius: $border-radius; }
+code { background: #f5f5f5; padding: .1em .2em; border-radius: 4px; }
 
-.backlink-box {
-  background: $color-box-background;
-  padding: 1em;
-  border-radius: $border-radius;
+/* ---- Header / nav ---- */
+.site-header { border-bottom: 1px solid $color-border; margin-bottom: 2rem; }
+.site-nav {
+  max-width: 37em; margin: 0 auto; padding: 1rem 0;
+  display: flex; align-items: center; justify-content: space-between;
 }
+.site-brand { text-decoration: none; border: 0; font-weight: normal; color: $color-primary; }
+.site-links { display: flex; align-items: center; }
+.site-nav a { border-bottom: 0; text-decoration: none; }
+.site-links a { margin-left: 1rem; }
 
-code {
-  background: #f5f5f5;
-  padding: 0.1em 0.2em;
-  border-radius: 4px;
-}
-
-/* Uncreated notes: lighter colour, no brackets */
-.invalid-link {
-  color: mix($color-text, white, 50%); /* lighter text shade */
-  background: transparent;
-  padding: 0;
-  cursor: pointer; /* optional: keep pointer */
-  border-bottom: 1px dashed $color-border; /* optional: hint it's a link */
-}
-
-.invalid-link-brackets {
-  display: none; /* hide [[ and ]] */
-}
-
-/* page background already set on body; match footer to it */
-.site-footer {
-  background-color: hsl(43, 68%, 94%); /* #FAF4E5 */
-  border-top: 1px solid $color-border;
-  margin: 4rem 0 2rem;
-  padding-top: 1.5rem;
-  font-size: .9em;
-  color: mix($color-text, white, 75%);
-}
-
-/* Footer container: align left, not centered */
-.footer-wrap {
-  max-width: 37em;
-  margin: 0;              /* was 0 auto */
-  text-align: left;
-}
-
-/* No ↗ arrows in the footer */
-.site-footer a::after {
-  content: none !important;
-}
-
-/* Make sure the logo aligns left and ignores global img centring */
-.footer-logo {
-  display: block;
-  max-height: 40px;
-  margin: 1.25rem 0 0 0 !important;  /* ensure no auto margins */
-  border-radius: 50%;
-}
-
-/* -------- ConvertKit inline form (pretty, minimal) -------- */
-.site-footer .formkit-form.subscribe-inline {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
-.site-footer .subscribe-inline {
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-  margin: 1rem 0 2rem;
-}
-
-/* Input: no box, just an underline; full width on desktop */
-.site-footer .subscribe-inline .formkit-input {
-  flex: 1 1 24rem;
-  min-width: 16em;
-  background: transparent !important;
-  color: $color-text !important;
-
-  /* kill CK defaults */
-  border: 0 !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-
-  /* our style */
-  border-bottom: 1px solid $color-border !important;
-  padding: .6rem 0 !important;
-  outline: none !important;
-}
-
-.site-footer .subscribe-inline .formkit-input::placeholder {
-  color: mix($color-text, white, 65%) !important;
-}
-
-.site-footer .subscribe-inline .formkit-input:focus {
-  border-bottom-color: $color-primary !important;
-}
-
-/* Button: compact, dark, rounded */
-.site-footer .subscribe-inline .formkit-submit {
-  appearance: none !important;
-  border: 0 !important;
-  background: $color-primary !important;
-  color: #fff !important;
-  padding: .55rem 1rem !important;
-  line-height: 1 !important;
-  border-radius: $border-radius !important;
-  cursor: pointer !important;
-  white-space: nowrap !important;
-  box-shadow: none !important;
-}
-
-.site-footer .subscribe-inline .formkit-submit:hover {
-  filter: brightness(.95);
-}
-
-/* Hide “Powered by Kit” if CK injects it */
-.site-footer .formkit-powered-by,
-.site-footer .formkit-powered-by-convertkit-container {
-  display: none !important;
-}
-
-/* Mobile: stack neatly */
-@media (max-width: 600px) {
-  .site-footer .subscribe-inline {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: .5rem;
-  }
-  .site-footer .subscribe-inline .formkit-input {
-    flex-basis: 100%;
-  }
-}
-
-/* If you still see a different background tone, force it transparent */
-.site-footer,
-.footer-wrap,
-.subscribe-inline,
-.formkit-form { background: transparent; }
-
-@media (max-width: 600px) {
-  .subscribe-inline { flex-direction: column; align-items: flex-start; }
-}
-
-/* footer logo */
+/* ---- Footer & subscribe ---- */
+.site-footer { border-top: 1px solid $color-border; margin: 4rem 0 2rem; padding-top: 1.5rem; font-size: .9em; color: mix($color-text, white, 75%); }
+.footer-wrap { max-width: 37em; margin: 0; text-align: left; }
+.site-footer a::after { content: none !important; }
 .footer-logo-link { display: inline-block; border: 0; }
 .footer-logo { max-height: 40px; display: block; margin: 1.25rem 0 0; border-radius: 50%; }
 
-/* Header / nav */
-.site-header {
-  border-bottom: 1px solid $color-border;
-  margin-bottom: 2rem;
+/* ConvertKit inline form */
+.site-footer .formkit-form.subscribe-inline { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; }
+.site-footer .subscribe-inline { display: flex; align-items: center; gap: .75rem; margin: 1rem 0 2rem; }
+.site-footer .subscribe-inline .formkit-input {
+  flex: 1 1 24rem; min-width: 16em; background: transparent !important; color: $color-text !important;
+  border: 0 !important; box-shadow: none !important; border-radius: 0 !important;
+  border-bottom: 1px solid $color-border !important; padding: .6rem 0 !important; outline: none !important;
 }
-.site-nav {
-  max-width: 37em;                 /* 63em for wider header */
-  margin: 0 auto;
-  padding: 1rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  /* left title | right links */
+.site-footer .subscribe-inline .formkit-input::placeholder { color: mix($color-text, white, 65%) !important; }
+.site-footer .subscribe-inline .formkit-input:focus { border-bottom-color: $color-primary !important; }
+.site-footer .subscribe-inline .formkit-submit {
+  appearance: none !important; border: 0 !important; background: $color-primary !important; color: #fff !important;
+  padding: .55rem 1rem !important; line-height: 1 !important; border-radius: $border-radius !important; cursor: pointer !important; white-space: nowrap !important; box-shadow: none !important;
 }
-/* brand */
-.site-brand {
-  text-decoration: none;
-  border: 0;
-  font-weight: normal;
-  color: $color-primary;
+.site-footer .subscribe-inline .formkit-submit:hover { filter: brightness(.95); }
+.site-footer .formkit-powered-by,
+.site-footer .formkit-powered-by-convertkit-container { display: none !important; }
+@media (max-width: 600px) {
+  .site-footer .subscribe-inline { flex-direction: column; align-items: flex-start; gap: .5rem; }
+  .site-footer .subscribe-inline .formkit-input { flex-basis: 100%; }
 }
-/* right group */
-.site-links { display: flex; align-items: center; }
-/* remove underline in header; arrows already removed via .internal-link */
-.site-nav a { border-bottom: 0; text-decoration: none; }
-/* spacing */
-.site-links a { margin-left: 1rem; }
-#theme-toggle   { margin-left: 1rem; }
 
-/* theme toggle visuals */
-#theme-toggle {
-  height: 20px;
-  width: 36px;
-  display: inline-block;
-  position: relative;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-.theme-toggle-slide {
-  height: 20px;
-  border: 1px solid $color-border;
-  border-radius: 24px;
-  width: 100%;
-  position: absolute;
-  background: mix($color-text, white, 92%);
-}
-.theme-toggle-switch {
-  position: absolute;
-  z-index: 1;
-  top: 1px;
-  left: 1px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: $color-text;
-  transition: left 120ms linear, background 120ms linear;
-}
-.theme-dark .theme-toggle-slide { background: mix($color-text, white, 15%); }
-.theme-dark .theme-toggle-switch { left: 17px; background: mix($color-text, white, 90%); }
+/* =======================
+   Dark theme (html.theme-dark)
+   ======================= */
+.theme-dark,
+.theme-dark html,
+.theme-dark body { background-color: #333333; color: #FAF4E5; }
 
-@media (max-width: 700px) {
-  .site-nav { padding: .75rem 0; }
-  .site-links a { margin-left: .75rem; }
+.theme-dark .site-header,
+.theme-dark .site-footer,
+.theme-dark .site-nav,
+.theme-dark .wrapper,
+.theme-dark footer { background: transparent !important; }
+
+.theme-dark .site-header { border-bottom: 1px solid #555; }
+.theme-dark .site-footer { border-top:    1px solid #555; }
+.theme-dark hr           { background:    #555; }
+
+.theme-dark a { color: #FAF4E5; text-decoration-color: #666; background: transparent; }
+.theme-dark a:hover { color: #B0CEF2; text-decoration-color: #B0CEF2; }
+
+/* Ghost notes on dark */
+.theme-dark .invalid-link { color: #BDBDBD !important; border-bottom-color: #666 !important; }
+.theme-dark .invalid-link:hover { color: #B0CEF2 !important; border-bottom-color: #B0CEF2 !important; }
+
+/* Footer form on dark */
+.theme-dark .subscribe-inline .formkit-input {
+  color: #FAF4E5 !important; border-bottom: 1px solid #666 !important; background: transparent !important;
+}
+.theme-dark .subscribe-inline .formkit-input::placeholder { color: #BDBDBD !important; }
+.theme-dark .subscribe-inline .formkit-submit { background: #FAF4E5 !important; color: #333333 !important; }
+
+
+/* =======================
+   Theme toggle (clean)
+   ======================= */
+/* HTML:
+<button id="theme-toggle" type="button" role="switch" aria-label="toggle dark mode">
+  <span class="theme-toggle-slide"></span>
+  <span class="theme-toggle-switch"></span>
+</button>
+*/
+
+#theme-toggle{
+  display:inline-block;
+  vertical-align:middle;
+  position:relative;
+  width:40px; height:22px;
+  border:0; padding:0; margin-left:1rem;
+  background:transparent; cursor:pointer;
+  line-height:0;
+}
+.theme-toggle-slide{
+  position:absolute; inset:0;
+  border-radius:9999px;
+  background:transparent;
+  border:1px solid $color-border;
+}
+.theme-toggle-switch{
+  position:absolute; top:2px; left:2px;
+  width:18px; height:18px; border-radius:50%;
+  background:$color-text;                 /* dark knob in light theme */
+  transition:left 150ms linear, background 150ms linear, color 150ms linear;
+  color:#FAF4E5;                          /* icon color in light mode */
+}
+/* tiny icon centered inside the knob (uses SVG masks for crisp look) */
+.theme-toggle-switch::before{
+  content:'';
+  position:absolute; left:50%; top:50%;
+  width:12px; height:12px; transform:translate(-50%,-50%);
+  background: currentColor;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1Zm0 9a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm6.364 2.95.707.707a1 1 0 1 0 1.414-1.414l-.707-.707a1 1 0 0 0-1.414 1.414Z"/></svg>') center/contain no-repeat;
+          mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1Zm0 9a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm6.364 2.95.707.707a1 1 0 1 0 1.414-1.414l-.707-.707a1 1 0 0 0-1.414 1.414Z"/></svg>') center/contain no-repeat;
+}
+/* Dark mode: slide right, invert colors, moon icon */
+.theme-dark .theme-toggle-slide { border-color:#575653; }
+.theme-dark .theme-toggle-switch{
+  left:20px; background:#FAF4E5; color:#333333;
+}
+.theme-dark .theme-toggle-switch::before{
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>') center/contain no-repeat;
+          mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>') center/contain no-repeat;
+}
+
+/* =======================
+   Link preview popover (light + dark)
+   ======================= */
+
+/* light */
+#popover-wrapper{
+  background: #FFFCF0 !important;   /* paper */
+  color: $color-primary !important;
+  border: 1px solid $color-border !important;
+  border-radius: 6px !important;
+  box-shadow: 0 5px 20px rgba(16,15,15,.2) !important;
+}
+#popover-content{ color: inherit !important; }
+#popover-content a{
+  color: inherit !important;
+  text-decoration: underline;
+  text-decoration-color: $color-border;
+}
+
+/* dark */
+.theme-dark #popover-wrapper{
+  background: #2b2b2b !important;   /* dark card */
+  color: #FAF4E5 !important;
+  border: 1px solid #555 !important;
+  box-shadow: 0 5px 20px rgba(0,0,0,.65) !important;
+}
+.theme-dark #popover-content a{
+  color: inherit !important;
+  text-decoration-color: #888;
 }
