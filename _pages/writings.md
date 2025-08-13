@@ -15,3 +15,20 @@ these are the things i wanna tell my younger self, in no particular order.
 
 [[a season of growth and reflection]]
 [[what does it mean to be grateful]]
+
+<ul>
+
+  {% for post in site.posts %}
+
+    <li>
+
+      <a href="{{ post.url }}">{{ post.title }}</a>
+
+    </li>
+
+  {% endfor %}
+
+</ul>
+
+  
+
