@@ -299,3 +299,10 @@ a[href^="http://notes.ryeones.com"]:after { content: none !important; }
   color: #B0CEF2;
 }
 .theme-dark .post-title { text-decoration-color: #666; }
+
+.topics a {
+  margin-right: 0.25em;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+

@@ -40,14 +40,16 @@
     .nodes [active],
     .text [active] {
       cursor: pointer;
-      fill: #faf4e5; /* current note */
+      fill: #333333; /* current note */
     }
     .text text {
       cursor: pointer;
       fill: #b0cef2;
+      text-shadow: -1px -1px 0 #faf4e5bb, 1px -1px 0 #faf4e5bb,
+                   -1px 1px 0 #faf4e5bb, 1px 1px 0 #faf4e5bb;
     }
     #graph-wrapper {
-      background: #333333;
+      background: #faf4e5;
       border-radius: 4px;
       height: auto;
     }

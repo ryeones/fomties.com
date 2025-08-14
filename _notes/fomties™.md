@@ -11,4 +11,4 @@ idea came out on 30th july official at 715pm
 
 have also secured the [domain](https://www.fomties.com) as well as relevant [social handles](https://www.instagram.com/fomties) for future use depending on how it evolves.
 
-at the moment, fomties™ is this [[ryan tham|current site]] where i share my thoughts and learnings in public, under a subdomain of my [personal brand](https://www.ryeones.com).
+at the moment, fomties™ is this [[home|current site]] where i share my thoughts and learnings in public, under a subdomain of my [personal brand](https://www.ryeones.com).
