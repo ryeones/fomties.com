@@ -40,12 +40,20 @@ permalink: /changelog
 - fix width/alignment issue where some pages cut off mid-way
     
 - fix tag page so individual tags render with correct css instead of raw html
-    
-- fix convertkit sign-up success message / redirect behaviour
-    
+- fix rss feed path from /feed.xml → /feed (workaround still not working)
 
 ---
+## **v0.5.0 – 2025-08-18**
 
+  
+
+`changed`
+
+- switched convertkit form submission to beehiiv
+    
+- edited success page content after signup
+
+---
 ## **v0.4.0 – 2025-08-15**
 
   

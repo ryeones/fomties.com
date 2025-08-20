@@ -42,7 +42,7 @@ plugins:
 
 # jekyll-feed settings: only publish blog posts (not notes) to /feed.xml
 feed:
-  path: feed.xml
+  path: feed
   # By default jekyll-feed only includes posts.
   # If you ever add custom collections to the feed, list them here:
   # collections:
@@ -94,3 +94,4 @@ kramdown:
 
 # Show teaser/preview by splitting content with this marker
 excerpt_separator: "\n\n<!--more-->\n\n"
+
