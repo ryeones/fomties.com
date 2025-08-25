@@ -7,3 +7,4 @@ as what was coined in [[atomic habits]] by [[james clear]], [[you don't rise to 
 and the fact of the matter is that there is no one way, definitely no perfect template. we like to buy the next template the creator already has, but the thing is it may or may not work for us. we buy a couple more and we see if it fits. 
 
 it is the systems we curate and create for ourselves, by [[steal like an artist|stealing like an artist]].
+
