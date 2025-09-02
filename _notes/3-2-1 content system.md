@@ -1,18 +1,15 @@
 ---
 categories:
   - notes
-created:
-  "{ date }":
 url:
 author:
   - "[[Me]]"
-published:
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
-title: insert title
+title: 3-2-1 content system
 ---
 [[3-2-1 back up rule]] is a system that is widely used nowadays.
 

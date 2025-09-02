@@ -4,7 +4,6 @@ categories:
   - notes
 author:
   - "[[Me]]"
-published:
 status:
 attribution:
   - na yeong seok

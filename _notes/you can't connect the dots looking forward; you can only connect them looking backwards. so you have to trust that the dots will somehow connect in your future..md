@@ -12,7 +12,6 @@ categories:
   - notes
 author:
   - "[[Me]]"
-published:
 status:
 ---
 this quote is interesting because its the first time i'm using the [[noma framework]] when note-making.

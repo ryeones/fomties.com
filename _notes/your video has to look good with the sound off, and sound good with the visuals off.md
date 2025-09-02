@@ -12,6 +12,5 @@ categories:
   - notes
 author:
   - "[[Me]]"
-published:
 status:
 ---
