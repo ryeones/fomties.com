@@ -28,6 +28,7 @@ exclude:
   - "_includes/notes_graph.json"
   - "+ sources"
   - "+ sources/*"
+  - "+ sources/readwise/*"
 
 
 use_html_extension:  false
