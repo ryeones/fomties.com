@@ -24,7 +24,9 @@ permalink:           pretty
 relative_permalinks: false
 
 include:             ["_pages"]
-exclude:             ["_includes/notes_graph.json"]
+exclude:
+  - "_includes/notes_graph.json"
+  - "+ sources/readwise"
 
 use_html_extension:  false
 
