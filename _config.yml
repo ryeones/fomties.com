@@ -26,7 +26,9 @@ relative_permalinks: false
 include:             ["_pages"]
 exclude:
   - "_includes/notes_graph.json"
-  - "+ sources/readwise"
+  - "+ sources"
+  - "+ sources/*"
+
 
 use_html_extension:  false
 
