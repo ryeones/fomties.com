@@ -5,23 +5,14 @@ layout: default
 <article>
   <div>
     <h1>{{ page.title }}</h1>
-{% assign ts = nil %}
-{% if page.last_modified_at %}
-  {% assign ts = page.last_modified_at %}
-{% elsif page.date %}
-  {% assign ts = page.date %}
-{% endif %}
-
-{% if ts %}
-  <time datetime="{{ ts | date_to_xmlschema }}">
+<time datetime="{{ page.last_modified_at | date_to_xmlschema }}">
+  {% if page.type != 'pages' %}
     {%- comment -%} reading time: ~200 wpm, rounded up {%- endcomment -%}
     {%- assign words = content | strip_html | replace:'&nbsp;',' ' | replace:'  ',' ' | split:' ' | size -%}
     {%- assign minutes = words | plus: 199 | divided_by: 200 -%}
-    {% unless page.type == 'pages' %}
-      last updated on {{ ts | date: "%B %-d, %Y" | downcase }} • {{ minutes }} min read
-    {% endunless %}
-  </time>
-{% endif %}
+    last updated on {{ page.last_modified_at | date: "%B %-d, %Y" | downcase }} • {{ minutes }} min read
+  {% endif %}
+</time>
   </div>
 
   <div id="notes-entry-container">

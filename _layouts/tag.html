@@ -37,11 +37,7 @@ then force lowercase for case-insensitive matching.
         {% assign ptags = post.tags | join: ',' | downcase | split: ',' %}
         {% if ptags contains wanted %}
           <li class="post-row">
-  {% if post.date %}
-    <span class="post-date">{{ post.date | date: "%Y · %m" }}</span>
-  {% else %}
-    <span class="post-date">undated</span>
-  {% endif %}
+  <span class="post-date">{{ post.date | date: "%Y · %m" }}</span>
   <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
 </li>
         {% endif %}

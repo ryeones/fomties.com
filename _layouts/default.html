@@ -5,18 +5,6 @@
   <body unresolved>
     <nav>{% include nav.html %}</nav>
     <div class="wrapper">
-
-      {%- comment -%} safe last-updated block (skips if blank or "{}") {%- endcomment -%}
-      {%- assign ts = page.last_modified_at | default: page.date -%}
-      {%- assign ts_s = ts | append: '' -%}
-      {%- if ts_s != '' and ts_s != '{}' -%}
-        <time datetime="{{ ts | date_to_xmlschema }}">
-          {%- if page.collection == 'posts' or page.collection == 'notes' -%}
-            last updated on {{ ts | date: "%B %-d, %Y" | downcase }}
-          {%- endif -%}
-        </time>
-      {%- endif -%}
-
       <main>{{ content }}</main>
       <footer>{% include footer.html %}</footer>
     </div>
