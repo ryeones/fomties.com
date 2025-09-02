@@ -1,0 +1,42 @@
+filters:
+  and:
+    - note.categories.contains(link("Albums"))
+    - '!file.name.contains("Template")'
+display:
+  file.name: Album
+  note.year: Year
+  note.artist: Artist
+  note.created: Added
+  note.rating: Rating
+  note.genre: Genre
+views:
+  - type: table
+    name: Albums
+    order:
+      - file.name
+      - artist
+      - rating
+      - year
+      - genre
+  - type: table
+    name: Artist
+    filters:
+      and:
+        - list(artist).contains(this)
+    order:
+      - file.name
+      - artist
+      - rating
+      - year
+      - genre
+  - type: table
+    name: Genre
+    filters:
+      and:
+        - list(genre).contains(this)
+    order:
+      - file.name
+      - artist
+      - rating
+      - year
+      - genre

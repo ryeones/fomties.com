@@ -7,4 +7,3 @@ permalink: /about
 
 [[hey, i'm ryan|about me]]
 
-![[assets/bases/test.base]]

@@ -1,0 +1,23 @@
+properties:
+  file.name:
+    displayName: title
+  note.status:
+    displayName: status
+  note.published:
+    displayName: published
+views:
+  - type: table
+    name: All
+    filters:
+      and:
+        - list(categories).contains(link("posts"))
+        - '!file.name.contains("Template")'
+    order:
+      - file.name
+      - status
+      - published
+    sort:
+      - property: status
+        direction: ASC
+      - property: published
+        direction: DESC

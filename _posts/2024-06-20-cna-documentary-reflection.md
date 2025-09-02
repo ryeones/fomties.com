@@ -3,6 +3,11 @@ title: what does it mean to be grateful
 tags:
   - reflections
   - migration
+categories:
+  - "[[posts]]"
+published: 2024-06-20
+status:
+  - "[[published]]"
 ---
 ### skepticism to being sold
 

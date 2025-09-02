@@ -1,0 +1,2 @@
+"for we walk by faith, not by sight." - nkjv
+

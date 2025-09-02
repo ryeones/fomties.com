@@ -40,24 +40,6 @@ class BidirectionalLinksGenerator < Jekyll::Generator
         current_doc.content.gsub!( /\[\[(#{filename_pattern})\]\]/i, anchor_tag )
       end
 
-      # --- .base embeds:  ![[file.base]]  or  ![[file.base|height:420]] ---
-current_doc.content.gsub!(
-  /!\[\[([^\|\]]+\.base)(?:\|height:(\d+))?\]\]/i
-) do
-  fname  = Regexp.last_match(1)
-  height = (Regexp.last_match(2) || "420")
-  src    = "#{site.baseurl}/assets/bases/#{fname}"
-  <<~HTML.delete("\n")
-    <div class="base-embed-wrap">
-      <iframe class="base-embed" src="#{src}" loading="lazy"
-              style="width:100%;height:#{height}px;border:0;"></iframe>
-      <div class="base-embed-actions">
-        <a class="plain" href="#{src}" download>download #{fname}</a>
-      </div>
-    </div>
-  HTML
-end
-
       # Any remaining [[...]] are missing/hidden: mark invalid
       current_doc.content = current_doc.content.gsub(
         /\[\[([^\]]+)\]\]/i,

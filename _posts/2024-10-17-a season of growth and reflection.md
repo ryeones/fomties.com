@@ -2,6 +2,11 @@
 title: a season of growth and reflection
 tags:
   - reflections
+categories:
+  - "[[posts]]"
+status:
+  - "[[published]]"
+published: 2024-10-17
 ---
 this season has been a rollercoaster,
 

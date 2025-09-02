@@ -1,0 +1,249 @@
+- [[2025-08-25]] 9:57 PM — Synced 1295 highlights from 244 documents.
+    - 1 highlights from The Art of Persuasive Storytelling | Kelly D. Parker
+    - 3 highlights from Codie Sanchez —  They're Lying to You About How to Get Rich! How to Turn $1,000 Into $1M! Hard Work Doesn't Build Wealth!
+    - 2 highlights from The Breakthrough Power of Young Leaders | Mohan Sivaloganathan
+    - 1 highlights from An Anthem for Peace and Justice From Israeli and Palestinian Youth |  Jerusalem Youth Chorus
+    - 1 highlights from Projects Over Categories
+    - 31 highlights from The PARA Method: The Simple System for Organizing Your Digital Life in Seconds
+    - 1 highlights from Tweets From Chris Donnelly
+    - 1 highlights from One pattern I've noticed in all happy, successful people:
+    - 3 highlights from Tweets From Alex Finn
+    - 1 highlights from Tweets From Withoutname
+    - 2 highlights from From Notion to Obsidian, and Back to Notion
+    - 1 highlights from Tweets From Reads With Ravi
+    - 17 highlights from Nothing but Apple Notes: Exploring Hidden Features
+    - 12 highlights from Reacting to Mean Online Comments About Me
+    - 1 highlights from I Can Finally Tell You About Readwise Reader.
+    - 22 highlights from All the Ways to Structure Your Notes
+    - 65 highlights from Building a Second Brain
+    - 6 highlights from How to Build a Profitable Personal Brand
+    - 1 highlights from Quick Passages
+    - 1 highlights from Moment 177: You're NOT Lazy! This Is the REAL Reason You Procrastinate: The Performance Doctor
+    - 2 highlights from Better Pockets
+    - 8 highlights from How My Second Brain Saved My Life
+    - 11 highlights from From Chaos to Clarity: How Daily Notes Help You Stay Focused
+    - 17 highlights from The Digital Minimalist’s Complete Guide to Information Management in Apple Ecosystem
+    - 12 highlights from Pick a Notes App: Your Notetaking Style
+    - 13 highlights from 8 Types of Interview Formats You Need to Prepare For
+    - 5 highlights from We Tried the AI Software Companies Like Goldman Sachs and Unilever Use to Analyze Job Applicants
+    - 30 highlights from Is Being Fat a Choice? Fit Men vs Fat Men | Middle Ground
+    - 20 highlights from Just Use Apple Notes.
+    - 5 highlights from Tell Me About Yourself - Good Answer to This Tough Interview Question
+    - 25 highlights from 100% Penang
+    - 4 highlights from Designing Your Career: The Networking Reframe
+    - 7 highlights from My 20 Favorite Apple Mail Tips & Features
+    - 8 highlights from The Problem of Two Worlds
+    - 4 highlights from To Thy Values Be True
+    - 4 highlights from Invest in Your Health, Money Without Health to Enjoy, Is Useless
+    - 6 highlights from Grow Your Wealth 8 Forms of Capital
+    - 12 highlights from What Is Inflation?
+    - 2 highlights from What Is Compound Interest? | Investopedia
+    - 5 highlights from Can Money Buy Security?
+    - 3 highlights from Detours of Life
+    - 6 highlights from Getting to Know REITs for Beginners
+    - 3 highlights from The Risks of Investing in Cryptocurrency I Fortune
+    - 1 highlights from Warren Buffett : Ted Williams: Science of Hitting.
+    - 1 highlights from NUS Internship-as-a-Service - Student Guide
+    - 4 highlights from For the Love of Meat - A Film by Impossible Foods - Narrated by Founder Pat Brown
+    - 4 highlights from Virtual Reality Could Make Healthcare More Pleasant - The Medical Futurist
+    - 9 highlights from The Futuristic Farms That Will Feed the World | Freethink | Future of Food
+    - 4 highlights from Dollar Cost Averaging (DCA) and Lump Sum Investing Defined, Explained & Compared in One Minute
+    - 3 highlights from How Do Robo-Advisors Work?
+    - 6 highlights from 5 Essential iPhone Apps to Organize Your Tasks and Notes
+    - 17 highlights from Memory Expert Answers Questions From Twitter | Tech Support | WIRED
+    - 2 highlights from 5 Whys You Should Move From Bear
+    - 13 highlights from My Minimalist Personal Knowledge Management System (PKMS)
+    - 10 highlights from Crazy Rich Asians' Director Breaks Down a Scene | Notes on a Scene | Vanity Fair
+    - 8 highlights from What Is the Difference Between RGB and CMYK?
+    - 14 highlights from Virtual Tour of PANTONE Color Factory | TEALEAVES  #PaletteForYourPalate
+    - 6 highlights from Infographics & Information Design | Graphic Design
+    - 34 highlights from The Ultimate Guide to File Organization: 5 Systems You Must Know
+    - 22 highlights from What to Know About Social Media Addiction
+    - 45 highlights from 7 Brand Strategy Examples
+    - 30 highlights from Branding 101: How to Build a Strategic Brand in 2024
+    - 2 highlights from Learn Brand Strategy in 25 Minutes
+    - 3 highlights from Discounted Cash Flow
+    - 24 highlights from The DCF Model Explained - How the Pros Value Stocks/Businesses
+    - 9 highlights from What Is Growth Investing?
+    - 1 highlights from Tweets From Maggie Appleton
+    - 5 highlights from The Making of Apple’s Emoji: How Designing These Tiny Icons Changed My Life
+    - 1 highlights from Who ❋ Needs Words ✎ When You ➰Have Symbols❓
+    - 15 highlights from Epistemic Statuses Are Lazy, and That Is a Good Thing
+    - 21 highlights from Failing at Normal: An ADHD Success Story | Jessica McCabe | TEDxBratislava
+    - 7 highlights from If You're Ambitious but Lazy, Please Watch This Video…
+    - 21 highlights from Why I Write a Newsletter
+    - 9 highlights from On Whining
+    - 1 highlights from Tweets From Alex Becker
+    - 1 highlights from Tweets From Bo | 53a🅿️es.eth
+    - 1 highlights from Tweets From Sora ✨
+    - 2 highlights from 12 Principles of Animation
+    - 15 highlights from Narrative
+    - 62 highlights from sharing by design.indd
+    - 474 highlights from Yvonne_Rogers_Helen_Sharp_Jennifer_Preece_-_Interaction_Design__Beyond_
+    - 3 highlights from Tweets From MATT GRAY
+    - 0 highlights from ☕ No appetite
+    - 0 highlights from Routines for ADHD that ACTUALLY WORK! 🌛☀️ (Morning/Night routines)
+    - 0 highlights from ☕ Predictions
+    - 0 highlights from ☕ Après-fee
+    - 0 highlights from ☕ Fresh ’fits
+    - 0 highlights from 🧑‍🏫 Day 6: Elevate Your Presentations with 5 Slides
+    - 0 highlights from ☕ Clipped wings
+    - 0 highlights from Apple Mail: Power User Tips & Hidden Features (iOS & iPadOS)
+    - 0 highlights from Tiago Forte | Building a Second Brain | Talks at Google
+    - 0 highlights from Get 25% Off and First Dibs on Workspace Academy – Act Now!
+    - 0 highlights from ☕ End of year quiz
+    - 0 highlights from CS50 FULL REVIEW  - Best Course to Learn Computer Science in 2022? (edX, Harvard)
+    - 0 highlights from The Strangest Secret
+    - 0 highlights from Building a meaningful life in Notion
+    - 0 highlights from The Fastest Path To $10K/Month Writing Online (2025)
+    - 0 highlights from Automating Backups with Notion's API
+    - 0 highlights from ☕️ The big switch
+    - 0 highlights from Progressive Summarization Explained | Building a Second Brain Course Preview
+    - 0 highlights from ☕️ It’s giving lemons
+    - 0 highlights from The One-Person Business Model (How To Productize Yourself)
+    - 0 highlights from Start 2025 Strong with 30% Off Workspace Academy!
+    - 0 highlights from The Most Useful iOS Shortcut for Obsidian (and Beyond!) Revisited
+    - 0 highlights from A system to organise projects
+    - 0 highlights from 👀 Hello? Is anybody there?
+    - 0 highlights from Why Apple Notes is a Go-To Solution for Managing Digital Information?
+    - 0 highlights from Smelling Colors: Our Brains Associate Odors With Color — Fruity Smells Are Pink
+    - 0 highlights from A Brief History & Ethos of the Digital Garden
+    - 0 highlights from The Simplest Way To Organise Files | Best Practice
+    - 0 highlights from Make Time
+    - 0 highlights from ☕️ Begrudging acceptance
+    - 0 highlights from ☕ Big Switch
+    - 0 highlights from Become a Mail PRO with this iPhone tutorial!
+    - 0 highlights from Overview
+    - 0 highlights from Quick Question—What Held You Back?
+    - 0 highlights from The Second Mountain: The Quest for a Moral Life
+    - 0 highlights from 🗓️ Day 2: Google Calendar Tips to Save You Hours
+    - 0 highlights from The Almanack of Naval Ravikant: A Guide to Wealth and Happiness
+    - 0 highlights from How I track tasks with Obsidian
+    - 0 highlights from 📧 Day 1: Essential Gmail Filters for Focus
+    - 0 highlights from Warren Buffett - The Greatest Investor of All Time (Investor Profile)
+    - 0 highlights from How I remember everything I read with Readwise
+    - 0 highlights from ☕ Going overboard
+    - 0 highlights from Inside Ali Abdaal's Second Brain System
+    - 0 highlights from My System for Superhuman Productivity (the DART System)
+    - 0 highlights from 📄 Day 4: The Only Notes Template You’ll Ever Need
+    - 0 highlights from NextDraft is Coming
+    - 0 highlights from Kindle Highlights Convert to Apple Notes: The Ultimate Migration Guide
+    - 0 highlights from How I Take Notes for Computer Science using NOTION
+    - 0 highlights from What Most People Get Wrong about Task Management
+    - 0 highlights from Mohnish Pabrai’s Spawner Stocks Framework – How To Find 10 to 100 Bagger Stocks
+    - 0 highlights from Mac Finder Go To Folder Advanced Tips
+    - 0 highlights from ☕ Pet Brew
+    - 0 highlights from Daily Driver Task Management System
+    - 0 highlights from Peter Lynch Stock Screener - How To Find Stocks Like Peter Lynch
+    - 0 highlights from More To That - How to Discover Great Ideas.pdf
+    - 0 highlights from How to Choose Your Second Brain App
+    - 0 highlights from Dive into anything
+    - 0 highlights from What Type of Note-Taker Are You? | Choose Your Perfect Note-Taking App
+    - 0 highlights from Automating File Management Saves You Hours Every Week
+    - 0 highlights from ☕ The list of lists
+    - 0 highlights from Sync your Obsidian Vault on iOS with GitHub, Working Copy, and Apple Shortcuts
+    - 0 highlights from Explained | The Stock Market | FULL EPISODE | Netflix
+    - 0 highlights from 48 Hours Left to Start 2025 Strong (Save 30%)
+    - 0 highlights from The 48 laws of power
+    - 0 highlights from Struggling to manage projects? This Notion workshop is for you
+    - 0 highlights from The Practice: Shipping Creative Work
+    - 0 highlights from atomic-habits-visual-summary_2
+    - 0 highlights from My complete Obsidian workflow to manage my life
+    - 0 highlights from Please confirm your subscription
+    - 0 highlights from Can Entrepreneurship Be Taught? Richard Branson’s Mother Says Yes
+    - 0 highlights from Workspace Academy: Not for Everyone
+    - 0 highlights from Quantum computing for the very curious
+    - 0 highlights from Are Men Superior To Women? Alphas v. Betas | Middle Ground
+    - 0 highlights from ☕️ Caution: Morning Brew coming in hot
+    - 0 highlights from ☕️ Toilet time
+    - 0 highlights from The Diary of a CEO: The 33 Laws of Business and Life
+    - 0 highlights from Designers -You Should Include Obsidian In Your Design Process
+    - 0 highlights from The 4-Hour Workweek , Escape the 9-5, Live Anywhere and Join the New Rich
+    - 0 highlights from ☕ Turbo mode
+    - 0 highlights from ☕ Getting animated
+    - 0 highlights from Obsidian vs. handwritten notes
+    - 0 highlights from Mohnish Pabrai’s Q&A with The CFA Society of Mexico on August 17, 2022
+    - 0 highlights from Who Put Pantone in Charge of Color?
+    - 0 highlights from The Digital Minimalist’s Complete Guide to Information Management in Apple Ecosystem
+    - 0 highlights from Show Your Work!
+    - 0 highlights from The Pathless Path
+    - 0 highlights from I Got Married and Moved to Hong Kong! (Life Update)
+    - 0 highlights from Getting Started with Reader
+    - 0 highlights from Mastering the Art of Learning ‼️
+    - 0 highlights from Advice on turning current workflow into a zettelkasten workflow?
+    - 0 highlights from ☕ Ceasefire
+    - 0 highlights from Help Us Choose the Next Workshop Topic!
+    - 0 highlights from Peter Lynch - 6 Stocks Categories Give You Answers When To Buy Or Sell A Stock
+    - 0 highlights from Discover all Obsidian plugins with the latest updates, trending plugins, and the most downloaded ones. Stay informed about the best plugins to enhance your Obsidian experience.
+    - 0 highlights from 📁 Day 3: Supercharge your Google Drive workflow
+    - 0 highlights from Money matters: How to grow your CPF savings
+    - 0 highlights from Adventures With Anxiety! 😱🐺
+    - 0 highlights from The 3 Alarms
+    - 0 highlights from ☕ Crime-fighting vacuum
+    - 0 highlights from Million Dollar Weekend
+    - 0 highlights from The 3-2-1 Backup Strategy
+    - 0 highlights from Trackpad Won’t Click!
+    - 0 highlights from Living a Google-Free Digital Life: The Why and the How
+    - 0 highlights from 📈 Day 5: Run Effective Team Meetings in Google Sheets
+    - 0 highlights from (Engineering) Project Management in Obsidian
+    - 0 highlights from ☕ So many jobs
+    - 0 highlights from ☕ Turnaround Brew
+    - 0 highlights from Learn Brand Strategy In 17 Minutes (2023 Crash Course)
+    - 0 highlights from Your Manager Will Thank You for This Upgrade
+    - 0 highlights from I’d Love To Hear Your Thoughts 👀
+    - 0 highlights from The Rubber Duck Story
+    - 0 highlights from The Leitner Box—How to Remember Anything Forever
+    - 0 highlights from The Secret to My Success at Work (It’s Not What You Think)
+    - 0 highlights from ☕ Bye, bots
+    - 0 highlights from No More Mr. Nice Guy!
+    - 0 highlights from ☕ Fannie and Freddie
+    - 0 highlights from ☕ Pictures of the year
+    - 0 highlights from 🌲The Konik Method for Making Useful Notes
+    - 0 highlights from ‪@stephango.com‬
+    - 0 highlights from Vote now: What topic should I cover in the next workshop?
+    - 0 highlights from Mohnish Pabrai’s Lecture, Q&A with students of Peking Univ. (Guanghua School of Mgmt.)–Dec. 3, 2020
+    - 0 highlights from 🤖 Day 7: Must-use Google Gemini Prompts
+    - 0 highlights from The Secret Power of ‘Read It Later’ Apps
+    - 0 highlights from ☕ Day 1
+    - 0 highlights from How I shipped my new design portfolio under 5 hours
+    - 0 highlights from Maximizing Productivity with Obsidian: My Second Brain for Organizing Work Notes
+    - 0 highlights from ☕ We're Going on a Break
+    - 0 highlights from ☕ We’ve got good news
+    - 0 highlights from ☕ Coin flip
+    - 0 highlights from Tasks -V- Events: Why there’s an important distinction. | by Carl Pul…
+    - 0 highlights from ☕ The Golden Mug Awards
+    - 0 highlights from Reminder: Jeff’s Notion workshop on project management
+    - 0 highlights from How to Grow an Audience if You Have 0 Followers
+    - 0 highlights from Life Management System Comparison
+    - 0 highlights from The Art and Business of Online Writing: How to Beat the Game of Capturing and Keeping Attention
+    - 0 highlights from Tasks -V- Events: Why there’s an important distinction.
+    - 0 highlights from ☕️ Bigger bundles
+    - 0 highlights from This is a tutorial explaining how to manage books and summaries in Obsidian, including how to create a list and a gallery of books
+    - 0 highlights from GitHub - RyotaUshio/obsidian-pdf-plus: The most Obsidian-native PDF annotation, viewing & editing tool ever. Comes with optional Vim keybindings.
+    - 0 highlights from ☕ The Betas have arrived
+    - 0 highlights from From architecture to marketing: Was it worth it?
+    - 0 highlights from Learning in public with Personal Knowledge Management
+    - 0 highlights from How to use Hashtags effectively?
+    - 0 highlights from How to Take Smart Notes. One Simple Technique to Boost Writing,  Learning and Thinking
+    - 0 highlights from What is Rebranding? 6 Best Rebranding Examples & 4 Top Strategies
+    - 0 highlights from Jeff, I’m Interested, But I’ve Got One Question…
+    - 0 highlights from Into the mind of designer & founder, Andy Allen
+    - 0 highlights from When You Should Switch Your Second Brain App (And When You Shouldn’t)
+    - 0 highlights from Reader: Frequently Asked Questions
+    - 0 highlights from Dan Mian’s Post
+    - 0 highlights from Capture, Organize, Retrieve: Master Note-Taking with Google Keep
+    - 0 highlights from How to Implement PARA in Your Favorite Notetaking App
+    - 0 highlights from The Best Book I’ve Ever Read About Financial Freedom
+    - 0 highlights from Stop Procrastinating With Note-Taking Apps Like Obsidian, Roam, Logseq
+    - 0 highlights from From Apple Notes to Notion to Obsidian to Craft
+    - 0 highlights from 🙌 Complete your sign up to The Coin Currents!
+    - 0 highlights from Sold Out! Stay Tuned for More Exciting Content!
+    - 0 highlights from Capture To Do. How I Manage Literally All My Tasks in Obsidian
+    - 0 highlights from Last Chance to Optimize Your Workflow!
+    - 0 highlights from The Ultimate Guide to Summarizing Books: How to Distill Ideas to Accelerate Your Learning
+    - 0 highlights from Crash Course Computer Science Preview
+    - 0 highlights from Gemini for Productivity Workshop: Unlock the Power of AI!
+- [[2025-08-28]] 1:02 AM — Synced 0 highlights from 0 documents.
+- [[2025-08-29]] 11:41 PM — Synced 0 highlights from 0 documents.
+- [[2025-09-02]] 9:07 AM — Synced 0 highlights from 0 documents.
+
