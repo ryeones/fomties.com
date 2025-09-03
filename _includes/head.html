@@ -39,10 +39,10 @@
   {%- elsif site.og_image -%}
     <meta property="og:image" content="{{ site.url }}{{ site.og_image }}">
   {%- endif -%}
-  {%- if page.date -%}
-    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-    <meta property="article:author" content="{{ site.url }}/">
-  {%- endif -%}
+ {%- if page.date and page.date != empty -%}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="article:author" content="{{ site.url }}/">
+{%- endif -%}
 
   {%- comment -%}
   Twitter cards
