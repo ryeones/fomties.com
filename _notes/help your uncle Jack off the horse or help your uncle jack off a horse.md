@@ -7,6 +7,7 @@ tags:
   - quotes
 topics: []
 via:
+title: help your uncle Jack off the horse or help your uncle jack off a horse
 ---
 *this is the only note in my vault that will break one of my [[creative constraints]] of lowercase.*
 

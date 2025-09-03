@@ -1,14 +1,14 @@
 ---
 categories:
 created: 2025-08-31
-url: 
+url:
 author:
-published: 
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: curiosity makes the heart yearn
 ---
 
 cleavage and low cut

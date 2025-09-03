@@ -11,6 +11,7 @@ author: []
 url:
 rating: 6
 last: 2025-08-26
+title: seaweed chicken + porridge + pork belly
 ---
 ## things you'll need
 - japanese chicken seaweed

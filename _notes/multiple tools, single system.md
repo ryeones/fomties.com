@@ -3,12 +3,12 @@ categories:
 created: 2025-08-11
 url:
 author:
-published:
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: multiple tools, single system
 ---
 *decide on how to link to [[systems over templates]]*
 

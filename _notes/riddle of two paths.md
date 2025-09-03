@@ -3,12 +3,12 @@ categories:
 created: 2025-08-31
 url: https://www.youtube.com/watch?v=q0pQh69iPWA&ab_channel=LinkingYourThinkingwithNickMilo
 author:
-published:
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: riddle of two paths
 ---
 this riddle had me wracking my brain for awhile.
 
@@ -24,3 +24,4 @@ and you can only ask one question to on of the troll.
 
 who, and what will be the question you ask?
 
+this was first heard from the [[Linking Your Thinking with Nick Milo – This Secret Principle Will Transform Your Notes]] talk

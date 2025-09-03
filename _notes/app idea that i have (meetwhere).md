@@ -1,14 +1,14 @@
 ---
 categories:
 created: 2025-08-31
-url: 
+url:
 author:
-published: 
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: app idea that i have (meetwhere)
 ---
 was thinking about an app (in the context of singapore first)
 

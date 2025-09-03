@@ -1,14 +1,14 @@
 ---
 categories:
 created: 2025-09-02
-url: 
+url:
 author:
-published: 
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: clusters cause tension, and tension is required for resolution
 ---
 this was from [[Linking Your Thinking with Nick Milo – This Secret Principle Will Transform Your Notes]] talk at the pkm summit, where nick milo was sharing about how mocs can be useful when you start to group notes together in your garden as part of a higher order note.
 

@@ -3,12 +3,12 @@ categories:
 created: 2025-08-11
 url:
 author:
-published:
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: systems over templates
 ---
 i was down the rabbit hole of analog journaling recently and i reflected how my adhd nature has often made me dive into these corners of the internet.
 

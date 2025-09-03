@@ -3,12 +3,12 @@ categories:
 created: 2025-08-11
 url:
 author:
-published:
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: aesthetic is a creative constraint
 ---
 https://stephango.com/style
 

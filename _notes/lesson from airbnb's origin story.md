@@ -3,12 +3,12 @@ categories:
 created: 2025-09-02
 url:
 author:
-published:
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: lesson from airbnb's origin story
 ---
 i've heard of the [[airbnb origin story]] before, but it was brought up again recently during my first day at work at [[seek sophie]]
 

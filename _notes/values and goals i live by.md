@@ -1,17 +1,15 @@
 ---
 categories:
 created: 2025-08-31
-url: 
+url:
 author:
-published: 
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: values and goals i live by
 ---
-
-
 
 _things that i have picked up over the years that i really want to remember and follow_
 

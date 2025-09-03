@@ -2,6 +2,7 @@
 created: 2025-08-26
 tags:
   - 0🌲
+title: notemaking process to publish
 ---
 i need to find a streamline way from having an idea to publishing and working on the ideas
 

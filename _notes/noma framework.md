@@ -5,10 +5,10 @@ tags:
 categories:
 url:
 author:
-published:
 topics:
   - "[[Evergreen]]"
 status:
+title: noma framework
 ---
 
 a [[noma]] framework prompt by [[nick milo]] that allows us to be more of a [[note maker]] instead of a [[note taker]]. 

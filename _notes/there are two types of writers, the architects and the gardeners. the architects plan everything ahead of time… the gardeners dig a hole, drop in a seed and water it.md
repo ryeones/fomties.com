@@ -7,4 +7,5 @@ tags:
   - quotes
 topics: []
 via:
+title: there are two types of writers, the architects and the gardeners. the architects plan everything ahead of time… the gardeners dig a hole, drop in a seed and water it
 ---

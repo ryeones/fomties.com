@@ -1,14 +1,14 @@
 ---
 categories:
 created: 2025-08-31
-url: 
+url:
 author:
-published: 
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: creative constraints
 ---
 
 i first heard about a similar term from a blog post by [[Steph Ango]] called [style is consistent constraint](https://stephango.com/style) and i started looking back at my life, and realised that this isn't something completely new.

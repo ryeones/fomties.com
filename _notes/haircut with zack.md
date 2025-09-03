@@ -3,12 +3,12 @@ categories:
 created: 2025-08-31
 url:
 author:
-published:
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: haircut with zack
 ---
 0.5 fade for normal / 0 for holidays or want shorter 
 

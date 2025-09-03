@@ -3,12 +3,12 @@ categories:
 created: 2025-08-11
 url:
 author:
-published:
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: rule of 3 losses
 ---
 the idea of when to cut loses and not go on an entire tilt.
 

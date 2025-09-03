@@ -3,12 +3,12 @@ categories:
 created: 2025-08-11
 url:
 author:
-published:
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: a place to brainstorm, a place to create and a place to publish
 ---
 this is related to my note on [[multiple tools, single system]]
 

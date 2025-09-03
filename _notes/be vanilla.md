@@ -1,14 +1,14 @@
 ---
 categories:
 created: 2025-08-31
-url: 
+url:
 author:
-published: 
 topics:
   - "[[Evergreen]]"
 tags:
   - 0🌲
 status:
+title: be vanilla
 ---
 https://stephango.com/vanilla
 

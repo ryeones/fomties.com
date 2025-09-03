@@ -16,6 +16,22 @@ git commit -m 'Update content'
 git push -u origin main
 ```
 
+```
+cd ~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/my-digital-garden-ic
+
+
+bundle exec jekyll serve --livereload --port 4000
+  
+
+git add --all
+  
+
+git commit -m 'Update content'
+  
+
+git push -u origin main
+```
+
 1. the first line navigates to my vault folder on my computer
 2. the second line creates a preview on my local host
 	1. this allows me to make changes in obsidian or vscode without having to fully push to github for changes on my actual domain

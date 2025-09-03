@@ -3,7 +3,6 @@ categories:
 created: 2025-09-02
 url:
 author:
-published:
 topics:
   - "[[Evergreen]]"
 tags:
@@ -13,6 +12,7 @@ status:
 attribution: []
 source:
 via:
+title: architects vs gardeners in interpersonal relationships
 ---
 this was inspired by [[Linking Your Thinking with Nick Milo – This Secret Principle Will Transform Your Notes]] in his comments section.
 

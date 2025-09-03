@@ -2,6 +2,7 @@
 created: 2025-08-31
 tags:
   - 0🌲
+title: note templates for templater
 ---
 
 as mentioned by [[nick milo]] [[linking your thinking]] video series and his [original forum post](https://forum.obsidian.md/t/the-ultimate-folder-system-a-quixotic-journey-to-ace/63483), ideas and knowledge are often organised by the acronym [[stir]] , which was originally created by *include speaker name* as the term [[latch]]
