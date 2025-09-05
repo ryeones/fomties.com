@@ -5,20 +5,15 @@
       stroke: #b0cef2; /* other notes */
       opacity: 0.5;
     }
-    .nodes circle {
-      cursor: pointer;
-      fill: #b0cef2; /* other notes */
-      transition: all 0.15s ease-out;
-    }
-    .nodes [active],
-    .text [active] {
-      cursor: pointer;
-      fill: #333333; /* current note */
-    }
-    .text text {
-      cursor: pointer;
-      fill: #b0cef2;
-    }
+  .nodes circle {
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+}
+/* no fill here – JS sets it */
+.text text {
+  cursor: pointer;
+  /* no fill here – JS sets it */
+}
     #graph-wrapper {
       background: #faf4e5; /* graph background */
       border-radius: 4px;
@@ -34,7 +29,6 @@
     }
     .nodes circle {
       cursor: pointer;
-      fill: #b0cef2;
       transition: all 0.15s ease-out;
     }
     .nodes [active],
@@ -44,12 +38,11 @@
     }
     .text text {
       cursor: pointer;
-      fill: #b0cef2;
       text-shadow: -1px -1px 0 #faf4e5bb, 1px -1px 0 #faf4e5bb,
                    -1px 1px 0 #faf4e5bb, 1px 1px 0 #faf4e5bb;
     }
     #graph-wrapper {
-      background: #faf4e5;
+      background: #333333;
       border-radius: 4px;
       height: auto;
     }
@@ -90,6 +83,58 @@
         let nodesData = graphData.nodes;
         let linksData = graphData.edges;
 
+        // Build a set of all site pages' URLs (from Jekyll), normalized (no trailing slash)
+const PAGE_URLS = new Set(
+  ({{ site.pages | map: 'url' | jsonify }})
+    .map(u => String(u || '').replace(/\/+$/, ''))
+);
+
+// --- Degree map (handles multiple link shapes: source/target OR from/to)
+const degree = new Map();
+nodesData.forEach(n => degree.set(n.id, 0));
+linksData.forEach(l => {
+  const sid = (typeof l.source === 'object') ? l.source.id
+            : (l.source ?? l.from);
+  const tid = (typeof l.target === 'object') ? l.target.id
+            : (l.target ?? l.to);
+  if (sid != null) degree.set(sid, (degree.get(sid) || 0) + 1);
+  if (tid != null) degree.set(tid, (degree.get(tid) || 0) + 1);
+});
+
+// --- Type helpers (robust to your data shape)
+function isPost(d) {
+  if (d.collection) return d.collection === 'posts';
+  return !!(d.url && /^\/\d{4}\//.test(d.url)); // /YYYY/...
+}
+function isNote(d) {
+  if (d.collection) return d.collection === 'notes';
+  return !!(d.url && d.url.startsWith('/notes/'));
+}
+function isPage(d) {
+  // Prefer URL, fall back to path; normalize trailing slashes
+  const u = String(d.url || d.path || '').replace(/\/+$/, '');
+  // also try with a leading slash (in case d.url is missing it)
+  const uSlash = u.startsWith('/') ? u : '/' + u;
+  return PAGE_URLS.has(u) || PAGE_URLS.has(uSlash);
+}
+function isGhost(d) {
+  return d.ghost === true || d.exists === false;
+}
+function isActive(d) {
+  return isCurrentPath(d.path);
+}
+
+// Colors / opacity
+function nodeColor(d) {
+  if (isActive(d)) return '#333333';   // active
+  if (isPage(d))   return '#ff7eb6';   // pages = pink
+  return '#b0cef2';                    // everything else = blue
+}
+function nodeOpacity(d) {
+  if (isActive(d)) return 1.0;
+  if (isGhost(d))  return 0.35;        // ghosts faint
+  return 1.0;                          // keep all others solid for now
+}
         const nodeSize = {};
 
         const updateNodeSize = () => {
@@ -285,6 +330,13 @@
             .on("mouseout", onMouseout)
             .merge(node);
 
+            // apply colors/opacity now that the circles exist
+node
+  .attr('fill', nodeColor)
+  .attr('opacity', nodeOpacity)
+  .attr('stroke', '#222')                               // optional outline
+  .attr('stroke-width', d => isActive(d) ? 1.25 : 0.5); // optional emphasis
+
           link = link.data(linksData, (d) => `${d.source.id}-${d.target.id}`);
           link.exit().remove();
           link = link.enter().append("line").attr("stroke-width", STROKE).merge(link);
@@ -302,6 +354,10 @@
             .on("mouseover", onMouseover)
             .on("mouseout", onMouseout)
             .merge(text);
+
+            text
+  .attr('fill', nodeColor)
+  .attr('opacity', nodeOpacity);
 
           node.attr("active", (d) => isCurrentPath(d.path) ? true : null);
           text.attr("active", (d) => isCurrentPath(d.path) ? true : null);
@@ -324,8 +380,10 @@
         restart();
 
         function isCurrentPath(notePath) {
-          return window.location.pathname.includes(notePath)
-        }
+  if (!notePath) return false;
+  const norm = s => String(s).replace(/\/+$/, '');
+  return norm(window.location.pathname) === norm(notePath);
+}
 
         function shorten(str, maxLen, separator = ' ') {
           if (str.length <= maxLen) return str;
