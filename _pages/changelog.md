@@ -15,32 +15,38 @@ permalink: /changelog
 
 ### **unreleased**
 
-
 `to add`
-
 - notes to add: name server / dns / https certificates / localhost explainer
-    
 - blog post: experience “coding” a website as a non-coder
-    
 - blog post: documentation for hosting your own website similar to this
-    
-- look through inbox for overdue notes
-    
+- blog post: first week at my new job
 - update projects/creations page with mini portfolio
-    
+
+`to change`
+- fix width/alignment issue where some pages cut off mid-way
+- fix rss feed path from /feed.xml → /feed (workaround still not working)
+- adjust graph view to show daily notes nodes in coffee colour and tags in red
+
+---
+## **v0.6.0 – 2025-09-06**
 
   
 
-`to change`
+added
 
-- tweak css for dark mode graph view to update background and nodes properly
+- [[notes]] index page to list all notes. _(from last release, a bulk import of notes was added — they won’t be individually recorded here; moving forward, bulk imports will be summarised this way, but individual additions will still be logged)_
     
-- fix bidirectional link generator + notes graph to include _pages nodes in pink
+- clippings nodes in graph, styled yellow
+
+  
+
+fixed
+
+- bidirectional link generator to include _pages nodes correctly
     
-- fix width/alignment issue where some pages cut off mid-way
+- css for graph dark mode to adapt properly to theme
     
-- fix tag page so individual tags render with correct css instead of raw html
-- fix rss feed path from /feed.xml → /feed (workaround still not working)
+- tag page so individual tags render with proper css instead of raw html
 
 ---
 ## **v0.5.0 – 2025-08-18**
