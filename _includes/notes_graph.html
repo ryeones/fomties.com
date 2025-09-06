@@ -1,5 +1,5 @@
 <style>
-  /* keep CSS from overriding node/text color; JS will set colors */
+  /* Graph styles; JS sets node/label colors */
   @media (prefers-color-scheme: light) {
     .links line { stroke: #b0cef2; opacity: .5; }
     .nodes circle { cursor: pointer; transition: all .15s ease-out; }
@@ -11,7 +11,7 @@
     .nodes circle { cursor: pointer; transition: all .15s ease-out; }
     .text text { cursor: pointer; text-shadow:
       -1px -1px 0 #faf4e5bb, 1px -1px 0 #faf4e5bb,
-      -1px  1px 0 #faf4e5bb,-1px  1px 0 #faf4e5bb; }
+      -1px  1px 0 #faf4e5bb, 1px  1px 0 #faf4e5bb; }
     #graph-wrapper { background: #333333; border-radius: 4px; height: auto; }
   }
   .inactive { opacity: .1; transition: all .15s ease-out; }
@@ -28,19 +28,22 @@
       document.body.appendChild(s);
 
       s.onload = function () {
-        const MIN_NODE = 8, MAX_NODE = 12, ACTIVE_R = 1.5;
+        const MIN_NODE = 8, MAX_NODE = 12;
         const STROKE = 1, FONT_SIZE = 16, FONT_BASELINE = 40, MAX_LABEL = 50;
 
+        /* ---------- Data ---------- */
         const graphData = {% include notes_graph.json %};
         let nodesData = graphData.nodes || [];
         let linksData = graphData.edges || [];
 
+        /* ---------- Helpers ---------- */
         function linkIds(l) {
           const sid = (l.source && typeof l.source === 'object') ? l.source.id : (l.source ?? l.from);
           const tid = (l.target && typeof l.target === 'object') ? l.target.id : (l.target ?? l.to);
           return [sid, tid];
         }
 
+        // degree → size
         const degree = new Map();
         nodesData.forEach(n => degree.set(n.id, 0));
         linksData.forEach(l => {
@@ -48,7 +51,6 @@
           if (sid != null) degree.set(sid, (degree.get(sid) || 0) + 1);
           if (tid != null) degree.set(tid, (degree.get(tid) || 0) + 1);
         });
-
         const nodeSize = {};
         nodesData.forEach(n => {
           let w = 3 * Math.sqrt((degree.get(n.id) || 0) + 1);
@@ -60,14 +62,12 @@
           const norm = s => String(s).replace(/\/+$/, '');
           return norm(window.location.pathname) === norm(notePath);
         }
-
         function isPage(d) {
           const coll = (d.collection || '').toLowerCase();
           if (coll === 'pages') return true;
           const p = ((d.path || d.url || '') + '').toLowerCase();
           return /(\/|^)_?pages\//.test(p);
         }
-
         function isSourceNote(d) {
           const raw = (d.path || d.url || '').toString();
           const p = decodeURIComponent(raw).toLowerCase();
@@ -75,24 +75,23 @@
           if (Array.isArray(d.tags) && d.tags.map(t=>t.toLowerCase()).includes('sources')) return true;
           return false;
         }
-
         function isGhost(d) { return d.ghost === true || d.exists === false; }
         function isDarkTheme(){
           return document.documentElement.classList.contains('theme-dark')
               || window.matchMedia('(prefers-color-scheme: dark)').matches;
         }
-
         function activeNodeColor(){ return isDarkTheme() ? '#faf4e5' : '#333333'; }
         function defaultLabelColor(){ return isDarkTheme() ? '#faf4e5' : '#100f0f'; }
 
-        function nodeColor(d) {
-  if (isCurrentPath(d.path)) return activeNodeColor(); // active node
-  if (d.collection === 'posts' || d.kind === 'post') return '#4caf50'; // posts = green
-  if (isPage(d)) return '#ff7eb6';   // pages = pink
-  if (isSourceNote(d)) return '#ffd166'; // sources = yellow
-  return '#b0cef2';                  // default blue
-}
-
+        // NODE color by type
+function nodeColor(d) {
+  if (isCurrentPath(d.path)) return activeNodeColor();
+  if (isSourceNote(d)) return '#ffd166';             // yellow for +sources
+  if ((d.kind || '') === 'post') return '#4caf50';   // green for posts
+  if ((d.kind || '') === 'page') return '#ff7eb6';   // pink for pages
+  return '#b0cef2';                                   // blue for notes
+}                              // default notes = blue
+        // LABEL color (readable on bg)
         function labelColor(d){
           if (isCurrentPath(d.path)) return activeNodeColor();
           return defaultLabelColor();
@@ -103,13 +102,13 @@
           if (isGhost(d)) return 0.35;
           return 1;
         }
-
         function shorten(str, maxLen, sep=' ') {
           if (str.length <= maxLen) return str;
           const cut = str.lastIndexOf(sep, maxLen);
           return (cut > 0 ? str.substr(0, cut) : str.substr(0, maxLen)) + '…';
         }
 
+        /* ---------- SVG ---------- */
         const wrap = document.getElementById('graph-wrapper');
         const svgEl = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svgEl.setAttribute("width", wrap.getBoundingClientRect().width);
@@ -136,9 +135,7 @@
           if (!d3.event.active) simulation.alphaTarget(0.3).restart();
           d.fx = d.x; d.fy = d.y;
         }
-        function dragged(d) {
-          d.fx = d3.event.x; d.fy = d3.event.y;
-        }
+        function dragged(d) { d.fx = d3.event.x; d.fy = d3.event.y; }
         function dragended(d) {
           if (!d3.event.active) simulation.alphaTarget(0);
           d.fx = null; d.fy = null;
@@ -176,10 +173,7 @@
             .on("click", onClick)
             .on("mouseover", onMouseover)
             .on("mouseout", onMouseout)
-            .call(d3.drag()
-              .on("start", dragstarted)
-              .on("drag", dragged)
-              .on("end", dragended))
+            .call(d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended))
             .merge(node);
 
           node
@@ -191,16 +185,13 @@
 
           link = link.data(linksData, d => linkIds(d).join('-'));
           link.exit().remove();
-          link = link.enter()
-            .append("line")
-            .attr("stroke-width", STROKE)
-            .merge(link);
+          link = link.enter().append("line").attr("stroke-width", STROKE).merge(link);
 
           text = text.data(nodesData, d => d.label);
           text.exit().remove();
           text = text.enter()
             .append("text")
-            .text(d => shorten(d.label.replace(/_*/g, ""), MAX_LABEL))
+            .text(d => shorten((d.label || '').toString().replace(/_*/g, ""), MAX_LABEL))
             .attr("font-size", `${FONT_SIZE}px`)
             .attr("text-anchor", "middle")
             .attr("alignment-baseline", "central")
@@ -210,7 +201,7 @@
             .merge(text);
 
           text
-            .style('fill', labelColor)
+            .style('fill', labelColor)        /* <- labels use labelColor */
             .style('opacity', nodeOpacity)
             .attr('active', d => isCurrentPath(d.path) ? true : null);
 
@@ -221,14 +212,11 @@
 
         function ticked() {
           node.attr("cx", d => d.x).attr("cy", d => d.y);
-          text
-            .attr("x", d => d.x)
-            .attr("y", d => d.y - (FONT_BASELINE - nodeSize[d.id]));
-          link
-            .attr("x1", d => (d.source.x))
-            .attr("y1", d => (d.source.y))
-            .attr("x2", d => (d.target.x))
-            .attr("y2", d => (d.target.y));
+          text.attr("x", d => d.x).attr("y", d => d.y - (FONT_BASELINE - nodeSize[d.id]));
+          link.attr("x1", d => (d.source.x))
+              .attr("y1", d => (d.source.y))
+              .attr("x2", d => (d.target.x))
+              .attr("y2", d => (d.target.y));
         }
 
         svg.call(d3.zoom().scaleExtent([0.2, 3]).on("zoom", function() {
@@ -237,16 +225,16 @@
 
         restart();
 
+        // Update colors when theme toggles
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => restart());
+        const mo = new MutationObserver(() => restart());
+        mo.observe(document.documentElement, { attributes:true, attributeFilter:['class'] });
+
+        // Resize
         window.addEventListener('resize', function () {
           svgEl.setAttribute("width", wrap.getBoundingClientRect().width);
           svgEl.setAttribute("height", Math.max(320, window.innerHeight * 0.8));
         });
-
-        // Listen for theme changes
-        window.matchMedia('(prefers-color-scheme: dark)')
-          .addEventListener('change', () => restart());
-        const mo = new MutationObserver(() => restart());
-        mo.observe(document.documentElement, { attributes:true, attributeFilter:['class'] });
       };
     });
   </script>
