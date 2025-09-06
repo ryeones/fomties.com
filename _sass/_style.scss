@@ -15,8 +15,18 @@ $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
   sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
 /* ---- Page background (light) ---- */
-html { background-color: #FAF4E5; }     /* light paper */
-body {
+/* ---- Theme backgrounds (system + manual override) ---- */
+
+/* default = light */
+html { background-color: #FAF4E5; color: $color-text; }
+
+/* follow system dark unless manual .theme-dark is set */
+@media (prefers-color-scheme: dark) {
+  html:not(.theme-dark) { background-color: #333333; color: #FAF4E5; }
+}
+
+/* manual toggle wins */
+html.theme-dark { background-color: #333333; color: #FAF4E5; }body {
   box-sizing: content-box;
   font-family: $font-family;
   margin: 0 auto;
@@ -215,7 +225,7 @@ code { background: #f5f5f5; padding: .1em .2em; border-radius: 4px; }
 
 /* light */
 #popover-wrapper{
-  background: #FFFCF0 !important;   /* paper */
+  background: #FAF4E5 !important;   /* paper */
   color: $color-primary !important;
   border: 1px solid $color-border !important;
   border-radius: 6px !important;
@@ -307,3 +317,14 @@ a[href^="http://notes.ryeones.com"]:after { content: none !important; }
 }
 
 
+/* Graph canvas background follows theme */
+#graph-wrapper,
+#graph-wrapper > svg { background: #FAF4E5; } /* light */
+
+@media (prefers-color-scheme: dark) {
+  html:not(.theme-dark) #graph-wrapper,
+  html:not(.theme-dark) #graph-wrapper > svg { background: #333333; } /* system dark */
+}
+
+html.theme-dark #graph-wrapper,
+html.theme-dark #graph-wrapper > svg { background: #333333 !important; } /* manual dark */

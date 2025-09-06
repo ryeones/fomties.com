@@ -1,352 +1,206 @@
 <style>
-  /* Light theme */
+  /* keep CSS from overriding node/text color; JS will set colors */
   @media (prefers-color-scheme: light) {
-    .links line {
-      stroke: #b0cef2; /* other notes */
-      opacity: 0.5;
-    }
-  .nodes circle {
-  cursor: pointer;
-  transition: all 0.15s ease-out;
-}
-/* no fill here – JS sets it */
-.text text {
-  cursor: pointer;
-  /* no fill here – JS sets it */
-}
-    #graph-wrapper {
-      background: #faf4e5; /* graph background */
-      border-radius: 4px;
-      height: auto;
-    }
+    .links line { stroke: #b0cef2; opacity: .5; }
+    .nodes circle { cursor: pointer; transition: all .15s ease-out; }
+    .text text { cursor: pointer; }
+    #graph-wrapper { background: #faf4e5; border-radius: 4px; height: auto; }
   }
-
-  /* Dark theme */
   @media (prefers-color-scheme: dark) {
-    .links line {
-      stroke: #b0cef2;
-      opacity: 0.5;
-    }
-    .nodes circle {
-      cursor: pointer;
-      transition: all 0.15s ease-out;
-    }
-    .nodes [active],
-    .text [active] {
-      cursor: pointer;
-      fill: #333333; /* current note */
-    }
-    .text text {
-      cursor: pointer;
-      text-shadow: -1px -1px 0 #faf4e5bb, 1px -1px 0 #faf4e5bb,
-                   -1px 1px 0 #faf4e5bb, 1px 1px 0 #faf4e5bb;
-    }
-    #graph-wrapper {
-      background: #333333;
-      border-radius: 4px;
-      height: auto;
-    }
+    .links line { stroke: #b0cef2; opacity: .5; }
+    .nodes circle { cursor: pointer; transition: all .15s ease-out; }
+    .text text { cursor: pointer; text-shadow:
+      -1px -1px 0 #faf4e5bb, 1px -1px 0 #faf4e5bb,
+      -1px  1px 0 #faf4e5bb,-1px  1px 0 #faf4e5bb; }
+    #graph-wrapper { background: #333333; border-radius: 4px; height: auto; }
   }
-
-  .inactive {
-    opacity: 0.1;
-    transition: all 0.15s ease-out;
-  }
-
-  #graph-wrapper > svg {
-    max-width: 100%;
-    display: block;
-  }
+  .inactive { opacity: .1; transition: all .15s ease-out; }
+  #graph-wrapper > svg { max-width: 100%; display: block; }
 </style>
+
 <div id="graph-wrapper">
   <script>
-    window.addEventListener("load", loadGraph);
+    window.addEventListener("load", function loadGraph() {
+      var s = document.createElement("script");
+      s.src = "https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js";
+      s.crossOrigin = "anonymous";
+      s.integrity = "sha512-FHsFVKQ/T1KWJDGSbrUhTJyS1ph3eRrxI228ND0EGaEp6v4a/vGwPWd3Dtd/+9cI7ccofZvl/wulICEurHN1pg==";
+      document.body.appendChild(s);
 
-    function loadGraph() {
-      var oScript = document.createElement("script");
-      oScript.src = "https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js";
-      oScript.crossOrigin = 'anonymous';
-      oScript.integrity =
-        "sha512-FHsFVKQ/T1KWJDGSbrUhTJyS1ph3eRrxI228ND0EGaEp6v4a/vGwPWd3Dtd/+9cI7ccofZvl/wulICEurHN1pg==";
-      document.body.appendChild(oScript);
-      oScript.onload = () => {
-        const MINIMAL_NODE_SIZE = 8;
-        const MAX_NODE_SIZE = 12;
-        const ACTIVE_RADIUS_FACTOR = 1.5;
-        const STROKE = 1;
-        const FONT_SIZE = 16;
-        const TICKS = 200;
-        const FONT_BASELINE = 40;
-        const MAX_LABEL_LENGTH = 50;
+      s.onload = function () {
+        const MIN_NODE = 8, MAX_NODE = 12, ACTIVE_R = 1.5;
+        const STROKE = 1, FONT_SIZE = 16, FONT_BASELINE = 40, MAX_LABEL = 50;
 
-        const graphData = {% include notes_graph.json %}
-        let nodesData = graphData.nodes;
-        let linksData = graphData.edges;
+        const graphData = {% include notes_graph.json %};
+        let nodesData = graphData.nodes || [];
+        let linksData = graphData.edges || [];
 
-        // Build a set of all site pages' URLs (from Jekyll), normalized (no trailing slash)
-const PAGE_URLS = new Set(
-  ({{ site.pages | map: 'url' | jsonify }})
-    .map(u => String(u || '').replace(/\/+$/, ''))
-);
+        function linkIds(l) {
+          const sid = (l.source && typeof l.source === 'object') ? l.source.id : (l.source ?? l.from);
+          const tid = (l.target && typeof l.target === 'object') ? l.target.id : (l.target ?? l.to);
+          return [sid, tid];
+        }
 
-// --- Degree map (handles multiple link shapes: source/target OR from/to)
-const degree = new Map();
-nodesData.forEach(n => degree.set(n.id, 0));
-linksData.forEach(l => {
-  const sid = (typeof l.source === 'object') ? l.source.id
-            : (l.source ?? l.from);
-  const tid = (typeof l.target === 'object') ? l.target.id
-            : (l.target ?? l.to);
-  if (sid != null) degree.set(sid, (degree.get(sid) || 0) + 1);
-  if (tid != null) degree.set(tid, (degree.get(tid) || 0) + 1);
-});
+        const degree = new Map();
+        nodesData.forEach(n => degree.set(n.id, 0));
+        linksData.forEach(l => {
+          const [sid, tid] = linkIds(l);
+          if (sid != null) degree.set(sid, (degree.get(sid) || 0) + 1);
+          if (tid != null) degree.set(tid, (degree.get(tid) || 0) + 1);
+        });
 
-// --- Type helpers (robust to your data shape)
-function isPost(d) {
-  if (d.collection) return d.collection === 'posts';
-  return !!(d.url && /^\/\d{4}\//.test(d.url)); // /YYYY/...
-}
-function isNote(d) {
-  if (d.collection) return d.collection === 'notes';
-  return !!(d.url && d.url.startsWith('/notes/'));
-}
-function isPage(d) {
-  // Prefer URL, fall back to path; normalize trailing slashes
-  const u = String(d.url || d.path || '').replace(/\/+$/, '');
-  // also try with a leading slash (in case d.url is missing it)
-  const uSlash = u.startsWith('/') ? u : '/' + u;
-  return PAGE_URLS.has(u) || PAGE_URLS.has(uSlash);
-}
-function isGhost(d) {
-  return d.ghost === true || d.exists === false;
-}
-function isActive(d) {
-  return isCurrentPath(d.path);
-}
-
-// Colors / opacity
-function nodeColor(d) {
-  if (isActive(d)) return '#333333';   // active
-  if (isPage(d))   return '#ff7eb6';   // pages = pink
-  return '#b0cef2';                    // everything else = blue
-}
-function nodeOpacity(d) {
-  if (isActive(d)) return 1.0;
-  if (isGhost(d))  return 0.35;        // ghosts faint
-  return 1.0;                          // keep all others solid for now
-}
         const nodeSize = {};
+        nodesData.forEach(n => {
+          let w = 3 * Math.sqrt((degree.get(n.id) || 0) + 1);
+          nodeSize[n.id] = Math.max(MIN_NODE, Math.min(MAX_NODE, w));
+        });
 
-        const updateNodeSize = () => {
-          nodesData.forEach((el) => {
-            let weight =
-              3 *
-              Math.sqrt(
-                linksData.filter((l) => l.source.id === el.id || l.target.id === el.id)
-                  .length + 1
-              );
-            if (weight < MINIMAL_NODE_SIZE) {
-              weight = MINIMAL_NODE_SIZE;
-            } else if (weight > MAX_NODE_SIZE) {
-              weight = MAX_NODE_SIZE;
-            }
-            nodeSize[el.id] = weight;
-          });
-        };
+        function isCurrentPath(notePath) {
+          if (!notePath) return false;
+          const norm = s => String(s).replace(/\/+$/, '');
+          return norm(window.location.pathname) === norm(notePath);
+        }
 
-        const onClick = (d) => {
-          window.location = d.path
-        };
+        function isPage(d) {
+          const coll = (d.collection || '').toLowerCase();
+          if (coll === 'pages') return true;
+          const p = ((d.path || d.url || '') + '').toLowerCase();
+          return /(\/|^)_?pages\//.test(p);
+        }
 
-        const onMouseover = function (d) {
-          const relatedNodesSet = new Set();
-          linksData
-            .filter((n) => n.target.id == d.id || n.source.id == d.id)
-            .forEach((n) => {
-              relatedNodesSet.add(n.target.id);
-              relatedNodesSet.add(n.source.id);
-            });
+        function isSourceNote(d) {
+          const raw = (d.path || d.url || '').toString();
+          const p = decodeURIComponent(raw).toLowerCase();
+          if (/(^|\/)\+\s*sources\//.test(p)) return true;
+          if (Array.isArray(d.tags) && d.tags.map(t=>t.toLowerCase()).includes('sources')) return true;
+          return false;
+        }
 
-          node.attr("class", (node_d) => {
-            if (node_d.id !== d.id && !relatedNodesSet.has(node_d.id)) {
-              return "inactive";
-            }
-            return "";
-          });
+        function isGhost(d) { return d.ghost === true || d.exists === false; }
+        function isDarkTheme(){
+          return document.documentElement.classList.contains('theme-dark')
+              || window.matchMedia('(prefers-color-scheme: dark)').matches;
+        }
 
-          link.attr("class", (link_d) => {
-            if (link_d.source.id !== d.id && link_d.target.id !== d.id) {
-              return "inactive";
-            }
-            return "";
-          });
+        function activeNodeColor(){ return isDarkTheme() ? '#faf4e5' : '#333333'; }
+        function defaultLabelColor(){ return isDarkTheme() ? '#faf4e5' : '#100f0f'; }
 
-          link.attr("stroke-width", (link_d) => {
-            if (link_d.source.id === d.id || link_d.target.id === d.id) {
-              return STROKE * 4;
-            }
-            return STROKE;
-          });
-          text.attr("class", (text_d) => {
-            if (text_d.id !== d.id && !relatedNodesSet.has(text_d.id)) {
-              return "inactive";
-            }
-            return "";
-          });
-        };
+        function nodeColor(d) {
+  if (isCurrentPath(d.path)) return activeNodeColor(); // active node
+  if (d.collection === 'posts' || d.kind === 'post') return '#4caf50'; // posts = green
+  if (isPage(d)) return '#ff7eb6';   // pages = pink
+  if (isSourceNote(d)) return '#ffd166'; // sources = yellow
+  return '#b0cef2';                  // default blue
+}
 
-        const onMouseout = function (d) {
-          node.attr("class", "");
-          link.attr("class", "");
-          text.attr("class", "");
-          link.attr("stroke-width", STROKE);
-        };
+        function labelColor(d){
+          if (isCurrentPath(d.path)) return activeNodeColor();
+          return defaultLabelColor();
+        }
 
-        const sameNodes = (previous, next) => {
-          if (next.length !== previous.length) {
-            return false;
-          }
+        function nodeOpacity(d) {
+          if (isCurrentPath(d.path)) return 1;
+          if (isGhost(d)) return 0.35;
+          return 1;
+        }
 
-          const map = new Map();
-          for (const node of previous) {
-            map.set(node.id, node.label);
-          }
+        function shorten(str, maxLen, sep=' ') {
+          if (str.length <= maxLen) return str;
+          const cut = str.lastIndexOf(sep, maxLen);
+          return (cut > 0 ? str.substr(0, cut) : str.substr(0, maxLen)) + '…';
+        }
 
-          for (const node of next) {
-            const found = map.get(node.id);
-            if (!found || found !== node.title) {
-              return false;
-            }
-          }
-
-          return true;
-        };
-
-        const sameEdges = (previous, next) => {
-          if (next.length !== previous.length) {
-            return false;
-          }
-
-          const set = new Set();
-          for (const edge of previous) {
-            set.add(`${edge.source.id}-${edge.target.id}`);
-          }
-
-          for (const edge of next) {
-            if (!set.has(`${edge.source.id}-${edge.target.id}`)) {
-              return false;
-            }
-          }
-
-          return true;
-        };
-
-        const graphWrapper = document.getElementById('graph-wrapper')
-        const element = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        element.setAttribute("width", graphWrapper.getBoundingClientRect().width);
-        element.setAttribute("height", window.innerHeight * 0.8);
-        graphWrapper.appendChild(element);
-
-        const reportWindowSize = () => {
-          element.setAttribute("width", window.innerWidth);
-          element.setAttribute("height", window.innerHeight);
-        };
-
-        window.onresize = reportWindowSize;
-
-        const svg = d3.select("svg");
-        const width = Number(svg.attr("width"));
-        const height = Number(svg.attr("height"));
-        let zoomLevel = 1;
-
-        const simulation = d3
-          .forceSimulation(nodesData)
-          .force("forceX", d3.forceX().x(width / 2))
-          .force("forceY", d3.forceY().y(height / 2))
-          .force("charge", d3.forceManyBody())
-          .force(
-            "link",
-            d3
-              .forceLink(linksData)
-              .id((d) => d.id)
-              .distance(70)
-          )
-          .force("center", d3.forceCenter(width / 2, height / 2))
-          .force("collision", d3.forceCollide().radius(80))
-          .stop();
+        const wrap = document.getElementById('graph-wrapper');
+        const svgEl = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svgEl.setAttribute("width", wrap.getBoundingClientRect().width);
+        svgEl.setAttribute("height", Math.max(320, window.innerHeight * 0.8));
+        wrap.appendChild(svgEl);
+        const svg = d3.select(svgEl);
+        const width = +svg.attr('width');
+        const height = +svg.attr('height');
 
         const g = svg.append("g");
         let link = g.append("g").attr("class", "links").selectAll(".link");
         let node = g.append("g").attr("class", "nodes").selectAll(".node");
         let text = g.append("g").attr("class", "text").selectAll(".text");
 
-        const resize = () => {
-          if (d3.event) {
-            const scale = d3.event.transform;
-            zoomLevel = scale.k;
-            g.attr("transform", scale);
-          }
+        const simulation = d3.forceSimulation(nodesData)
+          .force("forceX", d3.forceX(width / 2).strength(0.05))
+          .force("forceY", d3.forceY(height / 2).strength(0.05))
+          .force("charge", d3.forceManyBody().strength(-200))
+          .force("link", d3.forceLink(linksData).id(d => d.id).distance(110).strength(0.7))
+          .force("collision", d3.forceCollide().radius(d => (nodeSize[d.id] || 12) + 24).iterations(2))
+          .on("tick", ticked);
 
-          const zoomOrKeep = (value) => (zoomLevel >= 1 ? value / zoomLevel : value);
+        function dragstarted(d) {
+          if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+          d.fx = d.x; d.fy = d.y;
+        }
+        function dragged(d) {
+          d.fx = d3.event.x; d.fy = d3.event.y;
+        }
+        function dragended(d) {
+          if (!d3.event.active) simulation.alphaTarget(0);
+          d.fx = null; d.fy = null;
+        }
 
-          const font = Math.max(Math.round(zoomOrKeep(FONT_SIZE)), 1);
-
-          text.attr("font-size", (d) => font);
-          text.attr("y", (d) => d.y - zoomOrKeep(FONT_BASELINE) + 8);
-          link.attr("stroke-width", zoomOrKeep(STROKE));
-          node.attr("r", (d) => {
-            return zoomOrKeep(nodeSize[d.id]);
+        function onClick(d){ if (d.path) window.location = d.path; }
+        function onMouseover(d) {
+          const related = new Set();
+          linksData.forEach(n => {
+            const [sid, tid] = linkIds(n);
+            if (sid == d.id || tid == d.id) { related.add(sid); related.add(tid); }
           });
-          svg
-            .selectAll("circle")
-            .filter((_d, i, nodes) => d3.select(nodes[i]).attr("active"))
-            .attr("r", (d) => zoomOrKeep(ACTIVE_RADIUS_FACTOR * nodeSize[d.id]));
-        };
+          node.attr("class", nd => (nd.id !== d.id && !related.has(nd.id)) ? "inactive" : "");
+          link.attr("class", ld => {
+            const [sid, tid] = linkIds(ld);
+            return (sid !== d.id && tid !== d.id) ? "inactive" : "";
+          });
+          link.attr("stroke-width", ld => {
+            const [sid, tid] = linkIds(ld);
+            return (sid === d.id || tid === d.id) ? STROKE * 4 : STROKE;
+          });
+          text.attr("class", td => (td.id !== d.id && !related.has(td.id)) ? "inactive" : "");
+        }
+        function onMouseout() {
+          node.attr("class",""); link.attr("class",""); text.attr("class","");
+          link.attr("stroke-width", STROKE);
+        }
 
-        const ticked = () => {
-          node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
-          text
-            .attr("x", (d) => d.x)
-            .attr("y", (d) => d.y - (FONT_BASELINE - nodeSize[d.id]) / zoomLevel);
-          link
-            .attr("x1", (d) => d.source.x)
-            .attr("y1", (d) => d.source.y)
-            .attr("x2", (d) => d.target.x)
-            .attr("y2", (d) => d.target.y);
-        };
-
-        const restart = () => {
-          updateNodeSize();
-          node = node.data(nodesData, (d) => d.id);
+        function restart() {
+          node = node.data(nodesData, d => d.id);
           node.exit().remove();
-          node = node
-            .enter()
+          node = node.enter()
             .append("circle")
-            .attr("r", (d) => {
-              return nodeSize[d.id];
-            })
+            .attr("r", d => nodeSize[d.id])
             .on("click", onClick)
             .on("mouseover", onMouseover)
             .on("mouseout", onMouseout)
+            .call(d3.drag()
+              .on("start", dragstarted)
+              .on("drag", dragged)
+              .on("end", dragended))
             .merge(node);
 
-            // apply colors/opacity now that the circles exist
-node
-  .attr('fill', nodeColor)
-  .attr('opacity', nodeOpacity)
-  .attr('stroke', '#222')                               // optional outline
-  .attr('stroke-width', d => isActive(d) ? 1.25 : 0.5); // optional emphasis
+          node
+            .style('fill', nodeColor)
+            .style('opacity', nodeOpacity)
+            .attr('stroke', '#222')
+            .attr('stroke-width', d => isCurrentPath(d.path) ? 1.25 : 0.5)
+            .attr('active', d => isCurrentPath(d.path) ? true : null);
 
-          link = link.data(linksData, (d) => `${d.source.id}-${d.target.id}`);
+          link = link.data(linksData, d => linkIds(d).join('-'));
           link.exit().remove();
-          link = link.enter().append("line").attr("stroke-width", STROKE).merge(link);
+          link = link.enter()
+            .append("line")
+            .attr("stroke-width", STROKE)
+            .merge(link);
 
-          text = text.data(nodesData, (d) => d.label);
+          text = text.data(nodesData, d => d.label);
           text.exit().remove();
-          text = text
-            .enter()
+          text = text.enter()
             .append("text")
-            .text((d) => shorten(d.label.replace(/_*/g, ""), MAX_LABEL_LENGTH))
+            .text(d => shorten(d.label.replace(/_*/g, ""), MAX_LABEL))
             .attr("font-size", `${FONT_SIZE}px`)
             .attr("text-anchor", "middle")
             .attr("alignment-baseline", "central")
@@ -355,41 +209,45 @@ node
             .on("mouseout", onMouseout)
             .merge(text);
 
-            text
-  .attr('fill', nodeColor)
-  .attr('opacity', nodeOpacity);
-
-          node.attr("active", (d) => isCurrentPath(d.path) ? true : null);
-          text.attr("active", (d) => isCurrentPath(d.path) ? true : null);
+          text
+            .style('fill', labelColor)
+            .style('opacity', nodeOpacity)
+            .attr('active', d => isCurrentPath(d.path) ? true : null);
 
           simulation.nodes(nodesData);
           simulation.force("link").links(linksData);
-          simulation.alpha(1).restart();
-          simulation.stop();
+          simulation.alpha(0.8).restart();
+        }
 
-          for (let i = 0; i < TICKS; i++) {
-            simulation.tick();
-          }
+        function ticked() {
+          node.attr("cx", d => d.x).attr("cy", d => d.y);
+          text
+            .attr("x", d => d.x)
+            .attr("y", d => d.y - (FONT_BASELINE - nodeSize[d.id]));
+          link
+            .attr("x1", d => (d.source.x))
+            .attr("y1", d => (d.source.y))
+            .attr("x2", d => (d.target.x))
+            .attr("y2", d => (d.target.y));
+        }
 
-          ticked();
-        };
+        svg.call(d3.zoom().scaleExtent([0.2, 3]).on("zoom", function() {
+          g.attr("transform", d3.event.transform);
+        }));
 
-        const zoomHandler = d3.zoom().scaleExtent([0.2, 3]).on("zoom", resize);
-
-        zoomHandler(svg);
         restart();
 
-        function isCurrentPath(notePath) {
-  if (!notePath) return false;
-  const norm = s => String(s).replace(/\/+$/, '');
-  return norm(window.location.pathname) === norm(notePath);
-}
+        window.addEventListener('resize', function () {
+          svgEl.setAttribute("width", wrap.getBoundingClientRect().width);
+          svgEl.setAttribute("height", Math.max(320, window.innerHeight * 0.8));
+        });
 
-        function shorten(str, maxLen, separator = ' ') {
-          if (str.length <= maxLen) return str;
-          return str.substr(0, str.lastIndexOf(separator, maxLen)) + '...';
-        }
-      }
-    }
+        // Listen for theme changes
+        window.matchMedia('(prefers-color-scheme: dark)')
+          .addEventListener('change', () => restart());
+        const mo = new MutationObserver(() => restart());
+        mo.observe(document.documentElement, { attributes:true, attributeFilter:['class'] });
+      };
+    });
   </script>
 </div>

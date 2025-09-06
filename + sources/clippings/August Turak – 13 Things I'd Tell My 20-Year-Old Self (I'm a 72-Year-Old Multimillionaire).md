@@ -9,7 +9,7 @@ created: 2025-08-31
 tags:
   - "videos"
 ---
-![13 Things I'd Tell My 20-Year-Old Self (I'm a 72-Year-Old Multimillionaire)](https://www.youtube.com/watch?v=LaauiljMyWM&ab_channel=AugustTurak)
+![August Turak – 13 Things I'd Tell My 20-Year-Old Self (I'm a 72-Year-Old Multimillionaire)](https://www.youtube.com/watch?v=LaauiljMyWM&ab_channel=AugustTurak)
 
 * spirituality comes first
     * seek first the kingdom of god
@@ -83,3 +83,5 @@ tags:
     * clench relax, clench relax, the answer always comes during the relax stage but the clench comes before the relax
         * answers come from surrender, but it doens’t mean you don’t have to fight for it
 * get started.. now
+
+
