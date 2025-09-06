@@ -11,18 +11,10 @@ class BidirectionalLinksGenerator < Jekyll::Generator
     all_notes = site.collections['notes']&.docs || []
     all_pages = site.pages.select { |p| p.data['title'] && p.data.fetch('output', true) != false }
 
-all_docs = (all_notes + all_pages + post_docs).uniq
-    link_extension = site.config["use_html_extension"] ? '.html' : ''
-# Collect posts (Jekyll 4: site.posts.docs; Jekyll 3: site.posts)
-post_docs =
-  if site.respond_to?(:posts) && site.posts.respond_to?(:docs)
-    site.posts.docs
-  else
-    site.posts || []
-  end
+    all_docs = (all_notes + all_pages).uniq
 
-# keep only “published” outputting posts
-post_docs = post_docs.select { |p| p.data.fetch('published', true) && p.data.fetch('output', true) != false }
+    link_extension = site.config["use_html_extension"] ? '.html' : ''
+
     # --- 1) Convert [[Wiki Links]] in every doc to <a class='internal-link'> ---
     all_docs.each do |current_doc|
       all_docs.each do |target|
@@ -61,22 +53,20 @@ post_docs = post_docs.select { |p| p.data.fetch('published', true) && p.data.fet
       )
     end
 
-# --- 2) Build nodes + edges across ALL docs (notes + pages + posts) ---
-all_docs.each do |current|
-  kind =
-    if    all_notes.include?(current)   then 'note'
-    elsif post_docs.include?(current)   then 'post'
-    else                                   'page'
+    # --- 2) Build nodes + edges across ALL docs (notes + pages) ---
+    all_docs.each do |current|
+      # Node kind
+      kind = all_notes.include?(current) ? 'note' : 'page'
+
+      # Node
+      graph_nodes << {
+        id: note_id_from(current),
+        path: "#{site.baseurl}#{current.url}#{link_extension}",
+        label: current.data['title'],
+        kind: kind,
+      }
     end
 
-  graph_nodes << {
-    id:    note_id_from(current),
-    path:  "#{site.baseurl}#{current.url}#{link_extension}",
-    label: current.data['title'] || current.basename,
-    kind:  kind,
-    collection: (current.respond_to?(:collection) && current.collection ? current.collection.label : nil)
-  }
-end
     # Edges (find any doc that links to current via the rendered href)
     all_docs.each do |current|
       hrefs = [
