@@ -32,7 +32,7 @@ permalink: /changelog
 
   
 
-added
+`added`
 
 - [[notes]] index page to list all notes. _(from last release, a bulk import of notes was added — they won’t be individually recorded here; moving forward, bulk imports will be summarised this way, but individual additions will still be logged)_
     
@@ -40,7 +40,7 @@ added
 
   
 
-fixed
+`fixed`
 
 - bidirectional link generator to include _pages nodes correctly
     
