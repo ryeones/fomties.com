@@ -4,32 +4,44 @@ title: home
 id: ryan tham
 permalink: /
 ---
+## **figuring out your twenties is a mess. but you’re not behind.**
 
-welcome to ***[[fomties™]]***, which is a stylised version of the phrase [[figuring out my twenties]].
-it is also the fancy name i gave to this side project of mine.
 
-this is [[my little corner of the internet]] where i share my ideas and thoughts in public. this is also known as a [[digital garden]] or a form of [[learning in public]]. 
 
-the site has a diverse ecosystem of interlinked notes evolving at very different rates. most of the notes fall within these [[tags|topics]] i'm interested in, but the most common attribute between all of these notes is the fact that they will always be a [[work in progress]], regardless of how evolved they appear.
 
-this project is built upon a couple of [[personal values]] i hold dearly to.
+**everyone’s pretending to have it figured out.**
 
-so these notes are written for myself to aid my thinking, learning and creativity.
+- dropouts running 6-figure agencies from penthouses in dubai.
+    
+- frat boys posting lambos from “ecom wins.”
+    
+- founders at 19, burnout by 23, “coaching” by 24.
 
-<strong>recently updated [[notes]]</strong>
+what they don’t show: *the late nights, the panic, the doubt.*
 
-<ul>
-  {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
-  {% for note in recent_notes limit: 5 %}
-    <li>
-      {{ note.last_modified_at | date: "%Y-%m-%d" }} — <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+you’re **not behind**. you’re just **not faking it.**
 
-<style>
-  .wrapper {
-    max-width: 46em;
-  }
-</style>
+---
 
+**fomties isn’t about the highlight reel. it’s about the real.**
+
+because most of us didn’t grow up with silicon valley dads or media connections.
+
+we started from weekend side hustles. dming strangers.
+
+balancing _living a life we’re proud of_  - not one that was built for us.
+
+and still - we show up. we build. we try. even if we end up "failing"
+
+**this is a space for that.**
+
+---
+### **sign up and get access to:**
+
+- **stories** - honest conversations with 20 somethings building from scratch: from weekend projects to bold ambitions, and everything in between.
+    
+- **strategies** - weekly reflections & actionable insights from someone figuring it out in real time (don't listen to social media, that's everyone btw, whether or not they're in their twenties.)
+    
+- **systems** - tools, frameworks & a community of twenty somethings all trying to live their own life, instead of chasing someone else's.
+    
+- early access to be _featured_ - if you’re figuring it out too, join the waitlist to share your story

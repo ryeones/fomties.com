@@ -18,3 +18,4 @@ i send occasional email updates with new ideas, essays, and projects as i figure
 - linkedin: [@ryeones](https://www.linkedin.com/ryeones)
 - bluesky: [@ryeones.com](https://bsky.app/profile/ryeones.com)
 - youtube: [@ryeones](https://www.youtube.com/@ryeones) 
+- website: [www.ryeones.com](https://www.ryeones.com)
