@@ -1,8 +1,8 @@
 # =========================
 # Site identity
 # =========================
-title:               "figuring out my twenties™"
-description:         "musings as i figure out my twenties by ryan tham."
+title:               "fomties™"
+description:         "everyone's pretending to have it figured out."
 url:                 "https://notes.ryeones.com"   # <- change if different
 baseurl:             ""                            # subpath, e.g. "/blog" (empty if at root)
 
@@ -89,8 +89,7 @@ defaults:
 markdown: kramdown
 kramdown:
   input: GFM
-  hard_wrap: false
+  hard_wrap: true
 
 # Show teaser/preview by splitting content with this marker
 excerpt_separator: "\n\n<!--more-->\n\n"
-

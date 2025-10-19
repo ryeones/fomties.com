@@ -8,18 +8,6 @@
       <main>
         {{ content }}
 
-        {%- assign ts = nil -%}
-        {%- if page.last_modified_at -%}
-          {%- assign ts = page.last_modified_at -%}
-        {%- elsif page.date -%}
-          {%- assign ts = page.date -%}
-        {%- endif -%}
-
-        {%- if ts -%}
-          <time datetime="{{ ts | date_to_xmlschema }}">
-            last updated on {{ ts | date: "%B %-d, %Y" | downcase }}
-          </time>
-        {%- endif -%}
       </main>
 
       <footer>{% include footer.html %}</footer>

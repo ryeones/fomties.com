@@ -4,16 +4,15 @@ title: home
 id: ryan tham
 permalink: /
 ---
-## **figuring out your twenties is a mess. but you’re not behind.**
+# your 20s is messy. but you’re not behind.
 
 
 
+*everyone’s pretending to have it figured out.*
 
-**everyone’s pretending to have it figured out.**
-
-- dropouts running 6-figure agencies from penthouses in dubai.
+- dropouts running 6-figure agencies from dubai penthouses
     
-- frat boys posting lambos from “ecom wins.”
+- frat boys flexing lambos from “ecom wins”
     
 - founders at 19, burnout by 23, “coaching” by 24.
 
@@ -23,15 +22,17 @@ you’re **not behind**. you’re just **not faking it.**
 
 ---
 
-**fomties isn’t about the highlight reel. it’s about the real.**
+**fomties isn’t about the highlight reel. it’s about being real.**
 
-because most of us didn’t grow up with silicon valley dads or media connections.
+most of us didn’t grow up with silicon valley dads or media connections.
 
-we started from weekend side hustles. dming strangers.
+we started with weekend side hustles. dming strangers. 
 
-balancing _living a life we’re proud of_  - not one that was built for us.
+we balanced _living a life we’re proud of_  - not one built for us.
 
-and still - we show up. we build. we try. even if we end up "failing"
+and still, we show up. we build. we try.
+
+even when it’s messy. even when we fall short.
 
 **this is a space for that.**
 
