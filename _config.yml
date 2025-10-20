@@ -3,7 +3,7 @@
 # =========================
 title:               "fomties™"
 description:         "everyone's pretending to have it figured out."
-url:                 "https://notes.ryeones.com"   # <- change if different
+url:                 "https://www.fomties.com"   # <- change if different
 baseurl:             ""                            # subpath, e.g. "/blog" (empty if at root)
 
 author:
