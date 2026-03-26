@@ -26,4 +26,12 @@ the kind of conversation you wish you'd had at 19.
 
 ---
 
-*want to be on the show? you don't need a big following or a finished product. just a real story. → [apply here](https://fomties.notion.site/)
+##### conversations
+
+no episodes yet — the first ones are being lined up.
+
+→ [see all conversations](/stories/episodes) *(populates automatically as episodes are added)*
+
+---
+
+*want to be on the show? you don't need a big following or a finished product. just a real story. → [apply here](https://fomties.notion.site/)*

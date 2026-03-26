@@ -14,8 +14,8 @@ views:
     name: All Issues
     order:
       - file.name
-      - note.description
-      - note.date
+      - description
+      - date
     sort:
-      - property: note.date
+      - property: date
         direction: DESC

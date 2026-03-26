@@ -11,14 +11,13 @@
             "id": "48f6617d1396fb3e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "content/abcd.md",
-                "mode": "preview",
-                "source": true
+                "file": "content/strategies/issues.base",
+                "viewName": "All Issues"
               },
-              "icon": "lucide-file",
-              "title": "abcd"
+              "icon": "lucide-table",
+              "title": "issues"
             }
           }
         ]
@@ -94,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "content/strategies/issues.base",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for issues"
             }
           },
           {
@@ -112,11 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "content/strategies/issues.base",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from issues"
             }
           },
           {
@@ -154,13 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/the 9-5 as launchpad.md",
+                "file": "content/strategies/issues.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of the 9-5 as launchpad"
+              "title": "Outline of issues"
             }
           }
         ]
@@ -181,8 +182,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "230c68299d3a4f2b",
+  "active": "48f6617d1396fb3e",
   "lastOpenFiles": [
+    "content/stories.md",
+    "content/strategies/index.md",
+    "content/stories/index.md",
+    "content/strategies/issues.base",
+    "content/stories/episodes.base",
+    "public/strategies/issues",
+    "content/the 9-5 as launchpad.md",
     "netlify.toml",
     "content/you never start from zero.md",
     "content/abcd.md",
@@ -206,22 +214,16 @@
     "public/static/styling-background.svg",
     "public/static/og-vertical.png",
     "public/static/og-image.webp",
-    "public/tags/index.html",
-    "public/tags/work.html",
-    "public/you-never-start-from-zero.html",
-    "public/tags/systems.html",
     "public/dong.canvas",
     "content/spaces.md",
     "content/subscribe.md",
     "content/systems.md",
     "content/strategies.md",
-    "content/stories.md",
     "content/about.md",
     "templates/newsletter-issue.md",
     "templates/episode.md",
     "content/objects/index.md",
     "index.xml.md",
-    "content/the 9-5 as launchpad.md",
     "README.md",
     "templates/slides.md",
     "templates/canvas.canvas",
@@ -230,7 +232,6 @@
     "templates/note.md",
     "templates/protected.md",
     "templates/stream-entry.md",
-    "note title.md",
-    "AGENTS.md"
+    "note title.md"
   ]
 }
