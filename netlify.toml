@@ -1,0 +1,18 @@
+[build]
+  command = "node quartz/bootstrap-cli.mjs build"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/index.xml"
+  [headers.values]
+    Content-Type = "application/atom+xml; charset=utf-8"

@@ -1,0 +1,82 @@
+name = "portfolio"
+compatibility_date = "2025-01-21"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+main = "./worker/index.ts"
+preview_urls = true
+workers_dev = true
+rules = [{ type = "Text", globs = ["**/*.txt"], fallthrough = true }]
+
+[[durable_objects.bindings]]
+name = "MCP_OBJECT"
+class_name = "Garden"
+
+[[migrations]]
+tag = "mcp-001"
+new_sqlite_classes = ["Garden"]
+
+[[kv_namespaces]]
+binding = "OAUTH_KV"
+id = "c8591d9cecbd4cf4b569a8edadc3302d"
+
+[[kv_namespaces]]
+binding = "FONTS"
+id = "aec7fd95ca404e8c9941993b0e65821d"
+remote = true
+
+[[r2_buckets]]
+binding = "LFS_BUCKET"
+bucket_name = "sites"
+
+[[durable_objects.bindings]]
+name = "MULTIPLAYER_COMMENTS"
+class_name = "MultiplayerComments"
+
+[[migrations]]
+tag = "comments-001"
+new_sqlite_classes = ["MultiplayerComments"]
+
+[[d1_databases]]
+binding = "COMMENTS_ROOM"
+database_name = "COMMENTS_ROOM"
+database_id = "a267f69f-5fc0-4fbd-a013-d81c4da2783e"
+migrations_dir = "migrations"
+remote = true
+
+[browser]
+binding = "BROWSER"
+
+[ai]
+binding = "AI"
+remote = true
+
+[[routes]]
+pattern = "aarnphm.xyz"
+custom_domain = true
+
+[[routes]]
+pattern = "notes.aarnphm.xyz"
+custom_domain = true
+
+[[routes]]
+pattern = "stream.aarnphm.xyz"
+custom_domain = true
+
+[[routes]]
+pattern = "lyd.aarnphm.xyz"
+custom_domain = true
+
+[assets]
+directory = "./public/"
+binding = "ASSETS"
+not_found_handling = "404-page"
+run_worker_first = true
+
+[observability.logs]
+enabled = true
+
+[placement]
+mode = "smart"
+
+[dev]
+port = 8080
+ip = "0.0.0.0"

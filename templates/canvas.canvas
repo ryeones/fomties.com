@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"node4","type":"group","x":-250,"y":-100,"width":200,"height":200,"label":"Group Label"},
+		{"id":"node2","type":"text","text":"Related thought","x":300,"y":-100,"width":200,"height":60},
+		{"id":"node3","type":"file","file":"note-title.md","x":300,"y":100,"width":200,"height":160},
+		{"id":"node1","type":"text","text":"Central idea","x":0,"y":0,"width":200,"height":60}
+	],
+	"edges":[
+		{"id":"edge1","fromNode":"node1","fromSide":"right","toNode":"node2","toSide":"left","label":"leads to"},
+		{"id":"edge2","fromNode":"node1","fromSide":"right","toNode":"node3","toSide":"left"}
+	]
+}

@@ -1,0 +1,24 @@
+filters:
+  and:
+    - file.tags.contains("episode")
+properties:
+  file.name:
+    displayName: episode
+  note.guest:
+    displayName: guest
+  note.topic:
+    displayName: topic
+  note.date:
+    displayName: date
+views:
+  - type: table
+    name: All Conversations
+    order:
+      - file.name
+      - guest
+      - topic
+      - date
+      - tags
+    sort:
+      - property: date
+        direction: DESC

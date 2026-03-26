@@ -1,0 +1,21 @@
+filters:
+  and:
+    - file.tags.contains("newsletter")
+    - '!file.name.contains("index")'
+properties:
+  file.name:
+    displayName: Issue
+  note.description:
+    displayName: What it's about
+  note.date:
+    displayName: Date
+views:
+  - type: table
+    name: All Issues
+    order:
+      - file.name
+      - note.description
+      - note.date
+    sort:
+      - property: note.date
+        direction: DESC
