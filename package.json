@@ -65,7 +65,7 @@
     "dompurify": "^3.4.1",
     "drizzle-orm": "^0.45.2",
     "esbuild-sass-plugin": "^3.7.0",
-    "fast-xml-parser": "^5.7.1",
+    "fast-xml-parser": "^5.7.2",
     "flexsearch": "^0.8.212",
     "github-slugger": "^2.0.0",
     "globby": "^16.2.0",
@@ -158,7 +158,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260424.1",
+    "@cloudflare/workers-types": "^4.20260426.1",
     "@types/d3": "^7.4.3",
     "@types/d3-drag": "^3.0.7",
     "@types/d3-force": "^3.0.10",
@@ -173,7 +173,7 @@
     "@types/unist": "^3.0.3",
     "@types/ws": "^8.18.1",
     "@types/yargs": "^17.0.35",
-    "@typescript/native-preview": "7.0.0-dev.20260423.1",
+    "@typescript/native-preview": "7.0.0-dev.20260426.1",
     "ai": "^6.0.168",
     "bibtex-tidy": "^1.14.0",
     "drizzle-kit": "^0.31.10",
@@ -189,7 +189,7 @@
     "ts-morph": "^28.0.0",
     "tsx": "^4.21.0",
     "typescript": "^6.0.3",
-    "wrangler": "^4.84.1"
+    "wrangler": "^4.85.0"
   },
   "engines": {
     "node": ">=22",
