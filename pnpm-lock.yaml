@@ -24,10 +24,10 @@ importers:
         version: 1.4.0
       '@cloudflare/ai-chat':
         specifier: ^0.7.1
-        version: 0.7.1(@ai-sdk/react@3.0.90(react@18.3.1)(zod@4.4.3))(agents@0.13.1)(ai@6.0.185(zod@4.4.3))(react@18.3.1)(zod@4.4.3)
+        version: 0.7.1(@ai-sdk/react@3.0.90(react@18.3.1)(zod@4.4.3))(agents@0.13.1)(ai@6.0.188(zod@4.4.3))(react@18.3.1)(zod@4.4.3)
       '@cloudflare/codemode':
         specifier: ^0.3.7
-        version: 0.3.7(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.185(zod@4.4.3))(zod@4.4.3)
+        version: 0.3.7(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.188(zod@4.4.3))(zod@4.4.3)
       '@cloudflare/puppeteer':
         specifier: ^1.1.0
         version: 1.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
@@ -75,7 +75,7 @@ importers:
         version: 5.0.6
       agents:
         specifier: ^0.13.1
-        version: 0.13.1(@babel/core@7.29.0)(@babel/runtime@7.29.2)(@cloudflare/ai-chat@0.7.1)(@cloudflare/codemode@0.3.7(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.185(zod@4.4.3))(zod@4.4.3))(@cloudflare/workers-types@4.20260520.1)(ai@6.0.185(zod@4.4.3))(react@18.3.1)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1))(zod@4.4.3)
+        version: 0.13.1(@babel/core@7.29.0)(@babel/runtime@7.29.2)(@cloudflare/ai-chat@0.7.1)(@cloudflare/codemode@0.3.7(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.188(zod@4.4.3))(zod@4.4.3))(@cloudflare/workers-types@4.20260521.1)(ai@6.0.188(zod@4.4.3))(react@18.3.1)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1))(zod@4.4.3)
       ansi-truncate:
         specifier: ^1.4.0
         version: 1.4.0
@@ -93,7 +93,7 @@ importers:
         version: 3.4.5
       drizzle-orm:
         specifier: ^0.45.2
-        version: 0.45.2(@cloudflare/workers-types@4.20260520.1)(@electric-sql/pglite@0.4.5)(@opentelemetry/api@1.9.1)
+        version: 0.45.2(@cloudflare/workers-types@4.20260521.1)(@electric-sql/pglite@0.4.5)(@opentelemetry/api@1.9.1)
       esbuild-sass-plugin:
         specifier: ^3.7.0
         version: 3.7.0(esbuild@0.28.0)(sass-embedded@1.99.0)
@@ -372,8 +372,8 @@ importers:
         version: 4.4.3
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: ^4.20260520.1
-        version: 4.20260520.1
+        specifier: ^4.20260521.1
+        version: 4.20260521.1
       '@types/d3':
         specifier: ^7.4.3
         version: 7.4.3
@@ -420,8 +420,8 @@ importers:
         specifier: 7.0.0-dev.20260519.1
         version: 7.0.0-dev.20260519.1
       ai:
-        specifier: ^6.0.185
-        version: 6.0.185(zod@4.4.3)
+        specifier: ^6.0.188
+        version: 6.0.188(zod@4.4.3)
       bibtex-tidy:
         specifier: ^1.14.0
         version: 1.14.0
@@ -466,12 +466,12 @@ importers:
         version: 6.0.3
       wrangler:
         specifier: ^4.93.0
-        version: 4.93.0(@cloudflare/workers-types@4.20260520.1)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+        version: 4.93.0(@cloudflare/workers-types@4.20260521.1)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
 
 packages:
 
-  '@ai-sdk/gateway@3.0.116':
-    resolution: {integrity: sha512-k8P17w7Eho5Y4l3tZrYxqQdffkI4xwtl8GCxkZs+JdMWZhyrLLlozqWkKLaWrCSlEYQOeIhEnQLhqQgYYU86Rw==}
+  '@ai-sdk/gateway@3.0.118':
+    resolution: {integrity: sha512-XYPbVoDo1TDMVLe5Eg42gIjdOyxaizh9H0kiSSnTXr+AdrqZvutk/ypLOiqBXPV3D1K3+BSm/sbFeomZJlM64A==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -768,8 +768,8 @@ packages:
   '@cloudflare/workers-oauth-provider@0.6.0':
     resolution: {integrity: sha512-KOkTWEjwVjfYGU78eyapKziuPuzKw9gIg4LpxbGmxWhNl4bAdiJzWXeV3nepFr+vmkEiTMEGk99Llj5j0tH2cw==}
 
-  '@cloudflare/workers-types@4.20260520.1':
-    resolution: {integrity: sha512-wdmf9Fwabp06OgK9ZyCl8Q77GZ94k9J7OA9qA65FbgxZ/hd3hYRkVNiY7Bvsx4tKim+sWmKqGOblecZInAvoRg==}
+  '@cloudflare/workers-types@4.20260521.1':
+    resolution: {integrity: sha512-cerUUdckXWiNm0x0XEIomBkr58xja5hn/1F9wzzDfJTE96L98L/Ra0ToTxKfzsXLklPflOagce8Vhg0vx8Ytgw==}
 
   '@codemirror/autocomplete@6.20.2':
     resolution: {integrity: sha512-G5FPkgIiLjOgZMjqVjvuKQ1rGPtHogLldJr33eFJdVLtmwY+giGrlv/ewljLz6b9BSQLkjxuwBc6g6omDM+YxQ==}
@@ -2904,8 +2904,8 @@ packages:
       vite:
         optional: true
 
-  ai@6.0.185:
-    resolution: {integrity: sha512-oGsqscREaTlo75KHZLtwZxRyI+ZBwHV2wRX9B8smHjgOs13WwoCvUyr5aPUWpIBRz406wmIKy1RzoUEq0/WKJw==}
+  ai@6.0.188:
+    resolution: {integrity: sha512-kNwIl1MM4ESzeOPDYuN+FidJ2QY5kGWHLtTMru6HHPW/JJ6nPuvHRhJ8tMX/Y2Tijx9DCiv2W7y5IBouuB712g==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -4802,8 +4802,9 @@ packages:
     resolution: {integrity: sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==}
     hasBin: true
 
-  node-releases@2.0.44:
-    resolution: {integrity: sha512-5WUyunoPMsvvEhS8AxHtRzP+oA8UCkJ7YRxatWKjngndhDGLiqEVAQKWjFAiAiuL8zMRGzGSJxFnLetoa43qGQ==}
+  node-releases@2.0.45:
+    resolution: {integrity: sha512-iIbHXV9eBB2nB0wa7oTsrrXq+qQt+9SIlx9AX3T96YgobtEQfis5n6TJ6vV+3QP8DwdriEAcGhARaFCu37peBg==}
+    engines: {node: '>=18'}
 
   node-tikzjax@1.0.5:
     resolution: {integrity: sha512-ULp5DwgGLm1TKaELPmiT8qRhD3tkvwamnYi1ZfMd75v5G87XhpU0z8XwyDVQ+mVY9YsKjCZjvMBnL5V7juPWYA==}
@@ -6006,7 +6007,7 @@ packages:
 
 snapshots:
 
-  '@ai-sdk/gateway@3.0.116(zod@4.4.3)':
+  '@ai-sdk/gateway@3.0.118(zod@4.4.3)':
     dependencies:
       '@ai-sdk/provider': 3.0.10
       '@ai-sdk/provider-utils': 4.0.27(zod@4.4.3)
@@ -6294,22 +6295,22 @@ snapshots:
       fast-wrap-ansi: 0.2.0
       sisteransi: 1.0.5
 
-  '@cloudflare/ai-chat@0.7.1(@ai-sdk/react@3.0.90(react@18.3.1)(zod@4.4.3))(agents@0.13.1)(ai@6.0.185(zod@4.4.3))(react@18.3.1)(zod@4.4.3)':
+  '@cloudflare/ai-chat@0.7.1(@ai-sdk/react@3.0.90(react@18.3.1)(zod@4.4.3))(agents@0.13.1)(ai@6.0.188(zod@4.4.3))(react@18.3.1)(zod@4.4.3)':
     dependencies:
       '@ai-sdk/react': 3.0.90(react@18.3.1)(zod@4.4.3)
-      agents: 0.13.1(@babel/core@7.29.0)(@babel/runtime@7.29.2)(@cloudflare/ai-chat@0.7.1)(@cloudflare/codemode@0.3.7(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.185(zod@4.4.3))(zod@4.4.3))(@cloudflare/workers-types@4.20260520.1)(ai@6.0.185(zod@4.4.3))(react@18.3.1)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1))(zod@4.4.3)
-      ai: 6.0.185(zod@4.4.3)
+      agents: 0.13.1(@babel/core@7.29.0)(@babel/runtime@7.29.2)(@cloudflare/ai-chat@0.7.1)(@cloudflare/codemode@0.3.7(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.188(zod@4.4.3))(zod@4.4.3))(@cloudflare/workers-types@4.20260521.1)(ai@6.0.188(zod@4.4.3))(react@18.3.1)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1))(zod@4.4.3)
+      ai: 6.0.188(zod@4.4.3)
       nanoid: 5.1.11
       react: 18.3.1
       zod: 4.4.3
 
-  '@cloudflare/codemode@0.3.7(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.185(zod@4.4.3))(zod@4.4.3)':
+  '@cloudflare/codemode@0.3.7(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.188(zod@4.4.3))(zod@4.4.3)':
     dependencies:
       '@types/json-schema': 7.0.15
       acorn: 8.16.0
     optionalDependencies:
       '@modelcontextprotocol/sdk': 1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3)
-      ai: 6.0.185(zod@4.4.3)
+      ai: 6.0.188(zod@4.4.3)
       zod: 4.4.3
 
   '@cloudflare/kv-asset-handler@0.5.0': {}
@@ -6351,7 +6352,7 @@ snapshots:
 
   '@cloudflare/workers-oauth-provider@0.6.0': {}
 
-  '@cloudflare/workers-types@4.20260520.1': {}
+  '@cloudflare/workers-types@4.20260521.1': {}
 
   '@codemirror/autocomplete@6.20.2':
     dependencies:
@@ -8032,24 +8033,24 @@ snapshots:
 
   agent-base@7.1.4: {}
 
-  agents@0.13.1(@babel/core@7.29.0)(@babel/runtime@7.29.2)(@cloudflare/ai-chat@0.7.1)(@cloudflare/codemode@0.3.7(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.185(zod@4.4.3))(zod@4.4.3))(@cloudflare/workers-types@4.20260520.1)(ai@6.0.185(zod@4.4.3))(react@18.3.1)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1))(zod@4.4.3):
+  agents@0.13.1(@babel/core@7.29.0)(@babel/runtime@7.29.2)(@cloudflare/ai-chat@0.7.1)(@cloudflare/codemode@0.3.7(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.188(zod@4.4.3))(zod@4.4.3))(@cloudflare/workers-types@4.20260521.1)(ai@6.0.188(zod@4.4.3))(react@18.3.1)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1))(zod@4.4.3):
     dependencies:
       '@babel/plugin-proposal-decorators': 7.29.0(@babel/core@7.29.0)
       '@cfworker/json-schema': 4.1.1
       '@modelcontextprotocol/sdk': 1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3)
       '@rolldown/plugin-babel': 0.2.3(@babel/core@7.29.0)(@babel/runtime@7.29.2)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1))
-      ai: 6.0.185(zod@4.4.3)
+      ai: 6.0.188(zod@4.4.3)
       cron-schedule: 6.0.0
       mimetext: 3.0.28
       nanoid: 5.1.11
-      partyserver: 0.5.6(@cloudflare/workers-types@4.20260520.1)
+      partyserver: 0.5.6(@cloudflare/workers-types@4.20260521.1)
       partysocket: 1.1.19(react@18.3.1)
       react: 18.3.1
       yargs: 18.0.0
       zod: 4.4.3
     optionalDependencies:
-      '@cloudflare/ai-chat': 0.7.1(@ai-sdk/react@3.0.90(react@18.3.1)(zod@4.4.3))(agents@0.13.1)(ai@6.0.185(zod@4.4.3))(react@18.3.1)(zod@4.4.3)
-      '@cloudflare/codemode': 0.3.7(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.185(zod@4.4.3))(zod@4.4.3)
+      '@cloudflare/ai-chat': 0.7.1(@ai-sdk/react@3.0.90(react@18.3.1)(zod@4.4.3))(agents@0.13.1)(ai@6.0.188(zod@4.4.3))(react@18.3.1)(zod@4.4.3)
+      '@cloudflare/codemode': 0.3.7(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.188(zod@4.4.3))(zod@4.4.3)
     transitivePeerDependencies:
       - '@babel/core'
       - '@babel/plugin-transform-runtime'
@@ -8058,9 +8059,9 @@ snapshots:
       - rolldown
       - supports-color
 
-  ai@6.0.185(zod@4.4.3):
+  ai@6.0.188(zod@4.4.3):
     dependencies:
-      '@ai-sdk/gateway': 3.0.116(zod@4.4.3)
+      '@ai-sdk/gateway': 3.0.118(zod@4.4.3)
       '@ai-sdk/provider': 3.0.10
       '@ai-sdk/provider-utils': 4.0.27(zod@4.4.3)
       '@opentelemetry/api': 1.9.1
@@ -8221,7 +8222,7 @@ snapshots:
       baseline-browser-mapping: 2.10.31
       caniuse-lite: 1.0.30001793
       electron-to-chromium: 1.5.360
-      node-releases: 2.0.44
+      node-releases: 2.0.45
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
   buffer-crc32@0.2.13: {}
@@ -8677,9 +8678,9 @@ snapshots:
       esbuild: 0.25.12
       tsx: 4.22.3
 
-  drizzle-orm@0.45.2(@cloudflare/workers-types@4.20260520.1)(@electric-sql/pglite@0.4.5)(@opentelemetry/api@1.9.1):
+  drizzle-orm@0.45.2(@cloudflare/workers-types@4.20260521.1)(@electric-sql/pglite@0.4.5)(@opentelemetry/api@1.9.1):
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20260520.1
+      '@cloudflare/workers-types': 4.20260521.1
       '@electric-sql/pglite': 0.4.5
       '@opentelemetry/api': 1.9.1
 
@@ -10348,7 +10349,7 @@ snapshots:
   node-gyp-build@4.8.4:
     optional: true
 
-  node-releases@2.0.44: {}
+  node-releases@2.0.45: {}
 
   node-tikzjax@1.0.5(bufferutil@4.0.9)(tslib@2.8.1)(utf-8-validate@5.0.10):
     dependencies:
@@ -10558,9 +10559,9 @@ snapshots:
 
   parseurl@1.3.3: {}
 
-  partyserver@0.5.6(@cloudflare/workers-types@4.20260520.1):
+  partyserver@0.5.6(@cloudflare/workers-types@4.20260521.1):
     dependencies:
-      '@cloudflare/workers-types': 4.20260520.1
+      '@cloudflare/workers-types': 4.20260521.1
       nanoid: 5.1.11
 
   partysocket@1.1.19(react@18.3.1):
@@ -11748,7 +11749,7 @@ snapshots:
 
   workerpool@10.0.2: {}
 
-  wrangler@4.93.0(@cloudflare/workers-types@4.20260520.1)(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  wrangler@4.93.0(@cloudflare/workers-types@4.20260521.1)(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.1(unenv@2.0.0-rc.24)(workerd@1.20260518.1)
@@ -11759,7 +11760,7 @@ snapshots:
       unenv: 2.0.0-rc.24
       workerd: 1.20260518.1
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20260520.1
+      '@cloudflare/workers-types': 4.20260521.1
       fsevents: 2.3.3
     transitivePeerDependencies:
       - bufferutil
