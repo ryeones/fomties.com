@@ -23,17 +23,17 @@ importers:
         specifier: ^1.5.1
         version: 1.5.1
       '@cloudflare/ai-chat':
-        specifier: ^0.8.4
-        version: 0.8.4(@ai-sdk/react@3.0.90(react@18.3.1)(zod@4.4.3))(agents@0.15.0)(ai@6.0.202(zod@4.4.3))(react@18.3.1)(zod@4.4.3)
+        specifier: ^0.8.5
+        version: 0.8.5(@ai-sdk/react@3.0.90(react@18.3.1)(zod@4.4.3))(agents@0.16.0)(ai@6.0.205(zod@4.4.3))(react@18.3.1)(zod@4.4.3)
       '@cloudflare/codemode':
-        specifier: ^0.3.8
-        version: 0.3.8(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.202(zod@4.4.3))(zod@4.4.3)
+        specifier: ^0.4.0
+        version: 0.4.0(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.205(zod@4.4.3))(zod@4.4.3)
       '@cloudflare/puppeteer':
         specifier: ^1.1.0
         version: 1.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@cloudflare/workers-oauth-provider':
-        specifier: ^0.7.2
-        version: 0.7.2
+        specifier: ^0.8.0
+        version: 0.8.0
       '@codemirror/autocomplete':
         specifier: ^6.20.3
         version: 6.20.3
@@ -74,8 +74,8 @@ importers:
         specifier: ^5.0.6
         version: 5.0.6
       agents:
-        specifier: ^0.15.0
-        version: 0.15.0(@babel/core@7.29.0)(@babel/runtime@7.29.7)(@cloudflare/ai-chat@0.8.4)(@cloudflare/workers-types@4.20260612.1)(ai@6.0.202(zod@4.4.3))(react@18.3.1)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.11.0))(zod@4.4.3)
+        specifier: ^0.16.0
+        version: 0.16.0(@babel/core@7.29.0)(@babel/runtime@7.29.7)(@cloudflare/ai-chat@0.8.5)(@cloudflare/workers-types@4.20260615.1)(ai@6.0.205(zod@4.4.3))(react@18.3.1)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.11.0))(zod@4.4.3)
       ansi-truncate:
         specifier: ^1.4.0
         version: 1.4.0
@@ -89,17 +89,17 @@ importers:
         specifier: ^7.9.0
         version: 7.9.0
       dompurify:
-        specifier: ^3.4.9
-        version: 3.4.9
+        specifier: ^3.4.10
+        version: 3.4.10
       drizzle-orm:
         specifier: ^0.45.2
-        version: 0.45.2(@cloudflare/workers-types@4.20260612.1)(@electric-sql/pglite@0.5.2)(@opentelemetry/api@1.9.1)(sql.js@1.14.1)
+        version: 0.45.2(@cloudflare/workers-types@4.20260615.1)(@electric-sql/pglite@0.5.2)(@opentelemetry/api@1.9.1)(sql.js@1.14.1)
       esbuild-sass-plugin:
         specifier: ^3.7.0
         version: 3.7.0(esbuild@0.28.1)(sass-embedded@1.100.0)
       fast-xml-parser:
-        specifier: ^5.8.0
-        version: 5.8.0
+        specifier: ^5.9.0
+        version: 5.9.0
       flexsearch:
         specifier: ^0.8.212
         version: 0.8.212
@@ -372,8 +372,8 @@ importers:
         version: 4.4.3
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: ^4.20260612.1
-        version: 4.20260612.1
+        specifier: ^4.20260615.1
+        version: 4.20260615.1
       '@types/d3':
         specifier: ^7.4.3
         version: 7.4.3
@@ -417,11 +417,11 @@ importers:
         specifier: ^17.0.35
         version: 17.0.35
       '@typescript/native-preview':
-        specifier: 7.0.0-dev.20260611.2
-        version: 7.0.0-dev.20260611.2
+        specifier: 7.0.0-dev.20260614.1
+        version: 7.0.0-dev.20260614.1
       ai:
-        specifier: ^6.0.202
-        version: 6.0.202(zod@4.4.3)
+        specifier: ^6.0.205
+        version: 6.0.205(zod@4.4.3)
       bibtex-tidy:
         specifier: ^1.14.0
         version: 1.14.0
@@ -432,8 +432,8 @@ importers:
         specifier: ^0.28.1
         version: 0.28.1
       eslint:
-        specifier: ^10.4.1
-        version: 10.4.1
+        specifier: ^10.5.0
+        version: 10.5.0
       mermaid:
         specifier: ^11.15.0
         version: 11.15.0
@@ -466,12 +466,12 @@ importers:
         version: 6.0.3
       wrangler:
         specifier: ^4.100.0
-        version: 4.100.0(@cloudflare/workers-types@4.20260612.1)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+        version: 4.100.0(@cloudflare/workers-types@4.20260615.1)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
 
 packages:
 
-  '@ai-sdk/gateway@3.0.128':
-    resolution: {integrity: sha512-t9Dyqk5thSmIzsNvVTQtZZiO3xqKGkk1hX3+GNpYmro+GuEdW+E6mKFHihb9Y1vCEt3rEyd4pbGUcin4D57FfQ==}
+  '@ai-sdk/gateway@3.0.131':
+    resolution: {integrity: sha512-CnjOZdywQaUnCyZ0N5wVNm7Sm63+NeHDVZQJKFX2IDq+t03SLwiiuoi3ILTLPlM+YSOhkQ/pvIDoR4qa98Zp5A==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -488,8 +488,8 @@ packages:
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
 
-  '@ai-sdk/provider-utils@4.0.28':
-    resolution: {integrity: sha512-nCtGJY43Kqwoyk0rYLj80a3eyXxcaWwyu+lYZDHgY+U6JbYYyvRdRTSy+XCDIB91rFH0Ul0eMDHmDr+YMYtrSw==}
+  '@ai-sdk/provider-utils@4.0.29':
+    resolution: {integrity: sha512-uhukHaCBvqkwBHkT8C2PrnqKTCoLn3pdHXqtcR9I8ErH+flbzgW4o7VHSNIup9LRu+WBvZIZDQLsx6rwl2tiOA==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -695,17 +695,17 @@ packages:
     resolution: {integrity: sha512-zccHj2z2oCCO4yrDiRSlFOxWerGqRiysP7a5jPK6uoI9URKAquwY42Dd/iUP8JWHxEzdRe4TlbvZCo8z1/mhrw==}
     engines: {node: '>= 20.12.0'}
 
-  '@cloudflare/ai-chat@0.8.4':
-    resolution: {integrity: sha512-y9+Mqe2uZS8vHOCi936IWknNM3Z2FLqU42bq1mdL+OFkI+MWdUZ0oVWR0ZWTYP/MNWgxwgdZBxzmaALQZuwbtA==}
+  '@cloudflare/ai-chat@0.8.5':
+    resolution: {integrity: sha512-I2Zw/TbtJC+8Ykm8JG5hIC3jqNCzEYodoCsrFD52Ix2qK7vN6psbz1ghjYubd1/qhsNOK8/Hua8kxkBxl49PxQ==}
     peerDependencies:
-      '@ai-sdk/react': ^3.0.0
-      agents: '>=0.14.0 <1.0.0'
+      '@ai-sdk/react': ^3.0.204
+      agents: '>=0.16.0 <1.0.0'
       ai: ^6.0.0
       react: ^19.0.0
       zod: ^4.0.0
 
-  '@cloudflare/codemode@0.3.8':
-    resolution: {integrity: sha512-PVe99dFf/dvf0JOh1SBTYL7YT0nXusmqaK0lRrrlHGIQdGAnKRSb4VtaE5atiDVgN/U9G16bSkej7Pn5lWhG1g==}
+  '@cloudflare/codemode@0.4.0':
+    resolution: {integrity: sha512-9PviCRBeISdgMwJK0LCQWZaOkYm2+K/EM4Y94U3lPg1/TJVb9et0aXgxzf8KB61yAvtDMDr8nZQ+scLX+6aQaA==}
     peerDependencies:
       '@modelcontextprotocol/sdk': ^1.25.0
       '@tanstack/ai': '>=0.8.0 <1.0.0'
@@ -768,11 +768,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@cloudflare/workers-oauth-provider@0.7.2':
-    resolution: {integrity: sha512-GcSc2lTPYO/r9Zxyuvw8KNAk640LP5XTnBWVuI13hA6XcEWQbyH9KuO9WiN5pXUcO2Gn7pBmRTNU4uIMpgmw2w==}
+  '@cloudflare/workers-oauth-provider@0.8.0':
+    resolution: {integrity: sha512-Vb2mjT9R+rLS9FcHgd5+ab4u7SP0ZB7x7t9M94JNMdN5e2ogRf3NOUCPW6NhBCTPwKu36VrfrYPPNGjOek4VYQ==}
 
-  '@cloudflare/workers-types@4.20260612.1':
-    resolution: {integrity: sha512-PMQI7XP/wrMhxyjseUHoHj6XFqkHaf4utWQ/hhefVY8oMK2LJ730oeQ7H/nZSVMexZe39DzsdOx7sf1PqMr7+Q==}
+  '@cloudflare/workers-types@4.20260615.1':
+    resolution: {integrity: sha512-fGOiTwoLj/8bU8mj3VAfa1EULx4ceZhDwnjvY+afDBlSXI9pvY7PE9t62rGEhJjbAOGd7i5WUDun0eZCWBDrzg==}
 
   '@codemirror/autocomplete@6.20.3':
     resolution: {integrity: sha512-tlosUqb+3BbxCxZdu4tKeRghPFC+QM7q4X5YhKV2eCmPG+1r2F3f4AaSz5sCrFqUtX4Jh20VFTKecl16MgiV9g==}
@@ -2127,8 +2127,8 @@ packages:
       '@emnapi/core': ^1.7.1
       '@emnapi/runtime': ^1.7.1
 
-  '@nodable/entities@2.1.0':
-    resolution: {integrity: sha512-nyT7T3nbMyBI/lvr6L5TyWbFJAI9FTgVRakNoBqCD+PmID8DzFrrNdLLtHMwMszOtqZa8PAOV24ZqDnQrhQINA==}
+  '@nodable/entities@2.2.0':
+    resolution: {integrity: sha512-9uGyhaQavEUMC8AIddIjau4NsnsXhou+j5sBAGojCM1oxmQpVKTWR/9JxABD6UAv12vpIms55fPZKFQEhG6uBg==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2956,50 +2956,50 @@ packages:
   '@types/yauzl@2.10.3':
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==}
 
-  '@typescript/native-preview-darwin-arm64@7.0.0-dev.20260611.2':
-    resolution: {integrity: sha512-X6NqNmoTnO1vtcsE4qP571BByPi+i16Ynrp6fffcQ38pbRuy4mwECxA9nKb273gscG0wvcIcGM81B+vy1F4nDw==}
+  '@typescript/native-preview-darwin-arm64@7.0.0-dev.20260614.1':
+    resolution: {integrity: sha512-2JHbdJ00FKTKDR1+NL4zhQBDlFZfZHEXaAarV6kbEjV0P47qKnSrAzzKHuponG0B9FqkPEMHOgu7WGJTBW2rHw==}
     engines: {node: '>=16.20.0'}
     cpu: [arm64]
     os: [darwin]
 
-  '@typescript/native-preview-darwin-x64@7.0.0-dev.20260611.2':
-    resolution: {integrity: sha512-VeguHC/F7EbxNPCrcwCRH2wif6PZKcdUg2DtMyjxohtcVK3vOoVCYqhJBgJVWQ2gbXk+bXcIz8L2/uNYDksN0w==}
+  '@typescript/native-preview-darwin-x64@7.0.0-dev.20260614.1':
+    resolution: {integrity: sha512-/8enyEb1tDsVvUp4rDeA5DernrvWgD6cQ4rY6O6PH6BQK8fqwY+CcHEHmw2xgwfqoswHNYjznLvmQmHBOjHqLw==}
     engines: {node: '>=16.20.0'}
     cpu: [x64]
     os: [darwin]
 
-  '@typescript/native-preview-linux-arm64@7.0.0-dev.20260611.2':
-    resolution: {integrity: sha512-19TXmRxxPUNNDAP/4xBwDNud1NvuNgQJhRm87t7/CSh4FGhWeeEm7AuyEvrCB+vzeeI/ExT+J58U1HOo+kYKzg==}
+  '@typescript/native-preview-linux-arm64@7.0.0-dev.20260614.1':
+    resolution: {integrity: sha512-jqhqAXqyEUxJpno/wRfWGa72R3VTt7p2LRTOFJ0C1bx5dEKrVosQSOdr2m9+2VhjXFXNvorXsGZPIWqxLOo28Q==}
     engines: {node: '>=16.20.0'}
     cpu: [arm64]
     os: [linux]
 
-  '@typescript/native-preview-linux-arm@7.0.0-dev.20260611.2':
-    resolution: {integrity: sha512-szcSb7sSn3OQZ5UWtToG2RTQeDlokd05pXM+rGctBIctDj6E4j9bvAfp6xLZCzqyDuZJhi3cXCJBdSlBD0NjHw==}
+  '@typescript/native-preview-linux-arm@7.0.0-dev.20260614.1':
+    resolution: {integrity: sha512-zYrUKq5oC6fUoHpOmT3B65hFMhbdIlLp7T9RW1/6a+wSYoq9xTRAeFufQ2XZ9cpTJ1tfIvlUmtgJJ5CGE/cOrg==}
     engines: {node: '>=16.20.0'}
     cpu: [arm]
     os: [linux]
 
-  '@typescript/native-preview-linux-x64@7.0.0-dev.20260611.2':
-    resolution: {integrity: sha512-h5Etd2Kc6lvvc+X4MU/EFeYDUZAS4hOqB18piWuy2INHfRvJMOo8jZOwUJRix3NQu75tPbltFCkwFOGqB0fd2Q==}
+  '@typescript/native-preview-linux-x64@7.0.0-dev.20260614.1':
+    resolution: {integrity: sha512-K2c/DN7Q3a6Z+KIl7bq45xByuuGjacqWO/UPCa/iTBA/m6GDzoMJ/Q/DBLtLRHyROBRiy5kjgEZfyLy3Tp8ygw==}
     engines: {node: '>=16.20.0'}
     cpu: [x64]
     os: [linux]
 
-  '@typescript/native-preview-win32-arm64@7.0.0-dev.20260611.2':
-    resolution: {integrity: sha512-JUUFHNi3asye8iOlVmFEra34LuQ8bw8qvYWp+cW7EXg3mrMxtac/u5chhi8BmICEav2Ff3UFd8ZFL0n+F5EvBA==}
+  '@typescript/native-preview-win32-arm64@7.0.0-dev.20260614.1':
+    resolution: {integrity: sha512-C+C25Grr4sCbQIYPT5WfKYIL613ZIN9aGcUwDGMSTmIQ3azIR5MtdkSF4l4vsOC4lF8HwFV83MDa28JuQYhQFg==}
     engines: {node: '>=16.20.0'}
     cpu: [arm64]
     os: [win32]
 
-  '@typescript/native-preview-win32-x64@7.0.0-dev.20260611.2':
-    resolution: {integrity: sha512-1ZPtOctecgkUHBIEoTefE34t4CewqxwdzIkRx22fDEC9bHhN8xO4JSfQyL+OSWDxiZaJKuqR9BnfWSl2eAFtmg==}
+  '@typescript/native-preview-win32-x64@7.0.0-dev.20260614.1':
+    resolution: {integrity: sha512-nJBR61NGiCMBJOpdzJ4ZgA/HEd+fqIb99ur39UljSH9xvFKFlRwDosyAQFD8UEwrZsUbXN0VPLJY5MDknug3GA==}
     engines: {node: '>=16.20.0'}
     cpu: [x64]
     os: [win32]
 
-  '@typescript/native-preview@7.0.0-dev.20260611.2':
-    resolution: {integrity: sha512-nP/OrQRFTRKHeQiXzMVhQlxSrOPeuDgeGGd9KMlmOFTc/bbQ8Zd6Ep5izsdTkFljd26QUfpm98crp5E5bYAvJg==}
+  '@typescript/native-preview@7.0.0-dev.20260614.1':
+    resolution: {integrity: sha512-4N1ZBHJUcsjKJQnUCxKUemV3jnm0PKZIZ4xh7dXN/3/AfmckE8Z1llyqOFfDwGOf8oQpdgkwQ6JUm7pqI3bGPg==}
     engines: {node: '>=16.20.0'}
     hasBin: true
 
@@ -3034,8 +3034,8 @@ packages:
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
 
-  acorn@8.16.0:
-    resolution: {integrity: sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==}
+  acorn@8.17.0:
+    resolution: {integrity: sha512-xRQbDb9BnwDafYNn6Vwl839DYVjqXYb1XVGtWAZ1kcDc6iwAL4hg3B1dZlRiuENFeO2H53gFG3in621AdERVAg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -3047,11 +3047,11 @@ packages:
     resolution: {integrity: sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==}
     engines: {node: '>= 14'}
 
-  agents@0.15.0:
-    resolution: {integrity: sha512-bLBPQ802tsxNMdNZCuujasbqM7Oiw+6FEdHKjtXuElX+QLvVzy17Cdygcx0BZyC7C9cqZ8Nr3T2LI/X/hDXxXQ==}
+  agents@0.16.0:
+    resolution: {integrity: sha512-wWVbUkSoRGDHKkMPVFTulvq38I/e0TBMd1itXlgUjGJWBXwzaCBiRA8LDKhDLQIjK0uca+HbSrxc+cDWzm4P8g==}
     hasBin: true
     peerDependencies:
-      '@cloudflare/ai-chat': '>=0.8.0 <1.0.0'
+      '@cloudflare/ai-chat': '>=0.8.5 <1.0.0'
       '@tanstack/ai': '>=0.10.2 <1.0.0'
       '@x402/core': ^2.0.0
       '@x402/evm': ^2.0.0
@@ -3074,8 +3074,8 @@ packages:
       vite:
         optional: true
 
-  ai@6.0.202:
-    resolution: {integrity: sha512-14O7uyHVa5lXyt1RzduRqM1zwOnLBN+EaE+btWiP2R7GLHd5oh+Z9uaebR785V/Y2hXlxvuQGsw2Gj6iHpkxsg==}
+  ai@6.0.205:
+    resolution: {integrity: sha512-F4akEGF41UdgJO3L4v+D5noVD1/czhJy6x0k9R/i1EXfxqrkBh/PdYSgRSLPiGFvrw76dzI8h4w3NYmLrTb8dw==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -3118,6 +3118,9 @@ packages:
 
   ansi-truncate@1.4.0:
     resolution: {integrity: sha512-p6d2MrNs/mbpdXFT08fGabIg4pbgnUbbhrsoFfxWV5L3zFKw7tUkYUxGY3xCGJUPohENM80Q4sWkl/VDEN3pZg==}
+
+  anynum@1.0.0:
+    resolution: {integrity: sha512-xjR9/zBVnUOP6ztMIIgShjsxui80nQUQH+5xJnvrYLs+90bF25/KJqaAi8mk+B4RDtX1Nspi6fmp4YTEts8SfA==}
 
   argparse@1.0.10:
     resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
@@ -3201,8 +3204,8 @@ packages:
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
-  baseline-browser-mapping@2.10.36:
-    resolution: {integrity: sha512-lVq/Df7LXlO79MVaaUHztSwWiG9oXoWHlgvNS51v8Dpd4+G4/VIy6qYePTw31nAVls33nUtnfezYeLkYAak9dg==}
+  baseline-browser-mapping@2.10.37:
+    resolution: {integrity: sha512-girxaJ7WZssDOFhzCGZTDKoTa1gk6A1TbflaYTpykLJ4UU9Fz9kx1aREM8JCuoVHbL8X8T/mJg7w2oYSq72Oig==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -3711,8 +3714,8 @@ packages:
     resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
     engines: {node: '>= 4'}
 
-  dompurify@3.4.9:
-    resolution: {integrity: sha512-4dPSRMRDqHvs0V4YDFCsaIZo4if5u0xM+llyxiM2fwuZFdKArUBAF3VtI2+n8NKg9P870WMdYk0UhqQNoWXbfQ==}
+  dompurify@3.4.10:
+    resolution: {integrity: sha512-0xzNv0e7oYC6yyuOGZIABPM4qtg3QxLFniDNPP4ZP90wR8Yq3zgwpRbrNiT4N3IKqDbbYFEJLV+JWEs19aZ//w==}
 
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
@@ -3937,8 +3940,8 @@ packages:
     resolution: {integrity: sha512-tD40eHxA35h0PEIZNeIjkHoDR4YjjJp34biM0mDvplBe//mB+IHCqHDGV7pxF+7MklTvighcCPPZC7ynWyjdTA==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  eslint@10.4.1:
-    resolution: {integrity: sha512-AyIKhnOBuOAdueD7RB3xB+YeAWScb9jHsJBgH2Hcde8InP5JYhqrRR6iTMHyTEwgENK54Cp44e4v8BwNhsuHuw==}
+  eslint@10.5.0:
+    resolution: {integrity: sha512-1y+7C+vi12bUK1IpZeaV3gsH9fHLBmPvYmPx42pvT/E9yG0IC8g3PUZZgp0+JLJl7ZDK0flc2gc+Aw9dpCvIsQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     hasBin: true
     peerDependencies:
@@ -4063,8 +4066,8 @@ packages:
   fast-xml-builder@1.2.0:
     resolution: {integrity: sha512-00aAWieqff+ZJhsXA4g1g7M8k+7AYoMUUHF+/zFb5U6Uv/P0Vl4QZo84/IcufzYalLuEj9928bXN9PbbFzMF0Q==}
 
-  fast-xml-parser@5.8.0:
-    resolution: {integrity: sha512-6bIM7fsJxeo3uXv7OncQYsBAMPJ7V16Slahl/6M98C/i2q+vB1+4a0MtrvYwDFEUrwDSbAmeLDRXsOBwrL7yAg==}
+  fast-xml-parser@5.9.0:
+    resolution: {integrity: sha512-duBuXbyIhEeNO4GjFuVqr0nF047oNwr18aum+zJyqo0MUG/n7Afgs3Qv3D6VN3ONedUKxiuFlPiMGIa0Z11chA==}
     hasBin: true
 
   fastq@1.20.1:
@@ -4483,6 +4486,9 @@ packages:
 
   is-promise@4.0.0:
     resolution: {integrity: sha512-hvpoI6korhJMnej285dSg6nu1+e6uxs7zG3BYAm5byqDsgJNWwxzM6z6iZiAgQR4TJ30JmBTOwqZUw3WlyH3AQ==}
+
+  is-unsafe@1.0.1:
+    resolution: {integrity: sha512-CLK2+VdgERgD96EYm5lUQssZYlRg2tkZnbsxZoacmSiRxiFJ4Nk4SzjCl+Ur+v3kXIY9dTIdb3IH22y1mZ56LA==}
 
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
@@ -5188,13 +5194,13 @@ packages:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}
     engines: {node: '>= 0.8'}
 
-  partyserver@0.5.6:
-    resolution: {integrity: sha512-/LKCqlq9nWzNXA8UXZFO/Xz15QDCjJnGAgRQVLnXJO9bA0HKt5J8VM8wLnGc814WatzuQgeG17tqzI//y5WFGA==}
+  partyserver@0.5.8:
+    resolution: {integrity: sha512-htgSwiBcBu9zIYLrsxBAOvdkjukHvncbTk0nDrJgfruvZ08rxtEN1Ab4T7j9osykP80Bq3zA2oWFd3ngc4Z9uw==}
     peerDependencies:
       '@cloudflare/workers-types': ^4.20260424.1
 
-  partysocket@1.1.19:
-    resolution: {integrity: sha512-hPwsXSdUc8PKNCinET6TD3JQOxzQ2JaP0bUZQXBVl6UM8UuLn1odgf1LcJXHy4UHSQwWL/RU3AnyhEsGM+W+sg==}
+  partysocket@1.2.0:
+    resolution: {integrity: sha512-xgXql4N0b3umN263lHkrZMvvtYC906h4YjY8l63LNcF0x1bfJmQtZLQGqNQWzFHAxLns/6h6/rjdLW4EdYqQwA==}
     peerDependencies:
       react: '>=17'
     peerDependenciesMeta:
@@ -5855,8 +5861,8 @@ packages:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
     engines: {node: '>=0.10.0'}
 
-  strnum@2.3.0:
-    resolution: {integrity: sha512-ums3KNd42PGyx5xaoVTO1mjU1bH3NpY4vsrVlnv9PNGqQj8wd7rJ6nEypLrJ7z5vxK5RP0yMLo6J/Gsm62DI5Q==}
+  strnum@2.4.0:
+    resolution: {integrity: sha512-sHrVyWWdq28RbhjuJdZsA1SnGRJV6NiXbk6AXBxDOsgAcA+lmpUZCYjOdLBxkXMwis6RRe7dlZt4VlIWFVzkmg==}
 
   strtok3@10.3.5:
     resolution: {integrity: sha512-ki4hZQfh5rX0QDLLkOCj+h+CVNkqmp/CMf8v8kZpkNVK6jGQooMytqzLZYUVYIZcFZ6yDB70EfD8POcFXiF5oA==}
@@ -6352,10 +6358,10 @@ packages:
 
 snapshots:
 
-  '@ai-sdk/gateway@3.0.128(zod@4.4.3)':
+  '@ai-sdk/gateway@3.0.131(zod@4.4.3)':
     dependencies:
       '@ai-sdk/provider': 3.0.10
-      '@ai-sdk/provider-utils': 4.0.28(zod@4.4.3)
+      '@ai-sdk/provider-utils': 4.0.29(zod@4.4.3)
       '@vercel/oidc': 3.2.0
       zod: 4.4.3
 
@@ -6373,7 +6379,7 @@ snapshots:
       eventsource-parser: 3.1.0
       zod: 4.4.3
 
-  '@ai-sdk/provider-utils@4.0.28(zod@4.4.3)':
+  '@ai-sdk/provider-utils@4.0.29(zod@4.4.3)':
     dependencies:
       '@ai-sdk/provider': 3.0.10
       '@standard-schema/spec': 1.1.0
@@ -6642,22 +6648,22 @@ snapshots:
       fast-wrap-ansi: 0.2.2
       sisteransi: 1.0.5
 
-  '@cloudflare/ai-chat@0.8.4(@ai-sdk/react@3.0.90(react@18.3.1)(zod@4.4.3))(agents@0.15.0)(ai@6.0.202(zod@4.4.3))(react@18.3.1)(zod@4.4.3)':
+  '@cloudflare/ai-chat@0.8.5(@ai-sdk/react@3.0.90(react@18.3.1)(zod@4.4.3))(agents@0.16.0)(ai@6.0.205(zod@4.4.3))(react@18.3.1)(zod@4.4.3)':
     dependencies:
       '@ai-sdk/react': 3.0.90(react@18.3.1)(zod@4.4.3)
-      agents: 0.15.0(@babel/core@7.29.0)(@babel/runtime@7.29.7)(@cloudflare/ai-chat@0.8.4)(@cloudflare/workers-types@4.20260612.1)(ai@6.0.202(zod@4.4.3))(react@18.3.1)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.11.0))(zod@4.4.3)
-      ai: 6.0.202(zod@4.4.3)
+      agents: 0.16.0(@babel/core@7.29.0)(@babel/runtime@7.29.7)(@cloudflare/ai-chat@0.8.5)(@cloudflare/workers-types@4.20260615.1)(ai@6.0.205(zod@4.4.3))(react@18.3.1)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.11.0))(zod@4.4.3)
+      ai: 6.0.205(zod@4.4.3)
       nanoid: 5.1.11
       react: 18.3.1
       zod: 4.4.3
 
-  '@cloudflare/codemode@0.3.8(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.202(zod@4.4.3))(zod@4.4.3)':
+  '@cloudflare/codemode@0.4.0(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.205(zod@4.4.3))(zod@4.4.3)':
     dependencies:
       '@types/json-schema': 7.0.15
-      acorn: 8.16.0
+      acorn: 8.17.0
     optionalDependencies:
       '@modelcontextprotocol/sdk': 1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3)
-      ai: 6.0.202(zod@4.4.3)
+      ai: 6.0.205(zod@4.4.3)
       zod: 4.4.3
 
   '@cloudflare/kv-asset-handler@0.5.0': {}
@@ -6697,9 +6703,9 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20260611.1':
     optional: true
 
-  '@cloudflare/workers-oauth-provider@0.7.2': {}
+  '@cloudflare/workers-oauth-provider@0.8.0': {}
 
-  '@cloudflare/workers-types@4.20260612.1': {}
+  '@cloudflare/workers-types@4.20260615.1': {}
 
   '@codemirror/autocomplete@6.20.3':
     dependencies:
@@ -7140,9 +7146,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.1':
     optional: true
 
-  '@eslint-community/eslint-utils@4.9.1(eslint@10.4.1)':
+  '@eslint-community/eslint-utils@4.9.1(eslint@10.5.0)':
     dependencies:
-      eslint: 10.4.1
+      eslint: 10.5.0
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.12.2': {}
@@ -7735,7 +7741,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.2
     optional: true
 
-  '@nodable/entities@2.1.0': {}
+  '@nodable/entities@2.2.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -8456,36 +8462,36 @@ snapshots:
       '@types/node': 25.9.3
     optional: true
 
-  '@typescript/native-preview-darwin-arm64@7.0.0-dev.20260611.2':
+  '@typescript/native-preview-darwin-arm64@7.0.0-dev.20260614.1':
     optional: true
 
-  '@typescript/native-preview-darwin-x64@7.0.0-dev.20260611.2':
+  '@typescript/native-preview-darwin-x64@7.0.0-dev.20260614.1':
     optional: true
 
-  '@typescript/native-preview-linux-arm64@7.0.0-dev.20260611.2':
+  '@typescript/native-preview-linux-arm64@7.0.0-dev.20260614.1':
     optional: true
 
-  '@typescript/native-preview-linux-arm@7.0.0-dev.20260611.2':
+  '@typescript/native-preview-linux-arm@7.0.0-dev.20260614.1':
     optional: true
 
-  '@typescript/native-preview-linux-x64@7.0.0-dev.20260611.2':
+  '@typescript/native-preview-linux-x64@7.0.0-dev.20260614.1':
     optional: true
 
-  '@typescript/native-preview-win32-arm64@7.0.0-dev.20260611.2':
+  '@typescript/native-preview-win32-arm64@7.0.0-dev.20260614.1':
     optional: true
 
-  '@typescript/native-preview-win32-x64@7.0.0-dev.20260611.2':
+  '@typescript/native-preview-win32-x64@7.0.0-dev.20260614.1':
     optional: true
 
-  '@typescript/native-preview@7.0.0-dev.20260611.2':
+  '@typescript/native-preview@7.0.0-dev.20260614.1':
     optionalDependencies:
-      '@typescript/native-preview-darwin-arm64': 7.0.0-dev.20260611.2
-      '@typescript/native-preview-darwin-x64': 7.0.0-dev.20260611.2
-      '@typescript/native-preview-linux-arm': 7.0.0-dev.20260611.2
-      '@typescript/native-preview-linux-arm64': 7.0.0-dev.20260611.2
-      '@typescript/native-preview-linux-x64': 7.0.0-dev.20260611.2
-      '@typescript/native-preview-win32-arm64': 7.0.0-dev.20260611.2
-      '@typescript/native-preview-win32-x64': 7.0.0-dev.20260611.2
+      '@typescript/native-preview-darwin-arm64': 7.0.0-dev.20260614.1
+      '@typescript/native-preview-darwin-x64': 7.0.0-dev.20260614.1
+      '@typescript/native-preview-linux-arm': 7.0.0-dev.20260614.1
+      '@typescript/native-preview-linux-arm64': 7.0.0-dev.20260614.1
+      '@typescript/native-preview-linux-x64': 7.0.0-dev.20260614.1
+      '@typescript/native-preview-win32-arm64': 7.0.0-dev.20260614.1
+      '@typescript/native-preview-win32-x64': 7.0.0-dev.20260614.1
 
   '@ungap/structured-clone@1.3.0': {}
 
@@ -8507,37 +8513,37 @@ snapshots:
       mime-types: 3.0.2
       negotiator: 1.0.0
 
-  acorn-jsx@5.3.2(acorn@8.16.0):
+  acorn-jsx@5.3.2(acorn@8.17.0):
     dependencies:
-      acorn: 8.16.0
+      acorn: 8.17.0
 
-  acorn@8.16.0: {}
+  acorn@8.17.0: {}
 
   adm-zip@0.5.17: {}
 
   agent-base@7.1.4: {}
 
-  agents@0.15.0(@babel/core@7.29.0)(@babel/runtime@7.29.7)(@cloudflare/ai-chat@0.8.4)(@cloudflare/workers-types@4.20260612.1)(ai@6.0.202(zod@4.4.3))(react@18.3.1)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.11.0))(zod@4.4.3):
+  agents@0.16.0(@babel/core@7.29.0)(@babel/runtime@7.29.7)(@cloudflare/ai-chat@0.8.5)(@cloudflare/workers-types@4.20260615.1)(ai@6.0.205(zod@4.4.3))(react@18.3.1)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.11.0))(zod@4.4.3):
     dependencies:
       '@babel/plugin-proposal-decorators': 7.29.7(@babel/core@7.29.0)
       '@cfworker/json-schema': 4.1.1
-      '@cloudflare/codemode': 0.3.8(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.202(zod@4.4.3))(zod@4.4.3)
+      '@cloudflare/codemode': 0.4.0(@modelcontextprotocol/sdk@1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3))(ai@6.0.205(zod@4.4.3))(zod@4.4.3)
       '@modelcontextprotocol/sdk': 1.29.0(@cfworker/json-schema@4.1.1)(zod@4.4.3)
       '@rolldown/plugin-babel': 0.2.3(@babel/core@7.29.0)(@babel/runtime@7.29.7)(rolldown@1.0.0-rc.12(@emnapi/core@1.9.1)(@emnapi/runtime@1.11.0))
-      ai: 6.0.202(zod@4.4.3)
+      ai: 6.0.205(zod@4.4.3)
       cron-schedule: 6.0.0
       esbuild: 0.28.1
       just-bash: 3.0.1
       mimetext: 3.0.28
       nanoid: 5.1.11
-      partyserver: 0.5.6(@cloudflare/workers-types@4.20260612.1)
-      partysocket: 1.1.19(react@18.3.1)
+      partyserver: 0.5.8(@cloudflare/workers-types@4.20260615.1)
+      partysocket: 1.2.0(react@18.3.1)
       react: 18.3.1
       yaml: 2.9.0
       yargs: 18.0.0
       zod: 4.4.3
     optionalDependencies:
-      '@cloudflare/ai-chat': 0.8.4(@ai-sdk/react@3.0.90(react@18.3.1)(zod@4.4.3))(agents@0.15.0)(ai@6.0.202(zod@4.4.3))(react@18.3.1)(zod@4.4.3)
+      '@cloudflare/ai-chat': 0.8.5(@ai-sdk/react@3.0.90(react@18.3.1)(zod@4.4.3))(agents@0.16.0)(ai@6.0.205(zod@4.4.3))(react@18.3.1)(zod@4.4.3)
     transitivePeerDependencies:
       - '@babel/core'
       - '@babel/plugin-transform-runtime'
@@ -8546,11 +8552,11 @@ snapshots:
       - rolldown
       - supports-color
 
-  ai@6.0.202(zod@4.4.3):
+  ai@6.0.205(zod@4.4.3):
     dependencies:
-      '@ai-sdk/gateway': 3.0.128(zod@4.4.3)
+      '@ai-sdk/gateway': 3.0.131(zod@4.4.3)
       '@ai-sdk/provider': 3.0.10
-      '@ai-sdk/provider-utils': 4.0.28(zod@4.4.3)
+      '@ai-sdk/provider-utils': 4.0.29(zod@4.4.3)
       '@opentelemetry/api': 1.9.1
       zod: 4.4.3
 
@@ -8593,6 +8599,8 @@ snapshots:
   ansi-truncate@1.4.0:
     dependencies:
       fast-string-truncated-width: 3.0.3
+
+  anynum@1.0.0: {}
 
   argparse@1.0.10:
     dependencies:
@@ -8657,7 +8665,7 @@ snapshots:
 
   base64-js@1.5.1: {}
 
-  baseline-browser-mapping@2.10.36: {}
+  baseline-browser-mapping@2.10.37: {}
 
   basic-ftp@5.2.2: {}
 
@@ -8713,7 +8721,7 @@ snapshots:
 
   browserslist@4.28.2:
     dependencies:
-      baseline-browser-mapping: 2.10.36
+      baseline-browser-mapping: 2.10.37
       caniuse-lite: 1.0.30001799
       electron-to-chromium: 1.5.372
       node-releases: 2.0.47
@@ -9170,7 +9178,7 @@ snapshots:
     dependencies:
       domelementtype: 2.3.0
 
-  dompurify@3.4.9:
+  dompurify@3.4.10:
     optionalDependencies:
       '@types/trusted-types': 2.0.7
 
@@ -9187,9 +9195,9 @@ snapshots:
       esbuild: 0.25.12
       tsx: 4.22.4
 
-  drizzle-orm@0.45.2(@cloudflare/workers-types@4.20260612.1)(@electric-sql/pglite@0.5.2)(@opentelemetry/api@1.9.1)(sql.js@1.14.1):
+  drizzle-orm@0.45.2(@cloudflare/workers-types@4.20260615.1)(@electric-sql/pglite@0.5.2)(@opentelemetry/api@1.9.1)(sql.js@1.14.1):
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20260612.1
+      '@cloudflare/workers-types': 4.20260615.1
       '@electric-sql/pglite': 0.5.2
       '@opentelemetry/api': 1.9.1
       sql.js: 1.14.1
@@ -9391,9 +9399,9 @@ snapshots:
 
   eslint-visitor-keys@5.0.1: {}
 
-  eslint@10.4.1:
+  eslint@10.5.0:
     dependencies:
-      '@eslint-community/eslint-utils': 4.9.1(eslint@10.4.1)
+      '@eslint-community/eslint-utils': 4.9.1(eslint@10.5.0)
       '@eslint-community/regexpp': 4.12.2
       '@eslint/config-array': 0.23.5
       '@eslint/config-helpers': 0.6.0
@@ -9428,8 +9436,8 @@ snapshots:
 
   espree@11.2.0:
     dependencies:
-      acorn: 8.16.0
-      acorn-jsx: 5.3.2(acorn@8.16.0)
+      acorn: 8.17.0
+      acorn-jsx: 5.3.2(acorn@8.17.0)
       eslint-visitor-keys: 5.0.1
 
   esprima@4.0.1: {}
@@ -9565,12 +9573,13 @@ snapshots:
       path-expression-matcher: 1.5.0
       xml-naming: 0.1.0
 
-  fast-xml-parser@5.8.0:
+  fast-xml-parser@5.9.0:
     dependencies:
-      '@nodable/entities': 2.1.0
+      '@nodable/entities': 2.2.0
       fast-xml-builder: 1.2.0
+      is-unsafe: 1.0.1
       path-expression-matcher: 1.5.0
-      strnum: 2.3.0
+      strnum: 2.4.0
       xml-naming: 0.1.0
 
   fastq@1.20.1:
@@ -10080,6 +10089,8 @@ snapshots:
 
   is-promise@4.0.0: {}
 
+  is-unsafe@1.0.1: {}
+
   isexe@2.0.0: {}
 
   ismobilejs@1.1.1: {}
@@ -10152,7 +10163,7 @@ snapshots:
   just-bash@3.0.1:
     dependencies:
       diff: 8.0.4
-      fast-xml-parser: 5.8.0
+      fast-xml-parser: 5.9.0
       file-type: 21.3.4
       ini: 6.0.0
       minimatch: 10.2.5
@@ -10522,7 +10533,7 @@ snapshots:
       d3-sankey: 0.12.3
       dagre-d3-es: 7.0.14
       dayjs: 1.11.20
-      dompurify: 3.4.9
+      dompurify: 3.4.10
       es-toolkit: 1.46.1
       katex: 0.16.47
       khroma: 2.1.0
@@ -10668,8 +10679,8 @@ snapshots:
 
   micromark-extension-mdxjs@3.0.0:
     dependencies:
-      acorn: 8.16.0
-      acorn-jsx: 5.3.2(acorn@8.16.0)
+      acorn: 8.17.0
+      acorn-jsx: 5.3.2(acorn@8.17.0)
       micromark-extension-mdx-expression: 3.0.1
       micromark-extension-mdx-jsx: 3.0.2
       micromark-extension-mdx-md: 2.0.0
@@ -11149,12 +11160,12 @@ snapshots:
 
   parseurl@1.3.3: {}
 
-  partyserver@0.5.6(@cloudflare/workers-types@4.20260612.1):
+  partyserver@0.5.8(@cloudflare/workers-types@4.20260615.1):
     dependencies:
-      '@cloudflare/workers-types': 4.20260612.1
+      '@cloudflare/workers-types': 4.20260615.1
       nanoid: 5.1.11
 
-  partysocket@1.1.19(react@18.3.1):
+  partysocket@1.2.0(react@18.3.1):
     dependencies:
       event-target-polyfill: 0.0.4
     optionalDependencies:
@@ -12068,7 +12079,9 @@ snapshots:
   strip-json-comments@2.0.1:
     optional: true
 
-  strnum@2.3.0: {}
+  strnum@2.4.0:
+    dependencies:
+      anynum: 1.0.0
 
   strtok3@10.3.5:
     dependencies:
@@ -12482,7 +12495,7 @@ snapshots:
 
   workerpool@10.0.2: {}
 
-  wrangler@4.100.0(@cloudflare/workers-types@4.20260612.1)(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  wrangler@4.100.0(@cloudflare/workers-types@4.20260615.1)(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.1(unenv@2.0.0-rc.24)(workerd@1.20260611.1)
@@ -12493,7 +12506,7 @@ snapshots:
       unenv: 2.0.0-rc.24
       workerd: 1.20260611.1
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20260612.1
+      '@cloudflare/workers-types': 4.20260615.1
       fsevents: 2.3.3
     transitivePeerDependencies:
       - bufferutil
