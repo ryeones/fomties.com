@@ -86,7 +86,7 @@
     "hono": "^4.13.2",
     "image-size": "^2.0.2",
     "is-absolute-url": "^5.0.0",
-    "js-yaml": "^5.2.3",
+    "js-yaml": "^5.3.0",
     "katex": "^0.18.4",
     "lightningcss": "^1.33.0",
     "marked": "^18.0.9",
@@ -158,7 +158,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260814.1",
+    "@cloudflare/workers-types": "^5.20260815.1",
     "@types/d3": "^7.4.3",
     "@types/d3-drag": "^3.0.7",
     "@types/d3-force": "^3.0.10",
@@ -174,7 +174,7 @@
     "@types/ws": "^8.18.1",
     "@types/yargs": "^17.0.35",
     "@typescript/native-preview": "7.0.0-dev.20260707.2",
-    "ai": "^7.0.65",
+    "ai": "^7.0.66",
     "bibtex-tidy": "^1.15.1",
     "drizzle-kit": "^0.31.10",
     "esbuild": "^0.28.2",
