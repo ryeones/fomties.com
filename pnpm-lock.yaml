@@ -53,8 +53,8 @@ importers:
         specifier: ^6.43.9
         version: 6.43.9
       '@electric-sql/pglite':
-        specifier: ^0.5.6
-        version: 0.5.6
+        specifier: ^0.5.7
+        version: 0.5.7
       '@floating-ui/dom':
         specifier: ^1.8.0
         version: 1.8.0
@@ -93,7 +93,7 @@ importers:
         version: 3.4.14
       drizzle-orm:
         specifier: ^0.45.2
-        version: 0.45.2(@cloudflare/workers-types@5.20260823.1)(@electric-sql/pglite@0.5.6)(@opentelemetry/api@1.9.1)(sql.js@1.14.1)
+        version: 0.45.2(@cloudflare/workers-types@5.20260823.1)(@electric-sql/pglite@0.5.7)(@opentelemetry/api@1.9.1)(sql.js@1.14.1)
       esbuild-sass-plugin:
         specifier: ^3.7.0
         version: 3.7.0(esbuild@0.28.2)(sass-embedded@1.103.1)
@@ -845,8 +845,8 @@ packages:
   '@drizzle-team/brocli@0.10.2':
     resolution: {integrity: sha512-z33Il7l5dKjUgGULTqBsQBQwckHh5AbIuxhdsIxDDiZAzBOrZO6q9ogcWC65kU382AfynTfgNumVcNIjuIua6w==}
 
-  '@electric-sql/pglite@0.5.6':
-    resolution: {integrity: sha512-ipn6AOHouIRwNSVL+0hIRuM3yDwAWgRmvZuj+45sudzKpmdPbG8hQuQDZ4A8l7U8E0l7u6pJ/VtMEW42w+vEKQ==}
+  '@electric-sql/pglite@0.5.7':
+    resolution: {integrity: sha512-6WBks0NFO6YUhGP03mCNkbJuVFWwrZPrzZ/vsnAPnsCD28pybdZ+yoTrlLlWFoZst3kdaju5pxIslV/jrr36nQ==}
 
   '@emnapi/core@1.9.1':
     resolution: {integrity: sha512-mukuNALVsoix/w1BJwFzwXBN/dHeejQtuVzcDsfOEsdpCumXb/E9j8w11h5S54tT1xhifGfbbSm/ICrObRb3KA==}
@@ -7411,7 +7411,7 @@ snapshots:
 
   '@drizzle-team/brocli@0.10.2': {}
 
-  '@electric-sql/pglite@0.5.6': {}
+  '@electric-sql/pglite@0.5.7': {}
 
   '@emnapi/core@1.9.1':
     dependencies:
@@ -10084,10 +10084,10 @@ snapshots:
       esbuild: 0.25.12
       tsx: 4.23.12
 
-  drizzle-orm@0.45.2(@cloudflare/workers-types@5.20260823.1)(@electric-sql/pglite@0.5.6)(@opentelemetry/api@1.9.1)(sql.js@1.14.1):
+  drizzle-orm@0.45.2(@cloudflare/workers-types@5.20260823.1)(@electric-sql/pglite@0.5.7)(@opentelemetry/api@1.9.1)(sql.js@1.14.1):
     optionalDependencies:
       '@cloudflare/workers-types': 5.20260823.1
-      '@electric-sql/pglite': 0.5.6
+      '@electric-sql/pglite': 0.5.7
       '@opentelemetry/api': 1.9.1
       sql.js: 1.14.1
 
