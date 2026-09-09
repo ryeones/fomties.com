@@ -87,7 +87,7 @@
     "image-size": "^2.0.2",
     "is-absolute-url": "^5.0.0",
     "js-yaml": "^5.4.1",
-    "katex": "^0.18.5",
+    "katex": "^0.18.6",
     "lightningcss": "^1.33.0",
     "marked": "^18.0.11",
     "mdast-util-find-and-replace": "^3.0.2",
@@ -158,7 +158,7 @@
     "zod": "^4.5.4"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260905.1",
+    "@cloudflare/workers-types": "^5.20260906.1",
     "@types/d3": "^7.4.3",
     "@types/d3-drag": "^3.0.7",
     "@types/d3-force": "^3.0.10",
