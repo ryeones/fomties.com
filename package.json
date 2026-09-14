@@ -155,10 +155,10 @@
     "ws": "^8.21.3",
     "xml-formatter": "^3.7.0",
     "yargs": "^18.1.0",
-    "zod": "^4.5.4"
+    "zod": "^4.6.2"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260908.1",
+    "@cloudflare/workers-types": "^5.20260911.1",
     "@types/d3": "^7.4.3",
     "@types/d3-drag": "^3.0.7",
     "@types/d3-force": "^3.0.10",
@@ -167,19 +167,19 @@
     "@types/js-yaml": "^4.0.9",
     "@types/katex": "^0.16.8",
     "@types/mdast": "^4.0.4",
-    "@types/node": "^26.5.0",
+    "@types/node": "^26.5.1",
     "@types/pretty-time": "^1.1.5",
     "@types/source-map-support": "^0.5.10",
     "@types/unist": "^3.0.3",
     "@types/ws": "^8.18.1",
     "@types/yargs": "^17.0.35",
     "@typescript/native-preview": "7.0.0-dev.20260707.2",
-    "ai": "^7.0.93",
+    "ai": "^7.0.97",
     "bibtex-tidy": "^1.15.1",
     "drizzle-kit": "^0.31.10",
     "esbuild": "^0.28.2",
     "eslint": "^10.10.0",
-    "mermaid": "^11.17.2",
+    "mermaid": "^12.0.0",
     "micromark": "^4.0.2",
     "micromark-util-types": "^2.0.2",
     "oxfmt": "^0.67.0",
@@ -189,7 +189,7 @@
     "ts-morph": "^28.0.0",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2",
-    "wrangler": "^4.129.1"
+    "wrangler": "^4.131.0"
   },
   "engines": {
     "node": ">=22",
