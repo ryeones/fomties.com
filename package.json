@@ -86,10 +86,10 @@
     "hono": "^4.13.7",
     "image-size": "^2.0.2",
     "is-absolute-url": "^5.0.0",
-    "js-yaml": "^5.4.1",
+    "js-yaml": "^5.4.2",
     "katex": "^0.18.7",
     "lightningcss": "^1.33.0",
-    "marked": "^18.0.12",
+    "marked": "^18.0.13",
     "mdast-util-find-and-replace": "^3.0.2",
     "mdast-util-from-markdown": "^2.0.3",
     "mdast-util-gfm": "^3.1.0",
@@ -137,7 +137,7 @@
     "remark-smartypants": "^3.0.3",
     "rfdc": "^1.4.1",
     "rough-notation": "^0.5.1",
-    "sass-embedded": "^1.104.0",
+    "sass-embedded": "^1.104.1",
     "satori": "^0.33.4",
     "serve-handler": "^6.1.7",
     "sharp": "^0.35.4",
@@ -155,7 +155,7 @@
     "ws": "^8.21.3",
     "xml-formatter": "^3.7.0",
     "yargs": "^18.1.0",
-    "zod": "^4.6.2"
+    "zod": "^4.6.4"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260911.1",
