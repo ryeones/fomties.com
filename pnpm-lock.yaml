@@ -60,7 +60,7 @@ importers:
         version: 1.8.0
       '@huggingface/transformers':
         specifier: ^4.3.0
-        version: 4.3.0(@types/node@26.6.2)
+        version: 4.3.0(@types/node@26.6.3)
       '@jax-js/jax':
         specifier: ^0.1.25
         version: 0.1.25
@@ -93,7 +93,7 @@ importers:
         version: 3.4.16
       drizzle-orm:
         specifier: ^0.45.2
-        version: 0.45.2(@cloudflare/workers-types@5.20260925.1)(@electric-sql/pglite@0.5.8)(@opentelemetry/api@1.9.1)(sql.js@1.14.1)
+        version: 0.45.2(@cloudflare/workers-types@5.20260926.1)(@electric-sql/pglite@0.5.8)(@opentelemetry/api@1.9.1)(sql.js@1.14.1)
       esbuild-sass-plugin:
         specifier: ^3.7.0
         version: 3.7.0(esbuild@0.28.2)(sass-embedded@1.105.0)
@@ -324,7 +324,7 @@ importers:
         version: 6.1.7
       sharp:
         specifier: ^0.35.4
-        version: 0.35.4(@types/node@26.6.2)
+        version: 0.35.4(@types/node@26.6.3)
       source-map-support:
         specifier: ^0.5.21
         version: 0.5.21
@@ -372,8 +372,8 @@ importers:
         version: 4.6.5
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: ^5.20260925.1
-        version: 5.20260925.1
+        specifier: ^5.20260926.1
+        version: 5.20260926.1
       '@types/d3':
         specifier: ^7.4.3
         version: 7.4.3
@@ -399,8 +399,8 @@ importers:
         specifier: ^4.0.4
         version: 4.0.4
       '@types/node':
-        specifier: ^26.6.2
-        version: 26.6.2
+        specifier: ^26.6.3
+        version: 26.6.3
       '@types/pretty-time':
         specifier: ^1.1.5
         version: 1.1.5
@@ -466,7 +466,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: ^4.135.0
-        version: 4.135.0(@cloudflare/workers-types@5.20260925.1)(@types/node@26.6.2)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+        version: 4.135.0(@cloudflare/workers-types@5.20260926.1)(@types/node@26.6.3)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
 
 packages:
 
@@ -795,8 +795,8 @@ packages:
   '@cloudflare/workers-oauth-provider@0.10.3':
     resolution: {integrity: sha512-25ufMONJir9PllqVpK4GwOOoSFgpYm3+bM6NBedj7ufMCIfNf5jk4OI0LPuTJBaJgLl2lGCLqFqEPJXcSuPopQ==}
 
-  '@cloudflare/workers-types@5.20260925.1':
-    resolution: {integrity: sha512-E/Z3J8CzyNk0sinBu8g/1HjMCViSxG1kd/ARL8nzieSEdqtYZmgdnhlXbi95xyc3oetTwBR/r604/EuwuP6cnQ==}
+  '@cloudflare/workers-types@5.20260926.1':
+    resolution: {integrity: sha512-jLtwSjBFtXucrEIj584vNk/k9OwgW4ij7/nK40hnCw137/0ilqfkTlYIUTWlTEbUX2V/+XVBijzZha9spdQTUw==}
 
   '@codemirror/autocomplete@6.20.3':
     resolution: {integrity: sha512-tlosUqb+3BbxCxZdu4tKeRghPFC+QM7q4X5YhKV2eCmPG+1r2F3f4AaSz5sCrFqUtX4Jh20VFTKecl16MgiV9g==}
@@ -2963,8 +2963,8 @@ packages:
   '@types/nlcst@2.0.3':
     resolution: {integrity: sha512-vSYNSDe6Ix3q+6Z7ri9lyWqgGhJTmzRjZRqyq15N0Z/1/UnVsno9G/N40NBijoYx2seFDIl0+B2mgAb9mezUCA==}
 
-  '@types/node@26.6.2':
-    resolution: {integrity: sha512-X1P21scMv4zGKLYqjdGjaKa7COa0RKVYYZZN/NfvLQ1JegxFhdhpZG/Lyn8AXx6CDUavKAd11v6BvfpkDByK8g==}
+  '@types/node@26.6.3':
+    resolution: {integrity: sha512-dsqMQQoeTLqu9wynDD00q573mNzso3IdQOAfHRJqLCcmCFPoGo9A1bDpUcv/9tnKpErQWv9uKeGfl37EIS02Yg==}
 
   '@types/pretty-time@1.1.5':
     resolution: {integrity: sha512-5yl+BYwmnRWZb783W8YYoHXvPY8q/rp7ctHBVaGBB9RxlzGpHNJ72tGQMK7TrUSnxzl1dbDcBDuBCSbtfnSQGg==}
@@ -7019,7 +7019,7 @@ snapshots:
 
   '@cloudflare/workers-oauth-provider@0.10.3': {}
 
-  '@cloudflare/workers-types@5.20260925.1': {}
+  '@cloudflare/workers-types@5.20260926.1': {}
 
   '@codemirror/autocomplete@6.20.3':
     dependencies:
@@ -7504,13 +7504,13 @@ snapshots:
 
   '@huggingface/tokenizers@0.2.0': {}
 
-  '@huggingface/transformers@4.3.0(@types/node@26.6.2)':
+  '@huggingface/transformers@4.3.0(@types/node@26.6.3)':
     dependencies:
       '@huggingface/jinja': 0.5.10
       '@huggingface/tokenizers': 0.2.0
       onnxruntime-node: 1.30.0
       onnxruntime-web: 1.31.0-dev.20260914-8d85527a0
-      sharp: 0.35.4(@types/node@26.6.2)
+      sharp: 0.35.4(@types/node@26.6.3)
     transitivePeerDependencies:
       - '@types/node'
 
@@ -8732,7 +8732,7 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
-  '@types/node@26.6.2':
+  '@types/node@26.6.3':
     dependencies:
       undici-types: 8.9.0
 
@@ -8753,7 +8753,7 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 26.6.2
+      '@types/node': 26.6.3
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -8763,7 +8763,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 26.6.2
+      '@types/node': 26.6.3
     optional: true
 
   '@typescript/native-preview-darwin-arm64@7.0.0-dev.20260707.2':
@@ -9616,9 +9616,9 @@ snapshots:
       esbuild: 0.25.12
       tsx: 4.23.15
 
-  drizzle-orm@0.45.2(@cloudflare/workers-types@5.20260925.1)(@electric-sql/pglite@0.5.8)(@opentelemetry/api@1.9.1)(sql.js@1.14.1):
+  drizzle-orm@0.45.2(@cloudflare/workers-types@5.20260926.1)(@electric-sql/pglite@0.5.8)(@opentelemetry/api@1.9.1)(sql.js@1.14.1):
     optionalDependencies:
-      '@cloudflare/workers-types': 5.20260925.1
+      '@cloudflare/workers-types': 5.20260926.1
       '@electric-sql/pglite': 0.5.8
       '@opentelemetry/api': 1.9.1
       sql.js: 1.14.1
@@ -11310,10 +11310,10 @@ snapshots:
   mimic-response@3.1.0:
     optional: true
 
-  miniflare@5.20260918.0-alpha(@types/node@26.6.2)(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  miniflare@5.20260918.0-alpha(@types/node@26.6.3)(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
-      sharp: 0.35.4(@types/node@26.6.2)
+      sharp: 0.35.4(@types/node@26.6.3)
       undici: 7.29.0
       workerd: 1.20260918.1
       ws: 8.21.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
@@ -11728,7 +11728,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.2
-      '@types/node': 26.6.2
+      '@types/node': 26.6.3
       long: 5.3.2
 
   proxy-addr@2.0.7:
@@ -12329,7 +12329,7 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  sharp@0.35.4(@types/node@26.6.2):
+  sharp@0.35.4(@types/node@26.6.3):
     dependencies:
       '@img/colour': 1.1.0
       detect-libc: 2.1.2
@@ -12360,7 +12360,7 @@ snapshots:
       '@img/sharp-win32-arm64': 0.35.4
       '@img/sharp-win32-ia32': 0.35.4
       '@img/sharp-win32-x64': 0.35.4
-      '@types/node': 26.6.2
+      '@types/node': 26.6.3
 
   shebang-command@2.0.0:
     dependencies:
@@ -12996,18 +12996,18 @@ snapshots:
 
   workerpool@10.0.3: {}
 
-  wrangler@4.135.0(@cloudflare/workers-types@5.20260925.1)(@types/node@26.6.2)(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  wrangler@4.135.0(@cloudflare/workers-types@5.20260926.1)(@types/node@26.6.3)(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.1(unenv@2.0.0-rc.24)(workerd@1.20260918.1)
       blake3-wasm: 2.1.5
       esbuild: 0.28.1
-      miniflare: 5.20260918.0-alpha(@types/node@26.6.2)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      miniflare: 5.20260918.0-alpha(@types/node@26.6.3)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       path-to-regexp: 6.3.0
       unenv: 2.0.0-rc.24
       workerd: 1.20260918.1
     optionalDependencies:
-      '@cloudflare/workers-types': 5.20260925.1
+      '@cloudflare/workers-types': 5.20260926.1
       fsevents: 2.3.3
     transitivePeerDependencies:
       - '@types/node'
