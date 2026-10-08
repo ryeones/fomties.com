@@ -93,7 +93,7 @@ importers:
         version: 3.4.16
       drizzle-orm:
         specifier: ^0.45.2
-        version: 0.45.2(@cloudflare/workers-types@5.20261004.1)(@electric-sql/pglite@0.5.8)(@opentelemetry/api@1.9.1)(sql.js@1.14.1)
+        version: 0.45.2(@cloudflare/workers-types@5.20261005.1)(@electric-sql/pglite@0.5.8)(@opentelemetry/api@1.9.1)(sql.js@1.14.1)
       esbuild-sass-plugin:
         specifier: ^3.7.0
         version: 3.7.0(esbuild@0.28.2)(sass-embedded@1.105.1)
@@ -113,8 +113,8 @@ importers:
         specifier: ^4.0.3
         version: 4.0.3
       hast-util-find-and-replace:
-        specifier: ^5.0.1
-        version: 5.0.1
+        specifier: ^5.0.2
+        version: 5.0.2
       hast-util-from-html:
         specifier: ^2.0.3
         version: 2.0.3
@@ -173,8 +173,8 @@ importers:
         specifier: ^18.0.14
         version: 18.0.14
       mdast-util-find-and-replace:
-        specifier: ^3.0.2
-        version: 3.0.2
+        specifier: ^3.0.3
+        version: 3.0.3
       mdast-util-from-markdown:
         specifier: ^2.0.3
         version: 2.0.3(supports-color@10.2.2)
@@ -372,8 +372,8 @@ importers:
         version: 4.6.5
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: ^5.20261004.1
-        version: 5.20261004.1
+        specifier: ^5.20261005.1
+        version: 5.20261005.1
       '@types/d3':
         specifier: ^7.4.3
         version: 7.4.3
@@ -466,7 +466,7 @@ importers:
         version: 7.0.2
       wrangler:
         specifier: ^4.135.0
-        version: 4.135.0(@cloudflare/workers-types@5.20261004.1)(@types/node@26.6.4)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+        version: 4.135.0(@cloudflare/workers-types@5.20261005.1)(@types/node@26.6.4)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
 
 packages:
 
@@ -795,8 +795,8 @@ packages:
   '@cloudflare/workers-oauth-provider@0.10.3':
     resolution: {integrity: sha512-25ufMONJir9PllqVpK4GwOOoSFgpYm3+bM6NBedj7ufMCIfNf5jk4OI0LPuTJBaJgLl2lGCLqFqEPJXcSuPopQ==}
 
-  '@cloudflare/workers-types@5.20261004.1':
-    resolution: {integrity: sha512-K9D4/Y6bSIDNYFzjqzFMNoWK99pLgfgFxqSa76kfW++3VCkTSzJbzsQRffir366G3kmNyjoigC6ekp7DxIkxkw==}
+  '@cloudflare/workers-types@5.20261005.1':
+    resolution: {integrity: sha512-QQwZY342US72QGHso/H1CSzn9FWe6IoLZ8TsYyoMnvRHHOnucGuKZRDCyOn43HAkkRQqfRHFw8NP1xe1A7Oj8A==}
 
   '@codemirror/autocomplete@6.20.3':
     resolution: {integrity: sha512-tlosUqb+3BbxCxZdu4tKeRghPFC+QM7q4X5YhKV2eCmPG+1r2F3f4AaSz5sCrFqUtX4Jh20VFTKecl16MgiV9g==}
@@ -4513,8 +4513,8 @@ packages:
   hast-util-embedded@3.0.0:
     resolution: {integrity: sha512-naH8sld4Pe2ep03qqULEtvYr7EjrLK2QHY8KJR6RJkTUjPGObe1vnx585uzem2hGra+s1q08DZZpfgDVYRbaXA==}
 
-  hast-util-find-and-replace@5.0.1:
-    resolution: {integrity: sha512-S12fTskO3Hf2IGCBWXs1UcXT8GEJ3jmvmPZJctkRwfl3a8jnGi8aFYT8kd2zcEH+VE0qcGgKF0ewt5BPAsfIhw==}
+  hast-util-find-and-replace@5.0.2:
+    resolution: {integrity: sha512-8yv9iKe9DTsdXiVs5mIv2Cz9Xjxmbwd18HRWkDDf+j/joX4fdx06drUOsW7tmuVG9nE0oe46ua0zxxIDz14Xrg==}
 
   hast-util-from-dom@5.0.1:
     resolution: {integrity: sha512-N+LqofjR2zuzTjCPzyDUdSshy4Ma6li7p/c3pA78uTwzFgENbgbUrm2ugwsOdcjI1muO+o6Dgzp9p8WHtn/39Q==}
@@ -4978,8 +4978,8 @@ packages:
   mathjax@3.2.2:
     resolution: {integrity: sha512-Bt+SSVU8eBG27zChVewOicYs7Xsdt40qm4+UpHyX7k0/O9NliPc+x77k1/FEsPsjKPZGJvtRZM1vO+geW0OhGw==}
 
-  mdast-util-find-and-replace@3.0.2:
-    resolution: {integrity: sha512-Tmd1Vg/m3Xz43afeNxDIhWRtFZgM2VLyaf4vSTYwudTyeuTneoL3qtWMA5jeLyz/O1vDJmmV4QuScFCA2tBPwg==}
+  mdast-util-find-and-replace@3.0.3:
+    resolution: {integrity: sha512-xPgpDNl0/OXHsI7TlaIs22lWnH3KlpvZdXG1ET/m/YT2Hhdkx8lJV4kLphE6l9simyM4KPDFBwas08BgEob6Jw==}
 
   mdast-util-from-markdown@2.0.3:
     resolution: {integrity: sha512-W4mAWTvSlKvf8L6J+VN9yLSqQ9AOAAvHuoDAmPkz4dHf553m5gVj2ejadHJhoJmcmxEnOv6Pa8XJhpxE93kb8Q==}
@@ -7015,7 +7015,7 @@ snapshots:
 
   '@cloudflare/workers-oauth-provider@0.10.3': {}
 
-  '@cloudflare/workers-types@5.20261004.1': {}
+  '@cloudflare/workers-types@5.20261005.1': {}
 
   '@codemirror/autocomplete@6.20.3':
     dependencies:
@@ -9611,9 +9611,9 @@ snapshots:
       esbuild: 0.25.12
       tsx: 4.23.15
 
-  drizzle-orm@0.45.2(@cloudflare/workers-types@5.20261004.1)(@electric-sql/pglite@0.5.8)(@opentelemetry/api@1.9.1)(sql.js@1.14.1):
+  drizzle-orm@0.45.2(@cloudflare/workers-types@5.20261005.1)(@electric-sql/pglite@0.5.8)(@opentelemetry/api@1.9.1)(sql.js@1.14.1):
     optionalDependencies:
-      '@cloudflare/workers-types': 5.20261004.1
+      '@cloudflare/workers-types': 5.20261005.1
       '@electric-sql/pglite': 0.5.8
       '@opentelemetry/api': 1.9.1
       sql.js: 1.14.1
@@ -10231,7 +10231,7 @@ snapshots:
       '@types/hast': 3.0.5
       hast-util-is-element: 3.0.0
 
-  hast-util-find-and-replace@5.0.1:
+  hast-util-find-and-replace@5.0.2:
     dependencies:
       '@types/hast': 3.0.5
       escape-string-regexp: 5.0.0
@@ -10743,7 +10743,7 @@ snapshots:
   mathjax@3.2.2:
     optional: true
 
-  mdast-util-find-and-replace@3.0.2:
+  mdast-util-find-and-replace@3.0.3:
     dependencies:
       '@types/mdast': 4.0.4
       escape-string-regexp: 5.0.0
@@ -10783,7 +10783,7 @@ snapshots:
       '@types/mdast': 4.0.4
       ccount: 2.0.1
       devlop: 1.1.0
-      mdast-util-find-and-replace: 3.0.2
+      mdast-util-find-and-replace: 3.0.3
       micromark-util-character: 2.1.1
 
   mdast-util-gfm-footnote@2.1.0(supports-color@10.2.2):
@@ -10899,7 +10899,7 @@ snapshots:
   mdast-util-newline-to-break@2.0.0:
     dependencies:
       '@types/mdast': 4.0.4
-      mdast-util-find-and-replace: 3.0.2
+      mdast-util-find-and-replace: 3.0.3
 
   mdast-util-phrasing@4.1.0:
     dependencies:
@@ -11881,7 +11881,7 @@ snapshots:
       '@types/hast': 3.0.5
       escape-string-regexp: 5.0.0
       gemoji: 8.1.0
-      hast-util-find-and-replace: 5.0.1
+      hast-util-find-and-replace: 5.0.2
       hast-util-is-element: 3.0.0
 
   rehype-katex@7.0.1:
@@ -11972,7 +11972,7 @@ snapshots:
   remark-github@12.0.0:
     dependencies:
       '@types/mdast': 4.0.4
-      mdast-util-find-and-replace: 3.0.2
+      mdast-util-find-and-replace: 3.0.3
       mdast-util-to-string: 4.0.0
       to-vfile: 8.0.0
       unist-util-visit: 5.1.0
@@ -12991,7 +12991,7 @@ snapshots:
 
   workerpool@10.0.3: {}
 
-  wrangler@4.135.0(@cloudflare/workers-types@5.20261004.1)(@types/node@26.6.4)(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  wrangler@4.135.0(@cloudflare/workers-types@5.20261005.1)(@types/node@26.6.4)(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.1(unenv@2.0.0-rc.24)(workerd@1.20260918.1)
@@ -13002,7 +13002,7 @@ snapshots:
       unenv: 2.0.0-rc.24
       workerd: 1.20260918.1
     optionalDependencies:
-      '@cloudflare/workers-types': 5.20261004.1
+      '@cloudflare/workers-types': 5.20261005.1
       fsevents: 2.3.3
     transitivePeerDependencies:
       - '@types/node'
